@@ -51,7 +51,7 @@ Practical coding sessions start from basic introduction to tidy data manipulatio
 - Interactivity: {plotly}, {gganimate}
 - Intro to {shiny}
 
-[slides-gg]: /slides/slides-dataviz-bssd.html
+[slides-gg]: https://ikashnitsky.github.io/dataviz-bssd/slides/slides-dataviz-bssd.html
 [slides-map]: https://
 
 # Links to submit in-class assignments
