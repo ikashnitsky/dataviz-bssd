@@ -1,0 +1,763 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+  <head>
+    <title>Dataviz art/skill</title>
+    <meta charset="utf-8" />
+    <meta name="author" content="  Ilya Kashnitsky" />
+    <script src="libs/header-attrs/header-attrs.js"></script>
+    <link href="libs/remark-css/shinobi.css" rel="stylesheet" />
+    <link href="libs/remark-css/ninjutsu.css" rel="stylesheet" />
+    <script src="libs/twitter-widget/widgets.js"></script>
+    <link rel="stylesheet" href="assets/ninpo.css" type="text/css" />
+  </head>
+  <body>
+    <textarea id="source">
+class: center, middle, inverse, title-slide
+
+# Dataviz art/skill
+## Create powerful dataviz with R
+### <br><br><strong>Ilya Kashnitsky</strong>
+### <br>Barcelona Summer School of Demography 2021<br>2021-07-12
+
+---
+
+
+
+
+layout: false
+class: bg-main1 split-30 hide-slide-number
+
+.column.bg-main3[
+]
+.column.slide-in-right[
+.sliderbox.bg-main2.vmiddle[
+.font5[before we start]
+]]
+
+???
+#===before we start
+
+---
+layout: false
+class: bg-main1 split-10
+
+.column[.content.sideways-rl[
+.font5[WTF plot]  
+]]
+
+.column[.content.center[
+&lt;img width="100%" src="https://i.imgur.com/LOBXId3.png" /&gt;
+
+https://twitter.com/RuJEconomics/status/1191697644499984384
+]]
+???
+#===RuJEconomics crap plot
+
+
+---
+layout: false
+class: bg-main1 split-10
+
+.column[.content.sideways-rl[
+.font4[Money/Happiness]  
+]]
+
+.column[.content[
+&lt;iframe width="980px" height="620px" style="background: #FFFFFF;" src="https://www.visualcapitalist.com/wp-content/uploads/2018/03/money-happiness-large.html"&gt;&lt;/iframe&gt;
+https://www.visualcapitalist.com/wp-content/uploads/2018/03/money-happiness-large.html
+]]
+
+???
+#===Money/Happiness diamond plot
+
+
+---
+layout: false
+class: bg-pink hide-slide-number
+
+.font5.white.center[
+The main link:&lt;br&gt;
+]  
+.font4.white.center[
+github.com/ikashnitsky/dataviz-bssd
+]
+???
+#===github link
+
+---
+layout: false
+class: bg-black hide-slide-number
+
+.font5.white.center[
+rule 0&lt;br&gt;&lt;br&gt;DO VISUALIZE YOUR DATA
+]  
+???
+#===rule 0
+
+
+---
+layout: false
+class: bg-main1 split-10
+
+.column[.content.sideways-rl[
+.font4[Anscombe's Quartet]  
+]]
+
+.column[.content.center[
+&lt;img width="80%" src="https://i.imgur.com/QA3Ss8D.png" /&gt;
+
+http://i.imgur.com/QA3Ss8D.png
+]]
+???
+#===Anscombe's Quartet
+
+
+---
+layout: false
+class: bg-main1
+
+.column[.content[
+<blockquote class="twitter-tweet" align="center" data-width="550" data-lang="en" data-dnt="true" data-theme="dark"><p lang="en" dir="ltr">New <a href="https://twitter.com/hashtag/chi2017?src=hash&amp;ref_src=twsrc%5Etfw">#chi2017</a> paper is up. Don&#39;t trust statistics alone, visualize your data!<a href="https://t.co/amnbAYvsq1">https://t.co/amnbAYvsq1</a> <a href="https://t.co/1s6vkge6dl">pic.twitter.com/1s6vkge6dl</a></p>&mdash; Justin Matejka (@JustinMatejka) <a href="https://twitter.com/JustinMatejka/status/859075295059562498?ref_src=twsrc%5Etfw">May 1, 2017</a></blockquote>
+
+]]
+???
+#===Dino animation
+
+
+---
+layout: false
+class: bg-main1
+
+.column[.content[
+<blockquote class="twitter-tweet" align="center" data-width="550" data-lang="en" data-dnt="true" data-theme="dark"><p lang="en" dir="ltr">Visualizing summary statistics in a <a href="https://twitter.com/hashtag/boxplot?src=hash&amp;ref_src=twsrc%5Etfw">#boxplot</a> is great. But don&#39;t forget to explore the underlying data distribution. <br><br>Thanks to <a href="https://twitter.com/JustinMatejka?ref_src=twsrc%5Etfw">@JustinMatejka</a> for this great educational dataset.<a href="https://twitter.com/hashtag/30DayChartChallenge?src=hash&amp;ref_src=twsrc%5Etfw">#30DayChartChallenge</a> | <a href="https://twitter.com/hashtag/Day27?src=hash&amp;ref_src=twsrc%5Etfw">#Day27</a> | <a href="https://twitter.com/hashtag/educational?src=hash&amp;ref_src=twsrc%5Etfw">#educational</a> <a href="https://twitter.com/hashtag/dataviz?src=hash&amp;ref_src=twsrc%5Etfw">#dataviz</a> <a href="https://twitter.com/hashtag/Rstats?src=hash&amp;ref_src=twsrc%5Etfw">#Rstats</a> <a href="https://twitter.com/hashtag/ggplot2?src=hash&amp;ref_src=twsrc%5Etfw">#ggplot2</a> <a href="https://twitter.com/hashtag/statistics?src=hash&amp;ref_src=twsrc%5Etfw">#statistics</a> <a href="https://twitter.com/hashtag/violinplot?src=hash&amp;ref_src=twsrc%5Etfw">#violinplot</a> <a href="https://t.co/JfNwMzuash">pic.twitter.com/JfNwMzuash</a></p>&mdash; Mihaela Bozukova (@MBozukova) <a href="https://twitter.com/MBozukova/status/1387094850995118081?ref_src=twsrc%5Etfw">April 27, 2021</a></blockquote>
+
+]] 
+???
+#===MBozukova distributions
+
+
+---
+layout: true
+class: bg-white split-10
+
+.column[.content.sideways-rl[
+.font5.main1[Ulam spiral]  
+]]
+
+.column[.content.vmiddle.center[
+{{content}}
+]]
+
+---
+count:true
+&lt;img width="60%" src="https://i.imgur.com/Ym0oKHj.png" /&gt;
+
+---
+count:false
+&lt;img width="100%" src="https://i.imgur.com/T7xz3UN.png" /&gt;
+
+---
+count:false
+&lt;img width="100%" src="https://i.imgur.com/MxUNZxV.png" /&gt;
+
+???
+#===Ulam spiral
+
+
+---
+layout: false
+class: bg-main1
+
+.column[.content[
+<blockquote class="twitter-tweet" align="center" data-width="550" data-lang="en" data-dnt="true" data-theme="dark"><p lang="en" dir="ltr">Remade the <a href="https://twitter.com/WSJ?ref_src=twsrc%5Etfw">@WSJ</a> measles vaccination visualization using ggplot2 and the animation package <a href="https://twitter.com/hashtag/rstats?src=hash&amp;ref_src=twsrc%5Etfw">#rstats</a> <a href="https://t.co/cnIScD9ymI">pic.twitter.com/cnIScD9ymI</a></p>&mdash; Michael Lee 🚴📊🇷 (@mikeleeco) <a href="https://twitter.com/mikeleeco/status/876792944396730368?ref_src=twsrc%5Etfw">June 19, 2017</a></blockquote>
+
+]] 
+???
+#===US vaccination
+
+
+---
+layout: false
+class: bg-black hide-slide-number
+
+.font5.white.center[
+rule 1&lt;br&gt;&lt;br&gt;text should be horizontal
+]  
+???
+#===RULE 1
+
+---
+layout: false
+class: bg-white
+
+.column[.content.center[
+&lt;img width="80%" src="https://pbs.twimg.com/media/EyeZQtdWUAUlBbR?format=png&amp;name=large" /&gt;
+https://twitter.com/ikashnitsky/status/1378673154730647555
+]] 
+???
+#===#RotateTheDamnPlot
+
+---
+layout: false
+class: bg-main1 split-10
+
+.column[.content.sideways-rl[
+.font4[Dotplot blog post]  
+]]
+
+.column[.content[
+&lt;iframe width="980px" height="630px" style="background: #FFFFFF;" src="https://ikashnitsky.github.io/2019/dotplot/"&gt;&lt;/iframe&gt;
+https://ikashnitsky.github.io/2019/dotplot
+]]
+
+???
+#===Dotplot blog post
+
+
+
+---
+layout: true
+class: bg-white split-10
+
+.column[.content.sideways-rl[
+.font5.main1[figure improvement]  
+]]
+
+.column[.content.vmiddle.center[
+{{content}}
+]]
+
+---
+count:true
+&lt;img width="90%" src="https://i.imgur.com/OX29e5f.png" /&gt;
+https://doi.org/10.1186/s41118-019-0057-y
+
+---
+count:false
+&lt;img width="80%" src="https://i.imgur.com/LJdMuGf.png" /&gt;
+https://gist.github.com/ikashnitsky/2800295e304b4858be553432de4a0d11
+
+---
+count:false
+&lt;img width="100%" src="https://i.imgur.com/LFsmc42.png" /&gt;
+https://twitter.com/ikashnitsky/status/1192901559568523269
+
+???
+#===example of a figure improvement
+
+
+---
+layout: false
+class: bg-black hide-slide-number
+
+.font5.white.center[
+rule 2&lt;br&gt;&lt;br&gt;on slides, text should be as large as possible
+]  
+???
+#===RULE 2
+
+
+---
+layout: false
+class: bg-white
+
+.column[.content.center[
+&lt;img width="70%" src="https://pbs.twimg.com/media/EyeZRl_XEAELLvu?format=jpg&amp;name=medium" /&gt;
+https://twitter.com/ikashnitsky/status/1380247030463881224
+]] 
+???
+#===#IncreaseTheDamnFont
+
+
+---
+layout: false
+class: bg-main1 split-10
+
+.column[.content.sideways-rl[
+.font5[[@DamnPlot](https://twitter.com/DamnPlot)]  
+]]
+
+.column[.content.center[
+&lt;img src="https://i.imgur.com/iht1Jub.png" style="width: 70%" /&gt;
+
+https://twitter.com/DamnPlot
+]]
+???
+#===DamnPlot
+
+---
+layout: false
+class: bg-main1
+
+.column[.content.center[
+&lt;img width="70%" src="https://i.imgur.com/u1nCiJt.jpg" /&gt;
+]] 
+???
+#===Poor slide
+
+
+---
+layout: false
+class: bg-main1
+
+.column[.content.center[
+&lt;img width="90%" src="https://i.imgur.com/bYePASN.jpg" /&gt;
+]] 
+???
+#===Leo
+
+
+---
+layout: false
+class: bg-main1
+
+.column[.content.center[
+&lt;img width="90%" src="https://i.imgur.com/nvNEc2F.jpg" /&gt;
+]] 
+???
+#===Leo 2
+
+
+---
+layout: false
+class: bg-main1
+
+.column[.content.center[
+&lt;img width="90%" src="https://i.imgur.com/KpBVKP1.png" /&gt;
+]] 
+???
+#===my plot life expectancy
+
+
+
+---
+layout: false
+class: bg-black hide-slide-number
+
+.font5.white.center[
+rule 3&lt;br&gt;&lt;br&gt;mind colors, especially regarding colorblind friendliness
+]  
+???
+#===RULE 3
+
+---
+layout: false
+class: bg-main1
+
+.column[.content[
+<blockquote class="twitter-tweet" data-conversation="none" align="center" data-width="550" data-lang="en" data-dnt="true" data-theme="dark"><p lang="und" dir="ltr"><a href="https://t.co/KPqzPh06Iq">https://t.co/KPqzPh06Iq</a> <a href="https://t.co/P1YWTIWooR">pic.twitter.com/P1YWTIWooR</a></p>&mdash; Ilya Kashnitsky (@ikashnitsky) <a href="https://twitter.com/ikashnitsky/status/1257952618267148289?ref_src=twsrc%5Etfw">May 6, 2020</a></blockquote>
+
+]] 
+???
+#===Colorblind map example
+
+
+---
+layout: false
+class: bg-main1
+
+.column[.content[
+<blockquote class="twitter-tweet" align="center" data-width="550" data-lang="en" data-dnt="true" data-theme="dark"><p lang="en" dir="ltr">After 3 years of neglecting them, I am - finally - taking the time to update viridis(Lite). It will come with 3 new and beautiful color maps, all colorblind-friendly. Here is a preview to wait until they ship to CRAN later this week :-) <a href="https://twitter.com/hashtag/rstats?src=hash&amp;ref_src=twsrc%5Etfw">#rstats</a> <a href="https://twitter.com/hashtag/dataviz?src=hash&amp;ref_src=twsrc%5Etfw">#dataviz</a> <a href="https://t.co/dogF6pi9r3">pic.twitter.com/dogF6pi9r3</a></p>&mdash; Simon Garnier (@sjmgarnier) <a href="https://twitter.com/sjmgarnier/status/1381250856239124482?ref_src=twsrc%5Etfw">April 11, 2021</a></blockquote>
+
+]] 
+???
+#===viridis update
+
+
+
+
+---
+layout: false
+class: bg-black hide-slide-number
+
+.font5.white.center[
+rule 4&lt;br&gt;&lt;br&gt;highlight what's important for the story friendliness
+]  
+???
+#===RULE 4
+
+
+---
+layout: false
+class: bg-main1
+
+.column[.content[
+<blockquote class="twitter-tweet" align="center" data-width="550" data-lang="en" data-dnt="true" data-theme="dark"><p lang="en" dir="ltr">Spent way too long trying to work out what was so special about her knee <a href="https://t.co/0epzaJeQKk">https://t.co/0epzaJeQKk</a></p>&mdash; Alex Selby-Boothroyd (@AlexSelbyB) <a href="https://twitter.com/AlexSelbyB/status/1404075318449692674?ref_src=twsrc%5Etfw">June 13, 2021</a></blockquote>
+
+]] 
+???
+#===gymnastic circle
+
+---
+layout: false
+class: bg-main1 split-10
+
+.column[.content.sideways-rl[
+.font4[Barca Numbers]  
+]]
+
+.column[.content.center[
+&lt;iframe width="980px" height="620px" style="background: #FFFFFF;" src="https://barcanumbers.wordpress.com/2018/12/06"&gt;&lt;/iframe&gt;
+https://barcanumbers.wordpress.com/2018/12/06
+]] 
+
+???
+#===Barca Numbers
+
+
+---
+layout: false
+class: bg-main1 split-10
+
+.column[.content.sideways-rl[
+.font4[FT covid]  
+]]
+
+.column[.content.center[
+&lt;iframe width="980px" height="620px" style="background: #FFFFFF;" src="https://www.ft.com/content/a26fbf7e-48f8-11ea-aeb3-955839e06441"&gt;&lt;/iframe&gt;
+https://www.ft.com/content/a26fbf7e-48f8-11ea-aeb3-955839e06441
+]] 
+
+???
+#===FT covid
+
+
+
+
+---
+layout: false
+class: bg-black hide-slide-number
+
+.font5.white.center[
+rule 5&lt;br&gt;&lt;br&gt;plots don't have to be overly complicated to be powerful
+]  
+???
+#===RULE 5
+
+---
+layout: false
+class: bg-main1
+
+.column[.content[
+<blockquote class="twitter-tweet" align="center" data-width="550" data-lang="en" data-dnt="true" data-theme="dark"><p lang="en" dir="ltr">Climate change is happening now &amp; is happening everywhere. Our lives are already being affected by the warming of the planet.<br><br>Human activities are causing these fundamental changes to the climate. Burning fossil fuels &amp; deforestation are the primary reasons.<br><br>Our choices matter. <a href="https://t.co/SPnkVYq10u">pic.twitter.com/SPnkVYq10u</a></p>&mdash; Ed Hawkins (@ed_hawkins) <a href="https://twitter.com/ed_hawkins/status/1380478355921854466?ref_src=twsrc%5Etfw">April 9, 2021</a></blockquote>
+
+]] 
+???
+#===climate stripes
+
+
+---
+layout: false
+class: bg-main1
+
+.column[.content[
+<blockquote class="twitter-tweet" align="center" data-width="550" data-lang="en" data-dnt="true" data-theme="dark"><p lang="en" dir="ltr">Austria vs Germany ⚽️ The First 111 Years <a href="https://twitter.com/hashtag/AUTGER?src=hash&amp;ref_src=twsrc%5Etfw">#AUTGER</a> international <a href="https://twitter.com/hashtag/football?src=hash&amp;ref_src=twsrc%5Etfw">#football</a> results since 1907: <br>🇦🇹 10 wins<br>🇩🇪 25 wins<br>✖️ 6 draws<a href="https://twitter.com/hashtag/dataviz?src=hash&amp;ref_src=twsrc%5Etfw">#dataviz</a> by <a href="https://twitter.com/tinafrank?ref_src=twsrc%5Etfw">@tinafrank</a> &amp; <a href="https://twitter.com/metropop_eu?ref_src=twsrc%5Etfw">@metropop_eu</a> <a href="https://t.co/iRjXmpNsOe">pic.twitter.com/iRjXmpNsOe</a></p>&mdash; ramon bauer (@metropop_eu) <a href="https://twitter.com/metropop_eu/status/1003238957499518976?ref_src=twsrc%5Etfw">June 3, 2018</a></blockquote>
+
+]] 
+???
+#===Austria vs Germany
+
+
+---
+layout: false
+class: bg-main1 split-10
+
+.column[.content.sideways-rl[
+.font4[528 longest living]  
+]]
+
+.column[.content.center[
+&lt;img width="57%" src="https://fivethirtyeight.com/wp-content/uploads/2015/05/goldenburg-oldest-person-chart1.png" /&gt;
+
+https://fivethirtyeight.com/features/why-the-oldest-person-in-the-world-keeps-dying
+]] 
+
+???
+#===528 longest living
+
+
+
+
+layout: false
+class: bg-blue-gray hide-slide-number
+
+.font5.white.center[
+(not a rule) suggestion
+]  
+???
+#===(not a rule) suggestion
+
+
+layout: false
+class: bg-blue hide-slide-number
+
+.font5.white.center[
+When possible and meaningful for you story -- animate
+]  
+???
+#===animate when possible
+
+
+---
+layout: false
+class: bg-main1
+
+.column[.content[
+<blockquote class="twitter-tweet" align="center" data-width="550" data-lang="en" data-dnt="true" data-theme="dark"><p lang="en" dir="ltr">⚽️ With the <a href="https://twitter.com/hashtag/EURO2020?src=hash&amp;ref_src=twsrc%5Etfw">#EURO2020</a> approaching, you&#39;ve probably all been wondering what ~1 million of passes would looks like if all shot at the same time, right? Well wonder no more...<br><br>Thanks <a href="https://twitter.com/StatsBomb?ref_src=twsrc%5Etfw">@StatsBomb</a> for making the data openly available! <a href="https://twitter.com/observablehq?ref_src=twsrc%5Etfw">@observablehq</a> notebook <a href="https://t.co/dO4sfQpRi4">https://t.co/dO4sfQpRi4</a> <a href="https://t.co/fqbdK6PjRd">pic.twitter.com/fqbdK6PjRd</a></p>&mdash; Karim Douïeb (@karim_douieb) <a href="https://twitter.com/karim_douieb/status/1402522532276752389?ref_src=twsrc%5Etfw">June 9, 2021</a></blockquote>
+
+]] 
+???
+#===million passes
+
+
+---
+layout: false
+class: bg-main1 split-10
+
+.column[.content.sideways-rl[
+.font4[barchart race]  
+]]
+
+.column[.content.center[
+&lt;iframe width="980px" height="620px" style="background: #FFFFFF;" src="https://www.ft.com/video/83703ffe-cd5c-4591-9b4f-a3c087aa6d19"&gt;&lt;/iframe&gt;
+https://www.ft.com/video/83703ffe-cd5c-4591-9b4f-a3c087aa6d19
+]] 
+
+???
+#===barchart race cities
+
+
+---
+layout: false
+class: bg-main1 split-10
+
+.column[.content.sideways-rl[
+.font4[hmdexp shiny]  
+]]
+
+.column[.content.center[
+&lt;iframe width="980px" height="620px" style="background: #FFFFFF;" src="https://jschoeley.shinyapps.io/hmdexp"&gt;&lt;/iframe&gt;
+https://jschoeley.shinyapps.io/hmdexp
+]] 
+
+???
+#===hmdexp shiny
+
+
+
+---
+layout: false
+class: bg-indigo hide-slide-number
+
+.font5.white.center[
+Dataviz principles
+]  
+???
+#===Dataviz principles
+
+
+---
+layout: false
+class: bg-main1 split-10
+
+.column[.content.sideways-rl[
+.font4[policyviz cheatsheet]  
+]]
+
+.column[.content.center[
+&lt;iframe width="980px" height="620px" style="background: #FFFFFF;" src="https://policyviz.com/2018/08/07/dataviz-cheatsheet/"&gt;&lt;/iframe&gt;
+https://policyviz.com/2018/08/07/dataviz-cheatsheet
+]] 
+
+???
+#===policyviz cheatsheet
+
+---
+layout: false
+class: bg-main1 split-10
+
+.column[.content.sideways-rl[
+.font4[FT visual vocabulary]  
+]]
+
+.column[.content.center[
+&lt;iframe width="980px" height="620px" style="background: #FFFFFF;" src="https://ft-interactive.github.io/visual-vocabulary/"&gt;&lt;/iframe&gt;
+https://ft-interactive.github.io/visual-vocabulary/
+]] 
+
+???
+#===FT visual vocabulary
+
+
+---
+layout: false
+class: bg-main1 split-10
+
+.column[.content.sideways-rl[
+.font4[Claus Wilke]  
+]]
+
+.column[.content.center[
+&lt;iframe width="980px" height="620px" style="background: #FFFFFF;" src="https://serialmentor.com/dataviz/"&gt;&lt;/iframe&gt;
+https://serialmentor.com/dataviz
+]] 
+
+???
+#===Wilke book
+
+
+---
+layout: false
+class: bg-main1 split-10
+
+.column[.content.sideways-rl[
+.font4[Kieran Healy]  
+]]
+
+.column[.content.center[
+&lt;iframe width="980px" height="620px" style="background: #FFFFFF;" src="http://socviz.co/index.html"&gt;&lt;/iframe&gt;
+http://socviz.co/index.html
+]] 
+
+???
+#===Healy book
+
+
+
+---
+layout: false
+class: bg-pink hide-slide-number
+
+.font5.white.center[
+Jonas Shoeley's slides&lt;br&gt;
+]  
+.font4.white.center[
+github.com/jschoeley/idem_viz
+]
+???
+#===Jonas Shoeley's slides
+
+    </textarea>
+<style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
+<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script>var slideshow = remark.create({
+"ratio": "16:9",
+"highlightStyle": "github",
+"highlightLines": true,
+"countIncrementalSlides": false
+});
+if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
+  window.dispatchEvent(new Event('resize'));
+});
+(function(d) {
+  var s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
+  if (!r) return;
+  s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
+  d.head.appendChild(s);
+})(document);
+
+(function(d) {
+  var el = d.getElementsByClassName("remark-slides-area");
+  if (!el) return;
+  var slide, slides = slideshow.getSlides(), els = el[0].children;
+  for (var i = 1; i < slides.length; i++) {
+    slide = slides[i];
+    if (slide.properties.continued === "true" || slide.properties.count === "false") {
+      els[i - 1].className += ' has-continuation';
+    }
+  }
+  var s = d.createElement("style");
+  s.type = "text/css"; s.innerHTML = "@media print { .has-continuation { display: none; } }";
+  d.head.appendChild(s);
+})(document);
+// delete the temporary CSS (for displaying all slides initially) when the user
+// starts to view slides
+(function() {
+  var deleted = false;
+  slideshow.on('beforeShowSlide', function(slide) {
+    if (deleted) return;
+    var sheets = document.styleSheets, node;
+    for (var i = 0; i < sheets.length; i++) {
+      node = sheets[i].ownerNode;
+      if (node.dataset["target"] !== "print-only") continue;
+      node.parentNode.removeChild(node);
+    }
+    deleted = true;
+  });
+})();
+(function() {
+  "use strict"
+  // Replace <script> tags in slides area to make them executable
+  var scripts = document.querySelectorAll(
+    '.remark-slides-area .remark-slide-container script'
+  );
+  if (!scripts.length) return;
+  for (var i = 0; i < scripts.length; i++) {
+    var s = document.createElement('script');
+    var code = document.createTextNode(scripts[i].textContent);
+    s.appendChild(code);
+    var scriptAttrs = scripts[i].attributes;
+    for (var j = 0; j < scriptAttrs.length; j++) {
+      s.setAttribute(scriptAttrs[j].name, scriptAttrs[j].value);
+    }
+    scripts[i].parentElement.replaceChild(s, scripts[i]);
+  }
+})();
+(function() {
+  var links = document.getElementsByTagName('a');
+  for (var i = 0; i < links.length; i++) {
+    if (/^(https?:)?\/\//.test(links[i].getAttribute('href'))) {
+      links[i].target = '_blank';
+    }
+  }
+})();
+// adds .remark-code-has-line-highlighted class to <pre> parent elements
+// of code chunks containing highlighted lines with class .remark-code-line-highlighted
+(function(d) {
+  const hlines = d.querySelectorAll('.remark-code-line-highlighted');
+  const preParents = [];
+  const findPreParent = function(line, p = 0) {
+    if (p > 1) return null; // traverse up no further than grandparent
+    const el = line.parentElement;
+    return el.tagName === "PRE" ? el : findPreParent(el, ++p);
+  };
+
+  for (let line of hlines) {
+    let pre = findPreParent(line);
+    if (pre && !preParents.includes(pre)) preParents.push(pre);
+  }
+  preParents.forEach(p => p.classList.add("remark-code-has-line-highlighted"));
+})(document);</script>
+
+<script>
+slideshow._releaseMath = function(el) {
+  var i, text, code, codes = el.getElementsByTagName('code');
+  for (i = 0; i < codes.length;) {
+    code = codes[i];
+    if (code.parentNode.tagName !== 'PRE' && code.childElementCount === 0) {
+      text = code.textContent;
+      if (/^\\\((.|\s)+\\\)$/.test(text) || /^\\\[(.|\s)+\\\]$/.test(text) ||
+          /^\$\$(.|\s)+\$\$$/.test(text) ||
+          /^\\begin\{([^}]+)\}(.|\s)+\\end\{[^}]+\}$/.test(text)) {
+        code.outerHTML = code.innerHTML;  // remove <code></code>
+        continue;
+      }
+    }
+    i++;
+  }
+};
+slideshow._releaseMath(document);
+</script>
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+(function () {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src  = 'https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML';
+  if (location.protocol !== 'file:' && /^https?:/.test(script.src))
+    script.src  = script.src.replace(/^https?:/, '');
+  document.getElementsByTagName('head')[0].appendChild(script);
+})();
+</script>
+  </body>
+</html>

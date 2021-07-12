@@ -1,5 +1,5 @@
 #===============================================================================
-# 2019-07-08 -- BSSD dataviz
+# 2021-07-12 -- BSSD dataviz
 # Tidy exercises
 # Ilya Kashnitsky, ilya.kashnitsky@gmail.com
 #===============================================================================
@@ -30,7 +30,7 @@ pop <- read_excel(path = 'data/data-denmark.xlsx', sheet = 'pop')
 # Ex 2. pop dataframe -----------------------------------------------------
 
 # - subset only the year 2004
-# - transform to wide format using the column "sex" (spread)
+# - transform to wide format using the column "sex" (pivot_wider)
 # - get rid of the column for both sex
 # - calculate the sex ratio (males to females)
 # Q: in which region the SR is highest at ages 15, 45, over75 (coded as "open")
@@ -40,9 +40,9 @@ pop <- read_excel(path = 'data/data-denmark.xlsx', sheet = 'pop')
 # Ex 3. joined dataframe --------------------------------------------------
 
 # - join the two dataframes (left_join OR inner_join)
-# - calculate age specific mortality ratios
+# - calculate age specific death ratios
 # - subset only the ages 15-59 and year 2001
-# Q: what is the average ratio of male ASMR to female ASMR in each region? 
+# Q: what is the average ratio of male ASDR to female ASDR in each region? 
 # Tip: use summarize
 
 
@@ -50,7 +50,7 @@ pop <- read_excel(path = 'data/data-denmark.xlsx', sheet = 'pop')
 # Ex 4. joined dataframe (df) ---------------------------------------------
 
 # - subset only both sex
-# - transform to wide format using the column "year" (spread)
-# - calculate the growth of ASMR between 2005 and 2001
-# Q: in which region the average growth/decrease in ASMR was largest?
+# - transform to wide format using the column "year" (pivot_wider)
+# - calculate the growth of ASDR between 2005 and 2001
+# Q: in which region the average growth/decrease in ASDR was largest?
 

@@ -1,0 +1,645 @@
+---
+title: "Dataviz art/skill"
+subtitle: "Create powerful dataviz with R"
+author: "<br><br>**Ilya Kashnitsky**"
+date: "<br>Barcelona Summer School of Demography 2021<br>2021-07-12"
+output:
+  xaringan::moon_reader:
+    lib_dir: libs
+    css: ["shinobi", "ninjutsu" , "assets/ninpo.css"]
+    self_contained: false
+    nature:
+      ratio: "16:9"
+      highlightStyle: github
+      highlightLines: true
+      countIncrementalSlides: false
+---
+
+```{r setup, include=FALSE}
+options(htmltools.dir.version = FALSE)
+library(knitr)
+library(tweetrmd)
+```
+
+layout: false
+class: bg-main1 split-30 hide-slide-number
+
+.column.bg-main3[
+]
+.column.slide-in-right[
+.sliderbox.bg-main2.vmiddle[
+.font5[before we start]
+]]
+
+???
+#===before we start
+
+---
+layout: false
+class: bg-main1 split-10
+
+.column[.content.sideways-rl[
+.font5[WTF plot]  
+]]
+
+.column[.content.center[
+<img width="100%" src="https://i.imgur.com/LOBXId3.png" />
+
+https://twitter.com/RuJEconomics/status/1191697644499984384
+]]
+???
+#===RuJEconomics crap plot
+
+
+---
+layout: false
+class: bg-main1 split-10
+
+.column[.content.sideways-rl[
+.font4[Money/Happiness]  
+]]
+
+.column[.content[
+<iframe width="980px" height="620px" style="background: #FFFFFF;" src="https://www.visualcapitalist.com/wp-content/uploads/2018/03/money-happiness-large.html"></iframe>
+https://www.visualcapitalist.com/wp-content/uploads/2018/03/money-happiness-large.html
+]]
+
+???
+#===Money/Happiness diamond plot
+
+
+---
+layout: false
+class: bg-pink hide-slide-number
+
+.font5.white.center[
+The main link:<br>
+]  
+.font4.white.center[
+github.com/ikashnitsky/dataviz-bssd
+]
+???
+#===github link
+
+---
+layout: false
+class: bg-black hide-slide-number
+
+.font5.white.center[
+rule 0<br><br>DO VISUALIZE YOUR DATA
+]  
+???
+#===rule 0
+
+
+---
+layout: false
+class: bg-main1 split-10
+
+.column[.content.sideways-rl[
+.font4[Anscombe's Quartet]  
+]]
+
+.column[.content.center[
+<img width="80%" src="https://i.imgur.com/QA3Ss8D.png" />
+
+http://i.imgur.com/QA3Ss8D.png
+]]
+???
+#===Anscombe's Quartet
+
+
+---
+layout: false
+class: bg-main1
+
+.column[.content[
+```{r, echo=FALSE}
+tweet_embed("https://twitter.com/JustinMatejka/status/859075295059562498", align = "center", theme = "dark")
+```
+]]
+???
+#===Dino animation
+
+
+---
+layout: false
+class: bg-main1
+
+.column[.content[
+```{r, echo=FALSE}
+tweet_embed("https://twitter.com/MBozukova/status/1387094850995118081", align = "center", theme = "dark")
+```
+]] 
+???
+#===MBozukova distributions
+
+
+---
+layout: true
+class: bg-white split-10
+
+.column[.content.sideways-rl[
+.font5.main1[Ulam spiral]  
+]]
+
+.column[.content.vmiddle.center[
+{{content}}
+]]
+
+---
+count:true
+<img width="60%" src="https://i.imgur.com/Ym0oKHj.png" />
+
+---
+count:false
+<img width="100%" src="https://i.imgur.com/T7xz3UN.png" />
+
+---
+count:false
+<img width="100%" src="https://i.imgur.com/MxUNZxV.png" />
+
+???
+#===Ulam spiral
+
+
+---
+layout: false
+class: bg-main1
+
+.column[.content[
+```{r, echo=FALSE}
+tweet_embed("https://twitter.com/mikeleeco/status/876792944396730368", align = "center", theme = "dark")
+```
+]] 
+???
+#===US vaccination
+
+
+---
+layout: false
+class: bg-black hide-slide-number
+
+.font5.white.center[
+rule 1<br><br>text should be horizontal
+]  
+???
+#===RULE 1
+
+---
+layout: false
+class: bg-white
+
+.column[.content.center[
+<img width="80%" src="https://pbs.twimg.com/media/EyeZQtdWUAUlBbR?format=png&name=large" />
+https://twitter.com/ikashnitsky/status/1378673154730647555
+]] 
+???
+#===#RotateTheDamnPlot
+
+---
+layout: false
+class: bg-main1 split-10
+
+.column[.content.sideways-rl[
+.font4[Dotplot blog post]  
+]]
+
+.column[.content[
+<iframe width="980px" height="630px" style="background: #FFFFFF;" src="https://ikashnitsky.github.io/2019/dotplot/"></iframe>
+https://ikashnitsky.github.io/2019/dotplot
+]]
+
+???
+#===Dotplot blog post
+
+
+
+---
+layout: true
+class: bg-white split-10
+
+.column[.content.sideways-rl[
+.font5.main1[figure improvement]  
+]]
+
+.column[.content.vmiddle.center[
+{{content}}
+]]
+
+---
+count:true
+<img width="90%" src="https://i.imgur.com/OX29e5f.png" />
+https://doi.org/10.1186/s41118-019-0057-y
+
+---
+count:false
+<img width="80%" src="https://i.imgur.com/LJdMuGf.png" />
+https://gist.github.com/ikashnitsky/2800295e304b4858be553432de4a0d11
+
+---
+count:false
+<img width="100%" src="https://i.imgur.com/LFsmc42.png" />
+https://twitter.com/ikashnitsky/status/1192901559568523269
+
+???
+#===example of a figure improvement
+
+
+---
+layout: false
+class: bg-black hide-slide-number
+
+.font5.white.center[
+rule 2<br><br>on slides, text should be as large as possible
+]  
+???
+#===RULE 2
+
+
+---
+layout: false
+class: bg-white
+
+.column[.content.center[
+<img width="70%" src="https://pbs.twimg.com/media/EyeZRl_XEAELLvu?format=jpg&name=medium" />
+https://twitter.com/ikashnitsky/status/1380247030463881224
+]] 
+???
+#===#IncreaseTheDamnFont
+
+
+---
+layout: false
+class: bg-main1 split-10
+
+.column[.content.sideways-rl[
+.font5[[@DamnPlot](https://twitter.com/DamnPlot)]  
+]]
+
+.column[.content.center[
+<img src="https://i.imgur.com/iht1Jub.png" style="width: 70%" />
+
+https://twitter.com/DamnPlot
+]]
+???
+#===DamnPlot
+
+---
+layout: false
+class: bg-main1
+
+.column[.content.center[
+<img width="70%" src="https://i.imgur.com/u1nCiJt.jpg" />
+]] 
+???
+#===Poor slide
+
+
+---
+layout: false
+class: bg-main1
+
+.column[.content.center[
+<img width="90%" src="https://i.imgur.com/bYePASN.jpg" />
+]] 
+???
+#===Leo
+
+
+---
+layout: false
+class: bg-main1
+
+.column[.content.center[
+<img width="90%" src="https://i.imgur.com/nvNEc2F.jpg" />
+]] 
+???
+#===Leo 2
+
+
+---
+layout: false
+class: bg-main1
+
+.column[.content.center[
+<img width="90%" src="https://i.imgur.com/KpBVKP1.png" />
+]] 
+???
+#===my plot life expectancy
+
+
+
+---
+layout: false
+class: bg-black hide-slide-number
+
+.font5.white.center[
+rule 3<br><br>mind colors, especially regarding colorblind friendliness
+]  
+???
+#===RULE 3
+
+---
+layout: false
+class: bg-main1
+
+.column[.content[
+```{r, echo=FALSE}
+tweet_embed("https://twitter.com/ikashnitsky/status/1257952618267148289", align = "center", theme = "dark", hide_thread = T)
+```
+]] 
+???
+#===Colorblind map example
+
+
+---
+layout: false
+class: bg-main1
+
+.column[.content[
+```{r, echo=FALSE}
+tweet_embed("https://twitter.com/sjmgarnier/status/1381250856239124482", align = "center", theme = "dark")
+```
+]] 
+???
+#===viridis update
+
+
+
+
+---
+layout: false
+class: bg-black hide-slide-number
+
+.font5.white.center[
+rule 4<br><br>highlight what's important for the story friendliness
+]  
+???
+#===RULE 4
+
+
+---
+layout: false
+class: bg-main1
+
+.column[.content[
+```{r, echo=FALSE}
+tweet_embed("https://twitter.com/AlexSelbyB/status/1404075318449692674", align = "center", theme = "dark", hide_thread = T)
+```
+]] 
+???
+#===gymnastic circle
+
+---
+layout: false
+class: bg-main1 split-10
+
+.column[.content.sideways-rl[
+.font4[Barca Numbers]  
+]]
+
+.column[.content.center[
+<iframe width="980px" height="620px" style="background: #FFFFFF;" src="https://barcanumbers.wordpress.com/2018/12/06"></iframe>
+https://barcanumbers.wordpress.com/2018/12/06
+]] 
+
+???
+#===Barca Numbers
+
+
+---
+layout: false
+class: bg-main1 split-10
+
+.column[.content.sideways-rl[
+.font4[FT covid]  
+]]
+
+.column[.content.center[
+<iframe width="980px" height="620px" style="background: #FFFFFF;" src="https://www.ft.com/content/a26fbf7e-48f8-11ea-aeb3-955839e06441"></iframe>
+https://www.ft.com/content/a26fbf7e-48f8-11ea-aeb3-955839e06441
+]] 
+
+???
+#===FT covid
+
+
+
+
+---
+layout: false
+class: bg-black hide-slide-number
+
+.font5.white.center[
+rule 5<br><br>plots don't have to be overly complicated to be powerful
+]  
+???
+#===RULE 5
+
+---
+layout: false
+class: bg-main1
+
+.column[.content[
+```{r, echo=FALSE}
+tweet_embed("https://twitter.com/ed_hawkins/status/1380478355921854466", align = "center", theme = "dark", hide_thread = T)
+```
+]] 
+???
+#===climate stripes
+
+
+---
+layout: false
+class: bg-main1
+
+.column[.content[
+```{r, echo=FALSE}
+tweet_embed("https://twitter.com/metropop_eu/status/1003238957499518976", align = "center", theme = "dark", hide_thread = T)
+```
+]] 
+???
+#===Austria vs Germany
+
+
+---
+layout: false
+class: bg-main1 split-10
+
+.column[.content.sideways-rl[
+.font4[528 longest living]  
+]]
+
+.column[.content.center[
+<img width="57%" src="https://fivethirtyeight.com/wp-content/uploads/2015/05/goldenburg-oldest-person-chart1.png" />
+
+https://fivethirtyeight.com/features/why-the-oldest-person-in-the-world-keeps-dying
+]] 
+
+???
+#===528 longest living
+
+
+
+
+layout: false
+class: bg-blue-gray hide-slide-number
+
+.font5.white.center[
+(not a rule) suggestion
+]  
+???
+#===(not a rule) suggestion
+
+
+layout: false
+class: bg-blue hide-slide-number
+
+.font5.white.center[
+When possible and meaningful for you story -- animate
+]  
+???
+#===animate when possible
+
+
+---
+layout: false
+class: bg-main1
+
+.column[.content[
+```{r, echo=FALSE}
+tweet_embed("https://twitter.com/karim_douieb/status/1402522532276752389", align = "center", theme = "dark", hide_thread = T)
+```
+]] 
+???
+#===million passes
+
+
+---
+layout: false
+class: bg-main1 split-10
+
+.column[.content.sideways-rl[
+.font4[barchart race]  
+]]
+
+.column[.content.center[
+<iframe width="980px" height="620px" style="background: #FFFFFF;" src="https://www.ft.com/video/83703ffe-cd5c-4591-9b4f-a3c087aa6d19"></iframe>
+https://www.ft.com/video/83703ffe-cd5c-4591-9b4f-a3c087aa6d19
+]] 
+
+???
+#===barchart race cities
+
+
+---
+layout: false
+class: bg-main1 split-10
+
+.column[.content.sideways-rl[
+.font4[hmdexp shiny]  
+]]
+
+.column[.content.center[
+<iframe width="980px" height="620px" style="background: #FFFFFF;" src="https://jschoeley.shinyapps.io/hmdexp"></iframe>
+https://jschoeley.shinyapps.io/hmdexp
+]] 
+
+???
+#===hmdexp shiny
+
+
+
+---
+layout: false
+class: bg-indigo hide-slide-number
+
+.font5.white.center[
+Dataviz principles
+]  
+???
+#===Dataviz principles
+
+
+---
+layout: false
+class: bg-main1 split-10
+
+.column[.content.sideways-rl[
+.font4[policyviz cheatsheet]  
+]]
+
+.column[.content.center[
+<iframe width="980px" height="620px" style="background: #FFFFFF;" src="https://policyviz.com/2018/08/07/dataviz-cheatsheet/"></iframe>
+https://policyviz.com/2018/08/07/dataviz-cheatsheet
+]] 
+
+???
+#===policyviz cheatsheet
+
+---
+layout: false
+class: bg-main1 split-10
+
+.column[.content.sideways-rl[
+.font4[FT visual vocabulary]  
+]]
+
+.column[.content.center[
+<iframe width="980px" height="620px" style="background: #FFFFFF;" src="https://ft-interactive.github.io/visual-vocabulary/"></iframe>
+https://ft-interactive.github.io/visual-vocabulary/
+]] 
+
+???
+#===FT visual vocabulary
+
+
+---
+layout: false
+class: bg-main1 split-10
+
+.column[.content.sideways-rl[
+.font4[Claus Wilke]  
+]]
+
+.column[.content.center[
+<iframe width="980px" height="620px" style="background: #FFFFFF;" src="https://serialmentor.com/dataviz/"></iframe>
+https://serialmentor.com/dataviz
+]] 
+
+???
+#===Wilke book
+
+
+---
+layout: false
+class: bg-main1 split-10
+
+.column[.content.sideways-rl[
+.font4[Kieran Healy]  
+]]
+
+.column[.content.center[
+<iframe width="980px" height="620px" style="background: #FFFFFF;" src="http://socviz.co/index.html"></iframe>
+http://socviz.co/index.html
+]] 
+
+???
+#===Healy book
+
+
+
+---
+layout: false
+class: bg-pink hide-slide-number
+
+.font5.white.center[
+Jonas Shoeley's slides<br>
+]  
+.font4.white.center[
+github.com/jschoeley/idem_viz
+]
+???
+#===Jonas Shoeley's slides
+
