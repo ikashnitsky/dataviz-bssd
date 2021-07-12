@@ -21,6 +21,8 @@ Practical coding sessions start from basic introduction to tidy data manipulatio
 - Basic familiarity with R, consider [RStudio Primers](https://rstudio.cloud/learn/primers)
 
 
+# Alternative [GDrive folder with materials](https://bit.ly/bssd21-gdrive)
+
 
 # Outline
 
@@ -49,11 +51,23 @@ Practical coding sessions start from basic introduction to tidy data manipulatio
 - Interactivity: {plotly}, {gganimate}
 - Intro to {shiny}
 
-
-# Links to submit in-class assignments
-- Ugly `ggplot2` theme -- http://bit.ly/21-ugly-theme (day 2)
-
-
-
 [slides-gg]: /slides/slides-dataviz-bssd.html
 [slides-map]: https://
+
+# Links to submit in-class assignments
+- Ugly `ggplot2` theme -- https://bit.ly/bssd21-ugly (day 2)
+
+
+# Various cool stuff I promissed to share (in order of taking notes)
+
+## Day 1
+
+- John Burn-Murdoch's [RStudio 2021 talk](https://youtu.be/L5_4kuoiiKU)
+- Nathaniel Smith's [talk on the proinicples of viridis palettes](https://youtu.be/xAoljeRJ3lU)
+- Hans Rosling: [sample talk](https://youtu.be/BZoKfap4g4w); [Factfulness](https://www.amazon.com/Factfulness-Reasons-World-Things-Better/dp/1250107814); [gapminder.org](https://www.gapminder.org/tools/#$chart-type=bubbles&url=v1)
+- [Thread on excess death plots](https://twitter.com/ikashnitsky/status/1409472083965349892) 
+- [Post on efficient RStudio layout](https://ikashnitsky.github.io/2018/perfect-rstudio-layout/)
+- Jonas Schoeley's [HMD explorer app](https://jschoeley.shinyapps.io/hmdexp/)
+- Hadley Wickham's [R For Data Science](https://r4ds.had.co.nz)
+- Neal Grantham's [TidyTuesday Rocks app](https://nsgrantham.shinyapps.io/tidytuesdayrocks/)
+- **BONUS** Oscar Baruffa's [Big Book of R](https://www.bigbookofr.com)
