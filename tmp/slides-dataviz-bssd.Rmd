@@ -482,7 +482,7 @@ https://fivethirtyeight.com/features/why-the-oldest-person-in-the-world-keeps-dy
 
 
 
-
+---
 layout: false
 class: bg-blue-gray hide-slide-number
 
@@ -492,7 +492,7 @@ class: bg-blue-gray hide-slide-number
 ???
 #===(not a rule) suggestion
 
-
+---
 layout: false
 class: bg-blue hide-slide-number
 
