@@ -60,8 +60,6 @@ Practical coding sessions start from basic introduction to tidy data manipulatio
 
 # Various cool stuff I promissed to share (in order of taking notes)
 
-## Day 1
-
 - John Burn-Murdoch's [RStudio 2021 talk](https://youtu.be/L5_4kuoiiKU)
 - Nathaniel Smith's [talk on the proinicples of viridis palettes](https://youtu.be/xAoljeRJ3lU)
 - Hans Rosling: [sample talk](https://youtu.be/BZoKfap4g4w); [Factfulness](https://www.amazon.com/Factfulness-Reasons-World-Things-Better/dp/1250107814); [gapminder.org](https://www.gapminder.org/tools/#$chart-type=bubbles&url=v1)
@@ -71,3 +69,5 @@ Practical coding sessions start from basic introduction to tidy data manipulatio
 - Hadley Wickham's [R For Data Science](https://r4ds.had.co.nz)
 - Neal Grantham's [TidyTuesday Rocks app](https://nsgrantham.shinyapps.io/tidytuesdayrocks/)
 - **BONUS** Oscar Baruffa's [Big Book of R](https://www.bigbookofr.com)
+- [Replication materials](https://github.com/ikashnitsky/sex-gap-e0-pnas) for our recent PNAS paper
+- [Thread](https://twitter.com/ikashnitsky/status/1380247006170509312) on log transformation of the ratios
