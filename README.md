@@ -71,3 +71,5 @@ Practical coding sessions start from basic introduction to tidy data manipulatio
 - **BONUS** Oscar Baruffa's [Big Book of R](https://www.bigbookofr.com)
 - [Replication materials](https://github.com/ikashnitsky/sex-gap-e0-pnas) for our recent PNAS paper
 - [Thread](https://twitter.com/ikashnitsky/status/1380247006170509312) on log transformation of the ratios
+- Boxplot + jitter example: [tweet](https://twitter.com/ikashnitsky/status/1403645553637011461)  
+- US names shiny app: [repository](https://github.com/ikashnitsky/us-names-app); [tweet](https://twitter.com/ikashnitsky/status/1203840297911889920); [shiny app](https://ikashnitsky.shinyapps.io/us-names/)  
