@@ -45,7 +45,7 @@ world_outline <- spData::world %>%
 
 # let's use a fancy projection
 world_outline_robinson <- world_outline %>% 
-  st_transform(crs = 54030)
+  st_transform(crs = "ESRI:54030")
 
 country_borders <- world_outline_robinson %>% 
   rmapshaper::ms_innerlines()
@@ -53,18 +53,20 @@ country_borders <- world_outline_robinson %>%
 
 # map!
 world_outline_robinson %>% 
+  filter(!iso_a2 == "AQ") %>% 
   ggplot()+
-  geom_sf(fill = 7, color = NA)+
-  geom_sf(data = country_borders, size = .5, color = "#ffffff")+
-  geom_sf(data = df_plot, color = 5, size = 1.5, shape = 16)+
+  geom_sf(fill = "#673862", color = NA)+
+  geom_sf(data = country_borders, size = .25, color = "#BD92B7FF")+
+  geom_sf(data = df_plot, color = "#FDD15E", size = 1.5, shape = 16)+
   dark_theme_minimal()+
   labs(
     title = "Birth places of the participants",
-    subtitle = "IDEM 181 Dataviz course at MPIDR, June 2021",
+    subtitle = "BSSD Dataviz course at CED, July 2021",
     caption = "@ikashnitsky"
   )+
   theme(
-    plot.background = element_rect(fill = "#222222")
+    plot.background = element_rect(fill = "#222222", color = NA),
+    axis.text = element_blank()
   )
 
-ggsave("out/map-birth-places.png", width = 7, height = 5)  
+ggsave("~/Downloads/map-birth-places.png", width = 5, height = 3)  
