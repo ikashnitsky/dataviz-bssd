@@ -65,7 +65,8 @@ Practical coding sessions start from basic introduction to tidy data manipulatio
 
 
 # Links to submit in-class assignments
-<!-- - Ugly `ggplot2` theme -- https://bit.ly/bssd21-ugly (day 2) -->
+Ugly `ggplot2` theme -- https://bit.ly/bssd22-ugly (day 2)
+
 
 
 # Useful links
@@ -84,3 +85,4 @@ Practical coding sessions start from basic introduction to tidy data manipulatio
 - Boxplot + jitter example: [tweet](https://twitter.com/ikashnitsky/status/1403645553637011461)  
 - Jonas Schoeley's [HMD explorer app](https://jschoeley.shinyapps.io/hmdexp/)
 - US names shiny app: [repository](https://github.com/ikashnitsky/us-names-app); [tweet](https://twitter.com/ikashnitsky/status/1203840297911889920); [shiny app](https://ikashnitsky.shinyapps.io/us-names/)  
+- Jim Vaupel's [brilliant talk](https://twitter.com/ikashnitsky/status/1512700871968186379) on the unique central positioning of demography in science  
