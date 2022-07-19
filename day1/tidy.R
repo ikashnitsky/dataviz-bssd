@@ -38,7 +38,7 @@ pop_l <- pop_w %>% pivot_longer(contains("200"), names_to = "year")
 # Basic dplyr functions ---------------------------------------------------
 
 # filter
-pop_filt <- pop %>% filter(year=="2003", !sex=="b")
+pop_filt <- pop %>% filter(year=="y2003", !sex=="b")
 
 # magrittr !!!
 
@@ -76,7 +76,7 @@ df_sum <- pop %>%
 
 # summarise_if(is.numeric, ...)
 df_sum_if <- pop %>% 
-  spread(year, value) %>% 
+  pivot_wider(names_from = year, values_from = value) %>% 
   group_by(sex, age) %>% 
   summarise_if(.predicate = is.numeric, .funs = mean)
 
