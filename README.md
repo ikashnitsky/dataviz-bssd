@@ -43,7 +43,7 @@ Practical coding sessions start from basic introduction to tidy data manipulatio
 - Interactivity: `plotly`, `gganimate`
 
 ### Day 4, Thursday, July 21: MAPS
-- The basics of map projections
+- The basics of map projections ([slides][slides-maps])
 - With `geom_sf` maps become yet another type of dataviz
 - Useful spatial processing tricks with `rmapshaper`
 - `biscale` maps
@@ -54,7 +54,7 @@ Practical coding sessions start from basic introduction to tidy data manipulatio
 - course wrap-up
 
 [slides-gg]: https://ikashnitsky.github.io/dataviz-bssd/slides/slides-dataviz-bssd.html
-[slides-map]: https://
+[slides-maps]: https://ikashnitsky.github.io/dataviz-bssd/slides/slides-maps-bssd.html
 
 # Prerequisites
 - [R](https://cloud.r-project.org)  
