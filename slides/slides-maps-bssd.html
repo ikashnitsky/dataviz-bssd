@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html lang="en"><head>
-<script src="slides-dataviz-bssd_files/libs/clipboard/clipboard.min.js"></script>
-<script src="slides-dataviz-bssd_files/libs/quarto-html/tabby.min.js"></script>
-<script src="slides-dataviz-bssd_files/libs/quarto-html/popper.min.js"></script>
-<script src="slides-dataviz-bssd_files/libs/quarto-html/tippy.umd.min.js"></script>
-<link href="slides-dataviz-bssd_files/libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="slides-dataviz-bssd_files/libs/quarto-html/quarto-html.min.css" rel="stylesheet">
-<link href="slides-dataviz-bssd_files/libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
+<script src="slides-maps-bssd_files/libs/clipboard/clipboard.min.js"></script>
+<script src="slides-maps-bssd_files/libs/quarto-html/tabby.min.js"></script>
+<script src="slides-maps-bssd_files/libs/quarto-html/popper.min.js"></script>
+<script src="slides-maps-bssd_files/libs/quarto-html/tippy.umd.min.js"></script>
+<link href="slides-maps-bssd_files/libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="slides-maps-bssd_files/libs/quarto-html/quarto-html.min.css" rel="stylesheet">
+<link href="slides-maps-bssd_files/libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
   <meta name="generator" content="quarto-0.9.649">
 
   <meta name="author" content="  Ilya Kashnitsky">
@@ -14,8 +14,8 @@
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
-  <link rel="stylesheet" href="slides-dataviz-bssd_files/libs/revealjs/dist/reset.css">
-  <link rel="stylesheet" href="slides-dataviz-bssd_files/libs/revealjs/dist/reveal.css">
+  <link rel="stylesheet" href="slides-maps-bssd_files/libs/revealjs/dist/reset.css">
+  <link rel="stylesheet" href="slides-maps-bssd_files/libs/revealjs/dist/reveal.css">
   <style>
     code{white-space: pre-wrap;}
     span.smallcaps{font-variant: small-caps;}
@@ -24,11 +24,11 @@
     div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
     ul.task-list{list-style: none;}
   </style>
-  <link rel="stylesheet" href="slides-dataviz-bssd_files/libs/revealjs/dist/theme/quarto.css" id="theme">
-  <link href="slides-dataviz-bssd_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
-  <link href="slides-dataviz-bssd_files/libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
-  <link href="slides-dataviz-bssd_files/libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
-  <link href="slides-dataviz-bssd_files/libs/revealjs/plugin/quarto-support/footer.css" rel="stylesheet">
+  <link rel="stylesheet" href="slides-maps-bssd_files/libs/revealjs/dist/theme/quarto.css" id="theme">
+  <link href="slides-maps-bssd_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
+  <link href="slides-maps-bssd_files/libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
+  <link href="slides-maps-bssd_files/libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
+  <link href="slides-maps-bssd_files/libs/revealjs/plugin/quarto-support/footer.css" rel="stylesheet">
   <style type="text/css">
 
   .callout {
@@ -313,7 +313,7 @@
       margin-right: 0; 
     }
   </style>
-  <script src="slides-dataviz-bssd_files/libs/twitter-widget-0.0.1/widgets.js"></script>
+  <script src="slides-maps-bssd_files/libs/twitter-widget-0.0.1/widgets.js"></script>
 </head>
 <body>
   <div class="reveal">
@@ -321,427 +321,261 @@
 
 <section id="title-slide" class="center">
   <h1 class="title">Dataviz art/skill</h1>
-  <p class="subtitle">Create powerful dataviz with R</p>
+  <p class="subtitle">Maps with R</p>
   <p class="author"><br><br><strong>Ilya Kashnitsky</strong></p>
-  <p class="date"><br>Barcelona Summer School of Demography 2022<br>2022-07-18</p>
+  <p class="date"><br>Barcelona Summer School of Demography 2022<br>2022-07-21</p>
 </section>
 
 <section>
-<section id="ikashnitsky" class="title-slide slide level1 center" data-background="#00acee">
-<h1><span style="color:white"><span class="citation" data-cites="ikashnitsky">@ikashnitsky</span></span></h1>
+<section id="ifckinglovemaps" class="title-slide slide level1 center" data-background="#00acee">
+<h1><span style="color:white"><span class="citation" data-cites="IFckingLoveMaps">@IFckingLoveMaps</span></span></h1>
 
 </section>
 <section id="section" class="slide level2">
 <h2></h2>
-<div class="columns">
-<div class="column" style="width:50%;">
-<div class="cell" data-hash="slides-dataviz-bssd_cache/revealjs/unnamed-chunk-1_ba5b4a5470f140594bef59dd7fe75417">
+<div class="cell" data-hash="slides-maps-bssd_cache/revealjs/unnamed-chunk-1_94029dc7c7d42ac926d3e8174956b826">
 <div class="cell-output-display">
-<blockquote class="twitter-tweet" data-conversation="none" align="center" data-width="550" data-lang="en" data-dnt="true" data-theme="dark"><p lang="zxx" dir="ltr"><a href="https://t.co/kPn9MKaqzm">pic.twitter.com/kPn9MKaqzm</a></p>— Ilya Kashnitsky (@ikashnitsky) <a href="https://twitter.com/ikashnitsky/status/1377347138862993414?ref_src=twsrc%5Etfw">March 31, 2021</a></blockquote>
+<blockquote class="twitter-tweet" align="center" data-width="550" data-lang="en" data-dnt="true" data-theme="dark"><p lang="en" dir="ltr">Where the world want to go on holiday<br>Source: <a href="https://t.co/zuqTFJ1BpX">https://t.co/zuqTFJ1BpX</a> <a href="https://t.co/Z2qJOKq1lL">pic.twitter.com/Z2qJOKq1lL</a></p>— I Fucking Love Maps (@IFckingLoveMaps) <a href="https://twitter.com/IFckingLoveMaps/status/1229435663923240963?ref_src=twsrc%5Etfw">February 17, 2020</a></blockquote>
 
-</div>
-</div>
-</div><div class="column" style="width:50%;">
-<div class="cell" data-hash="slides-dataviz-bssd_cache/revealjs/unnamed-chunk-2_93a6f8296081eea44c02f60c8a3639eb">
-<div class="cell-output-display">
-<blockquote class="twitter-tweet" data-conversation="none" align="center" data-width="550" data-lang="en" data-dnt="true" data-theme="dark"><p lang="en" dir="ltr">Here's another while I'm avoiding grading <a href="https://t.co/4l6Sg4yMc8">pic.twitter.com/4l6Sg4yMc8</a></p>— Monica Alexander (@monjalexander) <a href="https://twitter.com/monjalexander/status/1377972237760933895?ref_src=twsrc%5Etfw">April 2, 2021</a></blockquote>
-
-</div>
-</div>
 </div>
 </div>
 </section>
 <section id="section-1" class="slide level2">
 <h2></h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<div class="cell" data-hash="slides-maps-bssd_cache/revealjs/unnamed-chunk-2_688421eb925439d9768fb8b9b17c0400">
+<div class="cell-output-display">
+<blockquote class="twitter-tweet" align="center" data-width="550" data-lang="en" data-dnt="true" data-theme="dark"><p lang="en" dir="ltr">Proud dad moment. This is a world map that my 7yo daughter sketched in half a minute to illustrate an argument she had had with a classmate on how day and night shift 🤩🗺️ <a href="https://t.co/rxydpODg6A">pic.twitter.com/rxydpODg6A</a></p>— Ilya Kashnitsky (@ikashnitsky) <a href="https://twitter.com/ikashnitsky/status/1531695114585776130?ref_src=twsrc%5Etfw">May 31, 2022</a></blockquote>
 
-<img src="https://camo.githubusercontent.com/8550e9cd92efdeed088c38e7f3fec62f8f0a0f75cb8dddc397c374c1a3cf102b/68747470733a2f2f696b6173686e6974736b792e6769746875622e696f2f64656d7265732d67656f66616365742f706f737465722d7061612d323031392f67656f66616365742d706f737465722d736d616c6c2e706e67" style="width:100%" class="r-stretch"><div class="footer">
-<p><a href="https://doi.org/10.4054/demres.2019.41.17" class="uri">https://doi.org/10.4054/demres.2019.41.17</a></p>
 </div>
+</div>
+</div><div class="column" style="width:50%;">
+<div class="cell" data-hash="slides-maps-bssd_cache/revealjs/unnamed-chunk-3_b459865b37f6bcd10d77d1cf0dbbc4b6">
+<div class="cell-output-display">
+<blockquote class="twitter-tweet" data-conversation="none" align="center" data-width="550" data-lang="en" data-dnt="true" data-theme="dark"><p lang="en" dir="ltr">Okay, this is my honest 1 minute attempt 🙈 <a href="https://t.co/UntSLZtTSg">pic.twitter.com/UntSLZtTSg</a></p>— Ilya Kashnitsky (@ikashnitsky) <a href="https://twitter.com/ikashnitsky/status/1531707262259052552?ref_src=twsrc%5Etfw">May 31, 2022</a></blockquote>
+
+</div>
+</div>
+</div>
+</div>
+</section></section>
+<section>
+<section id="map-projections" class="title-slide slide level1 center" data-background="#ffeb7f">
+<h1>Map projections</h1>
+
 </section>
 <section id="section-2" class="slide level2">
 <h2></h2>
-<div class="cell" data-hash="slides-dataviz-bssd_cache/revealjs/unnamed-chunk-3_ccde6172cdf26944ce9bb72b7f51f349">
-<div class="cell-output-display">
-<blockquote class="twitter-tweet" align="center" data-width="550" data-lang="en" data-dnt="true" data-theme="dark"><p lang="en" dir="ltr">My <a href="https://twitter.com/hashtag/dataviz?src=hash&amp;ref_src=twsrc%5Etfw">#dataviz</a> course w/ <a href="https://twitter.com/MPIDRnews?ref_src=twsrc%5Etfw">@MPIDRnews</a> &amp; <a href="https://twitter.com/IMPRS_PHDS?ref_src=twsrc%5Etfw">@IMPRS_PHDS</a> starts today. Excited and slightly nervous to deliver to 180+ participants 🙀<br>The course now has its own account here <a href="https://twitter.com/DatavizArtSkill?ref_src=twsrc%5Etfw">@DatavizArtSkill</a><br>And a hashtag <a href="https://twitter.com/hashtag/datavizartskill?src=hash&amp;ref_src=twsrc%5Etfw">#datavizartskill</a> <a href="https://t.co/uPNiFcdIvC">pic.twitter.com/uPNiFcdIvC</a></p>— Ilya Kashnitsky (@ikashnitsky) <a href="https://twitter.com/ikashnitsky/status/1404307967537713152?ref_src=twsrc%5Etfw">June 14, 2021</a></blockquote>
-
-</div>
+<iframe width="1000px" height="650px" style="background: #FFFFFF;" src="https://xkcd.com/977/">
+</iframe>
+<div class="footer">
+<p><a href="https://xkcd.com/977" class="uri">https://xkcd.com/977</a></p>
 </div>
 </section>
-<section id="section-3" class="slide level2" data-background="#ffffff">
+<section id="section-3" class="slide level2">
 <h2></h2>
 
-<img src="https://i.imgur.com/HrlVOcQ.png" style="width:100%" class="r-stretch"><div class="footer">
-<p><a href="https://doi.org/10.33612/diss.134195227" class="uri">https://doi.org/10.33612/diss.134195227</a></p>
-</div>
+<img data-src="https://i.imgur.com/HmwuO7c.png" class="r-stretch"></section>
+<section id="mercator-explained" class="slide level2">
+<h2>Mercator explained</h2>
+<iframe width="960" height="540" src="https://www.youtube.com/embed/CPQZ7NcQ6YQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="">
+</iframe>
 </section>
 <section id="section-4" class="slide level2">
 <h2></h2>
-
-<img src="https://i.imgur.com/JdGefX1.jpg" style="width:70%" class="r-stretch"></section></section>
-<section>
-<section id="before-we-start" class="title-slide slide level1 center" data-background="#ffcccc">
-<h1>before we start</h1>
-
+<iframe width="1000" height="600" src="https://www.youtube.com/embed/kIID5FDi2JQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="">
+</iframe>
 </section>
 <section id="section-5" class="slide level2">
 <h2></h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<div class="cell" data-hash="slides-maps-bssd_cache/revealjs/unnamed-chunk-4_3a5c551cd4161d30c036a7499efe80cf">
+<div class="cell-output-display">
+<blockquote class="twitter-tweet" align="center" data-width="550" data-lang="en" data-dnt="true" data-theme="dark"><p lang="en" dir="ltr">Animating the Mercator projection to the true size of each country in relation to all the others.<br><br>Now with added Antarctica!<a href="https://twitter.com/hashtag/dataviz?src=hash&amp;ref_src=twsrc%5Etfw">#dataviz</a> <a href="https://twitter.com/hashtag/maps?src=hash&amp;ref_src=twsrc%5Etfw">#maps</a> <a href="https://twitter.com/hashtag/GIS?src=hash&amp;ref_src=twsrc%5Etfw">#GIS</a> <a href="https://twitter.com/hashtag/projectionmapping?src=hash&amp;ref_src=twsrc%5Etfw">#projectionmapping</a> <a href="https://twitter.com/hashtag/mapping?src=hash&amp;ref_src=twsrc%5Etfw">#mapping</a> <a href="https://t.co/VNDRSjOpXe">pic.twitter.com/VNDRSjOpXe</a></p>— Neil Kaye (@neilrkaye) <a href="https://twitter.com/neilrkaye/status/1082660077625061384?ref_src=twsrc%5Etfw">January 8, 2019</a></blockquote>
 
-<img src="https://i.imgur.com/LOBXId3.png" width="100%" class="r-stretch"><div class="footer">
-<p><a href="https://twitter.com/RuJEconomics/status/1191697644499984384" class="uri">https://twitter.com/RuJEconomics/status/1191697644499984384</a></p>
 </div>
+</div>
+</div><div class="column" style="width:50%;">
+<div class="cell" data-hash="slides-maps-bssd_cache/revealjs/unnamed-chunk-5_0639ffec6a7ad8ba23781dae68140c5c">
+<div class="cell-output-display">
+<blockquote class="twitter-tweet" align="center" data-width="550" data-lang="en" data-dnt="true" data-theme="dark"><p lang="en" dir="ltr">We live by the <a href="https://twitter.com/hashtag/Mercator?src=hash&amp;ref_src=twsrc%5Etfw">#Mercator</a> projection of the world. Check yourself the true size of your country 🌍<br><br>For example, Greenland and Africa are shown in Mercator projection as roughly the same size, although in reality Africa is about fourteen times larger!<br><br>By <a href="https://twitter.com/neilrkaye?ref_src=twsrc%5Etfw">@neilrkaye</a> <a href="https://t.co/km1tJO80qX">pic.twitter.com/km1tJO80qX</a></p>— Zbigniew PISARSKI 🇺🇦 (@Pisarski) <a href="https://twitter.com/Pisarski/status/1052486032766197760?ref_src=twsrc%5Etfw">October 17, 2018</a></blockquote>
+
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="new-fancy-projection-waterman-butterfly" class="slide level2">
+<h2>New fancy projection (Waterman Butterfly)</h2>
+<iframe width="960" height="540" src="https://www.youtube.com/embed/_zmQInsMsXc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="">
+</iframe>
 </section>
 <section id="section-6" class="slide level2">
 <h2></h2>
-<iframe width="100%" height="650px" style="background: #FFFFFF;" src="https://www.visualcapitalist.com/wp-content/uploads/2018/03/money-happiness-large.html">
-</iframe>
-<div class="footer">
-<p><a href="https://www.visualcapitalist.com/wp-content/uploads/2018/03/money-happiness-large.html" class="uri">https://www.visualcapitalist.com/wp-content/uploads/2018/03/money-happiness-large.html</a></p>
+<div class="cell" data-hash="slides-maps-bssd_cache/revealjs/unnamed-chunk-6_9d335228f0f3d0cb172001e94e0dbb31">
+<div class="cell-output-display">
+<blockquote class="twitter-tweet" align="center" data-width="550" data-lang="en" data-dnt="true" data-theme="dark"><p lang="en" dir="ltr">behold, my greatest invention: the Mercator Globe <a href="https://t.co/AcY0XqBMCp">pic.twitter.com/AcY0XqBMCp</a></p>— ash astral 🏳️‍⚧️ (@ashastral) <a href="https://twitter.com/ashastral/status/1072313190590103557?ref_src=twsrc%5Etfw">December 11, 2018</a></blockquote>
+
 </div>
-</section></section>
-<section id="materials-for-the-course" class="title-slide slide level1 center" data-background="#ffffff">
-<h1>materials for the course</h1>
-<p><span style="font-size:1.4em"><a href="https://github.com/ikashnitsky/dataviz-bssd" class="uri">https://github.com/ikashnitsky/dataviz-bssd</a></span></p>
-</section>
-
-<section>
-<section id="rule-0-do-visualize-your-data" class="title-slide slide level1 center" data-background="#cce5cc">
-<h1>rule 0 – DO VISUALIZE YOUR DATA</h1>
-
-</section>
-<section id="anscombes-quartet" class="slide level2">
-<h2>Anscombe’s Quartet</h2>
-
-<img src="http://i.imgur.com/QA3Ss8D.png" width="70%" class="r-stretch"><div class="footer">
-<p><a href="http://i.imgur.com/QA3Ss8D.png" class="uri">http://i.imgur.com/QA3Ss8D.png</a></p>
 </div>
 </section>
 <section id="section-7" class="slide level2">
 <h2></h2>
-<div class="cell" data-hash="slides-dataviz-bssd_cache/revealjs/unnamed-chunk-4_e3c2c5af68e56cfd4fbc4db8d6df05bd">
-<div class="cell-output-display">
-<blockquote class="twitter-tweet" align="center" data-width="550" data-lang="en" data-dnt="true" data-theme="dark"><p lang="en" dir="ltr">New <a href="https://twitter.com/hashtag/chi2017?src=hash&amp;ref_src=twsrc%5Etfw">#chi2017</a> paper is up. Don't trust statistics alone, visualize your data!<a href="https://t.co/amnbAYvsq1">https://t.co/amnbAYvsq1</a> <a href="https://t.co/1s6vkge6dl">pic.twitter.com/1s6vkge6dl</a></p>— Justin Matejka (@JustinMatejka) <a href="https://twitter.com/JustinMatejka/status/859075295059562498?ref_src=twsrc%5Etfw">May 1, 2017</a></blockquote>
+<iframe width="1000px" height="650px" style="background: #FFFFFF;" src="http://epsg.io">
+</iframe>
+<div class="footer">
+<p><a href="http://epsg.io" class="uri">http://epsg.io</a></p>
+</div>
+</section></section>
+<section>
+<section id="are-we-too-focused-on-areas" class="title-slide slide level1 center">
+<h1>Are we too focused on areas?</h1>
 
-</div>
-</div>
 </section>
 <section id="section-8" class="slide level2">
 <h2></h2>
-<div class="cell" data-hash="slides-dataviz-bssd_cache/revealjs/unnamed-chunk-5_084edbe5bdd80f0f01aeab3e889c661d">
+<div class="cell" data-hash="slides-maps-bssd_cache/revealjs/unnamed-chunk-7_ab24c95ca90728008fdfdc0ef3c7d054">
 <div class="cell-output-display">
-<blockquote class="twitter-tweet" align="center" data-width="550" data-lang="en" data-dnt="true" data-theme="dark"><p lang="en" dir="ltr">Visualizing summary statistics in a <a href="https://twitter.com/hashtag/boxplot?src=hash&amp;ref_src=twsrc%5Etfw">#boxplot</a> is great. But don't forget to explore the underlying data distribution. <br><br>Thanks to <a href="https://twitter.com/JustinMatejka?ref_src=twsrc%5Etfw">@JustinMatejka</a> for this great educational dataset.<a href="https://twitter.com/hashtag/30DayChartChallenge?src=hash&amp;ref_src=twsrc%5Etfw">#30DayChartChallenge</a> | <a href="https://twitter.com/hashtag/Day27?src=hash&amp;ref_src=twsrc%5Etfw">#Day27</a> | <a href="https://twitter.com/hashtag/educational?src=hash&amp;ref_src=twsrc%5Etfw">#educational</a> <a href="https://twitter.com/hashtag/dataviz?src=hash&amp;ref_src=twsrc%5Etfw">#dataviz</a> <a href="https://twitter.com/hashtag/Rstats?src=hash&amp;ref_src=twsrc%5Etfw">#Rstats</a> <a href="https://twitter.com/hashtag/ggplot2?src=hash&amp;ref_src=twsrc%5Etfw">#ggplot2</a> <a href="https://twitter.com/hashtag/statistics?src=hash&amp;ref_src=twsrc%5Etfw">#statistics</a> <a href="https://twitter.com/hashtag/violinplot?src=hash&amp;ref_src=twsrc%5Etfw">#violinplot</a> <a href="https://t.co/JfNwMzuash">pic.twitter.com/JfNwMzuash</a></p>— Mihaela Bozukova (@MBozukova) <a href="https://twitter.com/MBozukova/status/1387094850995118081?ref_src=twsrc%5Etfw">April 27, 2021</a></blockquote>
+<blockquote class="twitter-tweet" data-conversation="none" align="center" data-width="550" data-lang="en" data-dnt="true" data-theme="dark"><p lang="en" dir="ltr">As many of you noticed the map I used is not using the proper vote results from the 2016 U.S. presidential election. I have been mislead by the map posted by Lara Trump which shows more red than it should be. Here is an updated version of the GIF: <a href="https://t.co/et2P9qn5P3">pic.twitter.com/et2P9qn5P3</a></p>— Karim Douïeb (@karim_douieb) <a href="https://twitter.com/karim_douieb/status/1181934417650040832?ref_src=twsrc%5Etfw">October 9, 2019</a></blockquote>
 
 </div>
 </div>
 </section>
-<section id="section-9" class="slide level2" data-background="#ffffff">
+<section id="section-9" class="slide level2">
 <h2></h2>
+<div class="cell" data-hash="slides-maps-bssd_cache/revealjs/unnamed-chunk-8_2f6c19e64d2268fdc141a655b299ec61">
+<div class="cell-output-display">
+<blockquote class="twitter-tweet" data-conversation="none" align="center" data-width="550" data-lang="en" data-dnt="true" data-theme="dark"><p lang="de" dir="ltr">Stärkste Partei pro Gemeinde, Nationalratswahl 2019.<br>Stärkste Partei pro Gemeinde, skaliert nach Einwohnerzahl.<br>Daten: <a href="https://twitter.com/StatSchweiz?ref_src=twsrc%5Etfw">@StatSchweiz</a>. Code: <a href="https://twitter.com/rkaravia?ref_src=twsrc%5Etfw">@rkaravia</a>. <a href="https://t.co/oecFJblkzP">pic.twitter.com/oecFJblkzP</a></p>— NZZ Visuals (@nzzvisuals) <a href="https://twitter.com/nzzvisuals/status/1186225049960943617?ref_src=twsrc%5Etfw">October 21, 2019</a></blockquote>
 
-<img src="https://i.imgur.com/Ym0oKHj.png" width="60%" class="r-stretch"><div class="footer">
-<p><a href="https://i.imgur.com/Ym0oKHj.png" class="uri">https://i.imgur.com/Ym0oKHj.png</a></p>
+</div>
+</div>
+</section></section>
+<section>
+<section id="sources-of-geodata" class="title-slide slide level1 center" data-background="#ffcccc">
+<h1>Sources of geodata</h1>
+
+</section>
+<section id="section-10" class="slide level2">
+<h2></h2>
+<iframe width="1000px" height="650px" style="background: #FFFFFF;" src="https://gadm.org/data.html">
+</iframe>
+<div class="footer">
+<p><a href="https://gadm.org/data.html" class="uri">https://gadm.org/data.html</a></p>
 </div>
 </section>
-<section id="section-10" class="slide level2" data-background="#ffffff">
+<section id="section-11" class="slide level2">
 <h2></h2>
-
-<img src="https://i.imgur.com/T7xz3UN.png" width="100%" class="r-stretch"><div class="footer">
-<p><a href="https://i.imgur.com/T7xz3UN.png" class="uri">https://i.imgur.com/T7xz3UN.png</a></p>
-</div>
-</section>
-<section id="section-11" class="slide level2" data-background="#ffffff">
-<h2></h2>
-
-<img src="https://i.imgur.com/MxUNZxV.png" width="100%" class="r-stretch"><div class="footer">
-<p><a href="https://i.imgur.com/MxUNZxV.png" class="uri">https://i.imgur.com/MxUNZxV.png</a></p>
+<iframe width="1000px" height="650px" style="background: #FFFFFF;" src="http://wiki.openstreetmap.org/wiki/Shapefiles">
+</iframe>
+<div class="footer">
+<p><a href="http://wiki.openstreetmap.org/wiki/Shapefiles" class="uri">http://wiki.openstreetmap.org/wiki/Shapefiles</a></p>
 </div>
 </section>
 <section id="section-12" class="slide level2">
 <h2></h2>
-<div class="cell" data-hash="slides-dataviz-bssd_cache/revealjs/unnamed-chunk-6_fe349228fb002d6573c92361dc90dc14">
-<div class="cell-output-display">
-<blockquote class="twitter-tweet" align="center" data-width="550" data-lang="en" data-dnt="true" data-theme="dark"><p lang="en" dir="ltr">Remade the <a href="https://twitter.com/WSJ?ref_src=twsrc%5Etfw">@WSJ</a> measles vaccination visualization using ggplot2 and the animation package <a href="https://twitter.com/hashtag/rstats?src=hash&amp;ref_src=twsrc%5Etfw">#rstats</a> <a href="https://t.co/cnIScD9ymI">pic.twitter.com/cnIScD9ymI</a></p>— Michael Lee 🚴📊🇷 (@mikeleeco) <a href="https://twitter.com/mikeleeco/status/876792944396730368?ref_src=twsrc%5Etfw">June 19, 2017</a></blockquote>
-
-</div>
-</div>
+<p>[google “download shapefile” =)]{font-size:2em”}</p>
 </section></section>
 <section>
-<section id="rule-1-text-should-be-horizontal" class="title-slide slide level1 center" data-background="#ffeb7f">
-<h1>rule 1 – text should be horizontal</h1>
+<section id="where-to-go-next" class="title-slide slide level1 center" data-background="#cefafa">
+<h1>Where to go next?</h1>
 
 </section>
 <section id="section-13" class="slide level2">
 <h2></h2>
-
-<img src="https://pbs.twimg.com/media/EyeZQtdWUAUlBbR?format=png&amp;name=large" width="80%" class="r-stretch"><div class="footer">
-<p><a href="https://twitter.com/ikashnitsky/status/1378673154730647555" class="uri">https://twitter.com/ikashnitsky/status/1378673154730647555</a></p>
+<iframe width="1000px" height="650px" style="background: #FFFFFF;" src="https://geocompr.robinlovelace.net">
+</iframe>
+<div class="footer">
+<p><a href="https://geocompr.robinlovelace.net" class="uri">https://geocompr.robinlovelace.net</a></p>
 </div>
 </section>
 <section id="section-14" class="slide level2">
 <h2></h2>
-<iframe width="100%" height="650px" style="background: #FFFFFF;" src="https://ikashnitsky.github.io/2019/dotplot/">
+<iframe width="1000px" height="650px" style="background: #FFFFFF;" src="https://cengel.github.io/R-spatial/">
 </iframe>
 <div class="footer">
-<p><a href="https://ikashnitsky.github.io/2019/dotplot" class="uri">https://ikashnitsky.github.io/2019/dotplot</a></p>
-</div>
-</section>
-<section id="example-of-a-figure-improvement" class="slide level2">
-<h2>example of a figure improvement</h2>
-
-<img src="https://i.imgur.com/OX29e5f.png" width="90%" class="r-stretch"><div class="footer">
-<p><a href="https://doi.org/10/ggbtpx" class="uri">https://doi.org/10/ggbtpx</a></p>
+<p><a href="https://cengel.github.io/R-spatial" class="uri">https://cengel.github.io/R-spatial</a></p>
 </div>
 </section>
 <section id="section-15" class="slide level2">
 <h2></h2>
-
-<img src="https://i.imgur.com/LJdMuGf.png" width="90%" class="r-stretch"><div class="footer">
-<p><a href="https://gist.github.com/ikashnitsky/2800295e304b4858be553432de4a0d11" class="uri">https://gist.github.com/ikashnitsky/2800295e304b4858be553432de4a0d11</a></p>
+<iframe width="1000px" height="650px" style="background: #FFFFFF;" src="https://bookdown.org">
+</iframe>
+<div class="footer">
+<p><a href="https://bookdown.org" class="uri">https://bookdown.org</a></p>
 </div>
 </section>
 <section id="section-16" class="slide level2">
 <h2></h2>
-
-<img src="https://i.imgur.com/LFsmc42.png" width="100%" class="r-stretch"><div class="footer">
-<p><a href="https://twitter.com/ikashnitsky/status/1192901559568523269" class="uri">https://twitter.com/ikashnitsky/status/1192901559568523269</a></p>
+<iframe width="1000px" height="650px" style="background: #FFFFFF;" src="https://www.r-bloggers.com">
+</iframe>
+<div class="footer">
+<p><a href="https://www.r-bloggers.com" class="uri">https://www.r-bloggers.com</a></p>
 </div>
 </section></section>
 <section>
-<section id="rule-2-on-slides-text-should-be-as-large-as-possible" class="title-slide slide level1 center" data-background="#cefafa">
-<h1>rule 2 – on slides, text should be as large as possible</h1>
+<section id="packages-to-explore" class="title-slide slide level1 center" data-background="#cce5cc">
+<h1>Packages to explore</h1>
 
 </section>
 <section id="section-17" class="slide level2">
 <h2></h2>
-
-<img src="https://pbs.twimg.com/media/EyeZRl_XEAELLvu?format=jpg&amp;name=medium" width="70%" class="r-stretch"><div class="footer">
-<p><a href="https://twitter.com/ikashnitsky/status/1380247030463881224" class="uri">https://twitter.com/ikashnitsky/status/1380247030463881224</a></p>
+<iframe width="1000px" height="650px" style="background: #FFFFFF;" src="https://cran.r-project.org/web/packages/tmap/vignettes/tmap-getstarted.html">
+</iframe>
+<div class="footer">
+<p><a href="https://cran.r-project.org/web/packages/tmap/vignettes/tmap-getstarted.html" class="uri">https://cran.r-project.org/web/packages/tmap/vignettes/tmap-getstarted.html</a></p>
 </div>
 </section>
 <section id="section-18" class="slide level2">
 <h2></h2>
-
-<img src="https://i.imgur.com/JRC9VZG.png" width="100%" class="r-stretch"><div class="footer">
-<p><a href="https://i.imgur.com/JRC9VZG.png" class="uri">https://i.imgur.com/JRC9VZG.png</a></p>
+<iframe width="1000px" height="650px" style="background: #FFFFFF;" src="https://r-spatial.github.io/sf/">
+</iframe>
+<div class="footer">
+<p><a href="https://r-spatial.github.io/sf" class="uri">https://r-spatial.github.io/sf</a></p>
 </div>
 </section>
 <section id="section-19" class="slide level2">
 <h2></h2>
-
-<img src="https://i.imgur.com/bYePASN.jpg" width="100%" class="r-stretch"><div class="footer">
-<p><a href="https://i.imgur.com/bYePASN.jpg" class="uri">https://i.imgur.com/bYePASN.jpg</a></p>
+<iframe width="1000px" height="650px" style="background: #FFFFFF;" src="https://walkerke.github.io/tidycensus/articles/basic-usage.html">
+</iframe>
+<div class="footer">
+<p><a href="https://walkerke.github.io/tidycensus/articles/basic-usage.html" class="uri">https://walkerke.github.io/tidycensus/articles/basic-usage.html</a></p>
 </div>
 </section>
 <section id="section-20" class="slide level2">
 <h2></h2>
-
-<img src="https://i.imgur.com/nvNEc2F.jpg" width="100%" class="r-stretch"><div class="footer">
-<p><a href="https://i.imgur.com/nvNEc2F.jpg" class="uri">https://i.imgur.com/nvNEc2F.jpg</a></p>
+<iframe width="1000px" height="650px" style="background: #FFFFFF;" src="https://bhaskarvk.github.io/tilegramsR/">
+</iframe>
+<div class="footer">
+<p><a href="https://bhaskarvk.github.io/tilegramsR" class="uri">https://bhaskarvk.github.io/tilegramsR</a></p>
 </div>
 </section>
 <section id="section-21" class="slide level2">
 <h2></h2>
-
-<img src="https://i.imgur.com/KpBVKP1.png" width="100%" class="r-stretch"><div class="footer">
-<p><a href="https://i.imgur.com/KpBVKP1.png" class="uri">https://i.imgur.com/KpBVKP1.png</a></p>
+<iframe width="1000px" height="650px" style="background: #FFFFFF;" src="https://cran.r-project.org/web/packages/voteogram/vignettes/intro_to_voteogram.html">
+</iframe>
+<div class="footer">
+<p><a href="https://cran.r-project.org/web/packages/voteogram/vignettes/intro_to_voteogram.html" class="uri">https://cran.r-project.org/web/packages/voteogram/vignettes/intro_to_voteogram.html</a></p>
 </div>
-</section></section>
-<section>
-<section id="rule-3-mind-colors-especially-regarding-colorblind-friendliness" class="title-slide slide level1 center" data-background="#ffeb7f">
-<h1>rule 3 – mind colors, especially regarding colorblind friendliness</h1>
-
 </section>
 <section id="section-22" class="slide level2">
 <h2></h2>
-<div class="cell" data-hash="slides-dataviz-bssd_cache/revealjs/unnamed-chunk-7_3ec9b770c501bfe662cda58598aa776c">
-<div class="cell-output-display">
-<blockquote class="twitter-tweet" data-conversation="none" align="center" data-width="550" data-lang="en" data-dnt="true" data-theme="dark"><p lang="qme" dir="ltr"><a href="https://t.co/KPqzPh06Iq">https://t.co/KPqzPh06Iq</a> <a href="https://t.co/P1YWTIWooR">pic.twitter.com/P1YWTIWooR</a></p>— Ilya Kashnitsky (@ikashnitsky) <a href="https://twitter.com/ikashnitsky/status/1257952618267148289?ref_src=twsrc%5Etfw">May 6, 2020</a></blockquote>
-
-</div>
+<iframe width="1000px" height="650px" style="background: #FFFFFF;" src="https://www.r-graph-gallery.com/cartogram.html">
+</iframe>
+<div class="footer">
+<p><a href="https://www.r-graph-gallery.com/cartogram.html" class="uri">https://www.r-graph-gallery.com/cartogram.html</a></p>
 </div>
 </section>
 <section id="section-23" class="slide level2">
 <h2></h2>
-<div class="cell" data-hash="slides-dataviz-bssd_cache/revealjs/unnamed-chunk-8_7ce2ae4d4d5f8ba139e75a5dc070c0f6">
+<div class="cell" data-hash="slides-maps-bssd_cache/revealjs/unnamed-chunk-9_2aa155ca9aa0d4828d1578a76a0a4f72">
 <div class="cell-output-display">
-<blockquote class="twitter-tweet" align="center" data-width="550" data-lang="en" data-dnt="true" data-theme="dark"><p lang="en" dir="ltr">Great news <a href="https://twitter.com/hashtag/rstats?src=hash&amp;ref_src=twsrc%5Etfw">#rstats</a> <a href="https://twitter.com/hashtag/dataviz?src=hash&amp;ref_src=twsrc%5Etfw">#dataviz</a> — the default go-to color selection just got richer 💥🎉<br><br>Knowing where it comes from, I know better than to question wherever "turbo" color scheme is really colorblind friendly, but it really blows my mind that something of these colors can be… <a href="https://t.co/AVo6cdMD32">https://t.co/AVo6cdMD32</a> <a href="https://t.co/pIud4NRjhY">pic.twitter.com/pIud4NRjhY</a></p>— Ilya Kashnitsky (@ikashnitsky) <a href="https://twitter.com/ikashnitsky/status/1381638374029721600?ref_src=twsrc%5Etfw">April 12, 2021</a></blockquote>
+<blockquote class="twitter-tweet" align="center" data-width="550" data-lang="en" data-dnt="true" data-theme="dark"><p lang="en" dir="ltr">I've had another go at calculating a composite risk score for every neighborhood (MSOA) in England accounting for age-based mortality risk and vaccine coverage.<br><br>The darkest red areas here are those facing the highest mortality risks if they see high COVID case numbers... <a href="https://t.co/Qzztkq8VSp">pic.twitter.com/Qzztkq8VSp</a></p>— Colin Angus (@VictimOfMaths) <a href="https://twitter.com/VictimOfMaths/status/1404455932717830152?ref_src=twsrc%5Etfw">June 14, 2021</a></blockquote>
 
 </div>
 </div>
-</section></section>
-<section>
-<section id="rule-4-highlight-whats-important-for-the-story" class="title-slide slide level1 center" data-background="#ffcccc">
-<h1>rule 4 – highlight what’s important for the story</h1>
-
-</section>
-<section id="section-24" class="slide level2">
-<h2></h2>
-<div class="cell" data-hash="slides-dataviz-bssd_cache/revealjs/unnamed-chunk-9_33d9a26dacbae9de4859ed79bcfce83b">
-<div class="cell-output-display">
-<blockquote class="twitter-tweet" align="center" data-width="550" data-lang="en" data-dnt="true" data-theme="dark"><p lang="en" dir="ltr">Spent way too long trying to work out what was so special about her knee <a href="https://t.co/0epzaJeQKk">https://t.co/0epzaJeQKk</a></p>— Alex Selby-Boothroyd (@AlexSelbyB) <a href="https://twitter.com/AlexSelbyB/status/1404075318449692674?ref_src=twsrc%5Etfw">June 13, 2021</a></blockquote>
-
-</div>
-</div>
-</section>
-<section id="section-25" class="slide level2">
-<h2></h2>
-<iframe width="100%" height="650px" src="https://barcanumbers.wordpress.com/2018/12/06">
-</iframe>
-<div class="footer">
-<p><a href="https://barcanumbers.wordpress.com/2018/12/06" class="uri">https://barcanumbers.wordpress.com/2018/12/06</a></p>
-</div>
-</section>
-<section id="section-26" class="slide level2">
-<h2></h2>
-<iframe width="100%" height="650px" src="https://www.ft.com/content/a26fbf7e-48f8-11ea-aeb3-955839e06441">
-</iframe>
-<div class="footer">
-<p><a href="https://www.ft.com/content/a26fbf7e-48f8-11ea-aeb3-955839e06441" class="uri">https://www.ft.com/content/a26fbf7e-48f8-11ea-aeb3-955839e06441</a></p>
-</div>
-</section></section>
-<section>
-<section id="rule-5-plots-dont-have-to-be-overly-complicated-to-be-powerful" class="title-slide slide level1 center" data-background="#cefafa">
-<h1>rule 5 – plots don’t have to be overly complicated to be powerful</h1>
-
-</section>
-<section id="section-27" class="slide level2">
-<h2></h2>
-<div class="cell" data-hash="slides-dataviz-bssd_cache/revealjs/unnamed-chunk-10_a7e609382f307c0a31b1db4529943611">
-<div class="cell-output-display">
-<blockquote class="twitter-tweet" align="center" data-width="550" data-lang="en" data-dnt="true" data-theme="dark"><p lang="en" dir="ltr">Climate change is happening now &amp; is happening everywhere. Our lives are already being affected by the warming of the planet.<br><br>Human activities are causing these fundamental changes to the climate. Burning fossil fuels &amp; deforestation are the primary reasons.<br><br>Our choices matter. <a href="https://t.co/SPnkVYq10u">pic.twitter.com/SPnkVYq10u</a></p>— Ed Hawkins (@ed_hawkins) <a href="https://twitter.com/ed_hawkins/status/1380478355921854466?ref_src=twsrc%5Etfw">April 9, 2021</a></blockquote>
-
-</div>
-</div>
-</section>
-<section id="section-28" class="slide level2">
-<h2></h2>
-<div class="cell" data-hash="slides-dataviz-bssd_cache/revealjs/unnamed-chunk-11_a0b4e483bb38654fcc08a779e8a47bb1">
-<div class="cell-output-display">
-<blockquote class="twitter-tweet" align="center" data-width="550" data-lang="en" data-dnt="true" data-theme="dark"><p lang="en" dir="ltr">Austria vs Germany ⚽️ The First 111 Years <a href="https://twitter.com/hashtag/AUTGER?src=hash&amp;ref_src=twsrc%5Etfw">#AUTGER</a> international <a href="https://twitter.com/hashtag/football?src=hash&amp;ref_src=twsrc%5Etfw">#football</a> results since 1907: <br>🇦🇹 10 wins<br>🇩🇪 25 wins<br>✖️ 6 draws<a href="https://twitter.com/hashtag/dataviz?src=hash&amp;ref_src=twsrc%5Etfw">#dataviz</a> by <a href="https://twitter.com/tinafrank?ref_src=twsrc%5Etfw">@tinafrank</a> &amp; <a href="https://twitter.com/metropop_eu?ref_src=twsrc%5Etfw">@metropop_eu</a> <a href="https://t.co/iRjXmpNsOe">pic.twitter.com/iRjXmpNsOe</a></p>— ramon bauer (@metropop_eu) <a href="https://twitter.com/metropop_eu/status/1003238957499518976?ref_src=twsrc%5Etfw">June 3, 2018</a></blockquote>
-
-</div>
-</div>
-</section>
-<section id="section-29" class="slide level2">
-<h2></h2>
-<iframe width="100%" height="650px" src="https://fivethirtyeight.com/features/why-the-oldest-person-in-the-world-keeps-dying">
-</iframe>
-<div class="footer">
-<p><a href="https://fivethirtyeight.com/features/why-the-oldest-person-in-the-world-keeps-dying" class="uri">https://fivethirtyeight.com/features/why-the-oldest-person-in-the-world-keeps-dying</a></p>
-</div>
-</section></section>
-<section>
-<section id="a-great-example" class="title-slide slide level1 center" data-background="#ffeb7f">
-<h1>a great example</h1>
-
-</section>
-<section id="section-30" class="slide level2">
-<h2></h2>
-<div class="cell" data-hash="slides-dataviz-bssd_cache/revealjs/unnamed-chunk-12_8162e9575da69fefbe67dd163f7ee0d2">
-<div class="cell-output-display">
-<blockquote class="twitter-tweet" align="center" data-width="550" data-lang="en" data-dnt="true" data-theme="dark"><p lang="en" dir="ltr">Friday and don't know what to do? Train your <a href="https://twitter.com/hashtag/ggplot2?src=hash&amp;ref_src=twsrc%5Etfw">#ggplot2</a> skills! 📊<br>My first blog post "The Evolution of a ggplot (Ep. 1)" is online 🎉<a href="https://t.co/fWG4PmyyhU">https://t.co/fWG4PmyyhU</a> <br><br>Thanks to <a href="https://twitter.com/R4DScommunity?ref_src=twsrc%5Etfw">@R4DScommunity</a> <a href="https://twitter.com/rstudio?ref_src=twsrc%5Etfw">@rstudio</a> <a href="https://twitter.com/dataandme?ref_src=twsrc%5Etfw">@dataandme</a> for all the neat  <a href="https://twitter.com/hashtag/rstats?src=hash&amp;ref_src=twsrc%5Etfw">#rstats</a> tricks!  <a href="https://twitter.com/hashtag/tidyverse?src=hash&amp;ref_src=twsrc%5Etfw">#tidyverse</a> <a href="https://twitter.com/hashtag/DataViz?src=hash&amp;ref_src=twsrc%5Etfw">#DataViz</a> <a href="https://twitter.com/hashtag/TidyTuesday?src=hash&amp;ref_src=twsrc%5Etfw">#TidyTuesday</a> <a href="https://twitter.com/hashtag/R4DS?src=hash&amp;ref_src=twsrc%5Etfw">#R4DS</a> <a href="https://t.co/RRMTSjXFgj">pic.twitter.com/RRMTSjXFgj</a></p>— Cédric Scherer (@CedScherer) <a href="https://twitter.com/CedScherer/status/1129453356756492293?ref_src=twsrc%5Etfw">May 17, 2019</a></blockquote>
-
-</div>
-</div>
-</section></section>
-<section>
-<section id="not-a-rule-suggestion" class="title-slide slide level1 center">
-<h1>(not a rule) suggestion</h1>
-
-</section>
-<section id="section-31" class="slide level2">
-<h2></h2>
-<h3 id="when-possible-and-meaningful-for-you-story-animate">When possible and meaningful for you story – animate</h3>
-</section>
-<section id="section-32" class="slide level2">
-<h2></h2>
-<div class="cell" data-hash="slides-dataviz-bssd_cache/revealjs/unnamed-chunk-13_8293ff8a1d68196f21b72fa657f85e8c">
-<div class="cell-output-display">
-<blockquote class="twitter-tweet" align="center" data-width="550" data-lang="en" data-dnt="true" data-theme="dark"><p lang="en" dir="ltr">⚽️ With the <a href="https://twitter.com/hashtag/EURO2020?src=hash&amp;ref_src=twsrc%5Etfw">#EURO2020</a> approaching, you've probably all been wondering what ~1 million of passes would looks like if all shot at the same time, right? Well wonder no more...<br><br>Thanks <a href="https://twitter.com/StatsBomb?ref_src=twsrc%5Etfw">@StatsBomb</a> for making the data openly available! <a href="https://twitter.com/observablehq?ref_src=twsrc%5Etfw">@observablehq</a> notebook <a href="https://t.co/dO4sfQpRi4">https://t.co/dO4sfQpRi4</a> <a href="https://t.co/fqbdK6PjRd">pic.twitter.com/fqbdK6PjRd</a></p>— Karim Douïeb (@karim_douieb) <a href="https://twitter.com/karim_douieb/status/1402522532276752389?ref_src=twsrc%5Etfw">June 9, 2021</a></blockquote>
-
-</div>
-</div>
-</section>
-<section id="section-33" class="slide level2">
-<h2></h2>
-<iframe width="100%" height="650px" style="background: #FFFFFF;" src="https://www.ft.com/video/83703ffe-cd5c-4591-9b4f-a3c087aa6d19">
-</iframe>
-<div class="footer">
-<p><a href="https://www.ft.com/video/83703ffe-cd5c-4591-9b4f-a3c087aa6d19" class="uri">https://www.ft.com/video/83703ffe-cd5c-4591-9b4f-a3c087aa6d19</a></p>
-</div>
-</section>
-<section id="section-34" class="slide level2">
-<h2></h2>
-<h3 id="or-make-it-completely-interactive">Or make it completely interactive</h3>
-</section>
-<section id="section-35" class="slide level2">
-<h2></h2>
-<iframe width="100%" height="650px" style="background: #FFFFFF;" src="https://jschoeley.shinyapps.io/hmdexp">
-</iframe>
-<div class="footer">
-<p><a href="https://jschoeley.shinyapps.io/hmdexp" class="uri">https://jschoeley.shinyapps.io/hmdexp</a></p>
-</div>
-</section></section>
-<section>
-<section id="dataviz-principles" class="title-slide slide level1 center" data-background="#ffffff">
-<h1>Dataviz principles</h1>
-
-</section>
-<section id="section-36" class="slide level2">
-<h2></h2>
-<iframe width="100%" height="650px" style="background: #FFFFFF;" src="https://policyviz.com/2018/08/07/dataviz-cheatsheet/">
-</iframe>
-<div class="footer">
-<p><a href="https://policyviz.com/2018/08/07/dataviz-cheatsheet" class="uri">https://policyviz.com/2018/08/07/dataviz-cheatsheet</a></p>
-</div>
-</section>
-<section id="section-37" class="slide level2">
-<h2></h2>
-<iframe width="100%" height="650px" style="background: #FFFFFF;" src="https://ft-interactive.github.io/visual-vocabulary/">
-</iframe>
-<div class="footer">
-<p><a href="https://ft-interactive.github.io/visual-vocabulary" class="uri">https://ft-interactive.github.io/visual-vocabulary</a></p>
-</div>
-</section>
-<section id="section-38" class="slide level2">
-<h2></h2>
-<iframe width="100%" height="650px" style="background: #FFFFFF;" src="https://serialmentor.com/dataviz/">
-</iframe>
-<div class="footer">
-<p><a href="https://serialmentor.com/dataviz" class="uri">https://serialmentor.com/dataviz</a></p>
-</div>
-</section>
-<section id="section-39" class="slide level2">
-<h2></h2>
-<iframe width="100%" height="650px" style="background: #FFFFFF;" src="http://socviz.co/index.html">
-</iframe>
-<div class="footer">
-<p><a href="http://socviz.co/index.html" class="uri">http://socviz.co/index.html</a></p>
-</div>
-</section>
-<section id="jonas-shoeleys-slides" class="slide level2">
-<h2>Jonas Shoeley’s slides</h2>
-<p><span style="font-size:1.5em"><a href="https://github.com/jschoeley/idem_viz" class="uri">https://github.com/jschoeley/idem_viz</a></span></p>
-</section></section>
-<section>
-<section id="tidyverse" class="title-slide slide level1 center" data-background="#cefafa">
-<h1>Tidyverse</h1>
-
-</section>
-<section id="section-40" class="slide level2">
-<h2></h2>
-<div class="cell" data-hash="slides-dataviz-bssd_cache/revealjs/unnamed-chunk-14_b7b885a30d50360087e63f60ddb965e3">
-<div class="cell-output-display">
-<blockquote class="twitter-tweet" align="center" data-width="550" data-lang="en" data-dnt="true" data-theme="dark"><p lang="zxx" dir="ltr"><a href="https://t.co/T4QBJaBD7s">pic.twitter.com/T4QBJaBD7s</a></p>— Trust me, I'm a "Biologist" (@TrustBiologist) <a href="https://twitter.com/TrustBiologist/status/1404078363300483087?ref_src=twsrc%5Etfw">June 13, 2021</a></blockquote>
-
-</div>
-</div>
-</section>
-<section id="the-most-influential-r-developer" class="slide level2">
-<h2>The most influential R developer</h2>
-</section>
-<section id="hadley-wickham" class="slide level2">
-<h2>Hadley Wickham</h2>
-
-<img data-src="http://i.imgur.com/BHfreww.jpg" class="r-stretch"><div class="footer footer-default">
+<div class="footer footer-default">
 
 </div>
 </section></section>
@@ -749,19 +583,19 @@
   </div>
 
   <script>window.backupDefine = window.define; window.define = undefined;</script>
-  <script src="slides-dataviz-bssd_files/libs/revealjs/dist/reveal.js"></script>
+  <script src="slides-maps-bssd_files/libs/revealjs/dist/reveal.js"></script>
   <!-- reveal.js plugins -->
-  <script src="slides-dataviz-bssd_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.js"></script>
-  <script src="slides-dataviz-bssd_files/libs/revealjs/plugin/pdf-export/pdfexport.js"></script>
-  <script src="slides-dataviz-bssd_files/libs/revealjs/plugin/reveal-menu/menu.js"></script>
-  <script src="slides-dataviz-bssd_files/libs/revealjs/plugin/reveal-menu/quarto-menu.js"></script>
-  <script src="slides-dataviz-bssd_files/libs/revealjs/plugin/quarto-support/support.js"></script>
+  <script src="slides-maps-bssd_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.js"></script>
+  <script src="slides-maps-bssd_files/libs/revealjs/plugin/pdf-export/pdfexport.js"></script>
+  <script src="slides-maps-bssd_files/libs/revealjs/plugin/reveal-menu/menu.js"></script>
+  <script src="slides-maps-bssd_files/libs/revealjs/plugin/reveal-menu/quarto-menu.js"></script>
+  <script src="slides-maps-bssd_files/libs/revealjs/plugin/quarto-support/support.js"></script>
   
 
-  <script src="slides-dataviz-bssd_files/libs/revealjs/plugin/notes/notes.js"></script>
-  <script src="slides-dataviz-bssd_files/libs/revealjs/plugin/search/search.js"></script>
-  <script src="slides-dataviz-bssd_files/libs/revealjs/plugin/zoom/zoom.js"></script>
-  <script src="slides-dataviz-bssd_files/libs/revealjs/plugin/math/math.js"></script>
+  <script src="slides-maps-bssd_files/libs/revealjs/plugin/notes/notes.js"></script>
+  <script src="slides-maps-bssd_files/libs/revealjs/plugin/search/search.js"></script>
+  <script src="slides-maps-bssd_files/libs/revealjs/plugin/zoom/zoom.js"></script>
+  <script src="slides-maps-bssd_files/libs/revealjs/plugin/math/math.js"></script>
   <script>window.define = window.backupDefine; window.backupDefine = undefined;</script>
 
   <script>

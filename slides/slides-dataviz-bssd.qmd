@@ -22,12 +22,11 @@ library(tweetrmd)
 ```
 
 
-# <span style="font-size:1.4em;color:white">@ikashnitsky</span>  {data-background=#00acee} 
+# [@ikashnitsky]{style="color:white"} {data-background="#00acee"}
 
-##
+## 
 
-:::: {.columns}
-
+::: columns
 ::: {.column width="50%"}
 ```{r}
 tweet_embed("https://twitter.com/ikashnitsky/status/1377347138862993414", align = "center", theme = "dark", hide_thread = T)
@@ -39,353 +38,352 @@ tweet_embed("https://twitter.com/ikashnitsky/status/1377347138862993414", align 
 tweet_embed("https://twitter.com/monjalexander/status/1377972237760933895", align = "center", theme = "dark", hide_thread = T)
 ```
 :::
-
-::::
-
-
-##
-<img src="https://camo.githubusercontent.com/8550e9cd92efdeed088c38e7f3fec62f8f0a0f75cb8dddc397c374c1a3cf102b/68747470733a2f2f696b6173686e6974736b792e6769746875622e696f2f64656d7265732d67656f66616365742f706f737465722d7061612d323031392f67656f66616365742d706f737465722d736d616c6c2e706e67" style="width:100%" />
-
-::: footer
-[https://doi.org/10.4054/demres.2019.41.17](https://doi.org/10.4054/demres.2019.41.17)
 :::
 
+## 
 
-##
+<img src="https://camo.githubusercontent.com/8550e9cd92efdeed088c38e7f3fec62f8f0a0f75cb8dddc397c374c1a3cf102b/68747470733a2f2f696b6173686e6974736b792e6769746875622e696f2f64656d7265732d67656f66616365742f706f737465722d7061612d323031392f67656f66616365742d706f737465722d736d616c6c2e706e67" style="width:100%"/>
+
+::: footer
+<https://doi.org/10.4054/demres.2019.41.17>
+:::
+
+## 
+
 ```{r, echo=FALSE}
 tweet_embed("https://twitter.com/ikashnitsky/status/1404307967537713152", align = "center", theme = "dark")
 ```
 
+##  {data-background="#ffffff"}
 
-## {data-background=#ffffff} 
-<img src="https://i.imgur.com/HrlVOcQ.png" style="width:100%" />
-
-::: footer
-[https://doi.org/10.33612/diss.134195227](https://doi.org/10.33612/diss.134195227)
-:::
-
-
-##
-<img src="https://i.imgur.com/JdGefX1.jpg" style="width:70%" />
-
-
-
-
-
-# before we start {data-background=#ffcccc} 
-
-##
-<img width="100%" src="https://i.imgur.com/LOBXId3.png" />
+<img src="https://i.imgur.com/HrlVOcQ.png" style="width:100%"/>
 
 ::: footer
-[https://twitter.com/RuJEconomics/status/1191697644499984384](https://twitter.com/RuJEconomics/status/1191697644499984384)
+<https://doi.org/10.33612/diss.134195227>
 :::
 
+## 
 
-##
-<iframe width="100%" height="650px" style="background: #FFFFFF;" src="https://www.visualcapitalist.com/wp-content/uploads/2018/03/money-happiness-large.html"></iframe>
+<img src="https://i.imgur.com/JdGefX1.jpg" style="width:70%"/>
+
+# before we start {data-background="#ffcccc"}
+
+## 
+
+<img src="https://i.imgur.com/LOBXId3.png" width="100%"/>
 
 ::: footer
-[https://www.visualcapitalist.com/wp-content/uploads/2018/03/money-happiness-large.html](https://www.visualcapitalist.com/wp-content/uploads/2018/03/money-happiness-large.html)
+<https://twitter.com/RuJEconomics/status/1191697644499984384>
 :::
 
+## 
 
+<iframe width="100%" height="650px" style="background: #FFFFFF;" src="https://www.visualcapitalist.com/wp-content/uploads/2018/03/money-happiness-large.html">
 
-# materials for the course {data-background=#ffffff} 
+</iframe>
 
-<span style="font-size:1.4em">[https://github.com/ikashnitsky/dataviz-bssd](https://github.com/ikashnitsky/dataviz-bssd)</span>
+::: footer
+<https://www.visualcapitalist.com/wp-content/uploads/2018/03/money-happiness-large.html>
+:::
 
+# materials for the course {data-background="#ffffff"}
 
-# rule 0 -- DO VISUALIZE YOUR DATA {data-background=#cce5cc}
+[<https://github.com/ikashnitsky/dataviz-bssd>]{style="font-size:1.4em"}
+
+# rule 0 -- DO VISUALIZE YOUR DATA {data-background="#cce5cc"}
 
 ## Anscombe's Quartet
-<img width="70%" src="http://i.imgur.com/QA3Ss8D.png" />
+
+<img src="http://i.imgur.com/QA3Ss8D.png" width="70%"/>
 
 ::: footer
-[http://i.imgur.com/QA3Ss8D.png](http://i.imgur.com/QA3Ss8D.png)
+<http://i.imgur.com/QA3Ss8D.png>
 :::
 
+## 
+```{r}
+tweet_embed("https://twitter.com/JustinMatejka/status/859075295059562498", align = "center", theme = "dark", hide_thread = T)
+```
 
-##
-<blockquote class="twitter-tweet tw-align-center"><p lang="en" dir="ltr">New <a href="https://twitter.com/hashtag/chi2017?src=hash&amp;ref_src=twsrc%5Etfw">#chi2017</a> paper is up. Don&#39;t trust statistics alone, visualize your data!<a href="https://t.co/amnbAYvsq1">https://t.co/amnbAYvsq1</a> <a href="https://t.co/1s6vkge6dl">pic.twitter.com/1s6vkge6dl</a></p>&mdash; Justin Matejka (@JustinMatejka) <a href="https://twitter.com/JustinMatejka/status/859075295059562498?ref_src=twsrc%5Etfw">May 1, 2017</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+## 
+```{r}
+tweet_embed("https://twitter.com/MBozukova/status/1387094850995118081", align = "center", theme = "dark", hide_thread = T)
+```
 
+##  {data-background="#ffffff"}
 
-##
-<blockquote class="twitter-tweet tw-align-center"><p lang="en" dir="ltr">Visualizing summary statistics in a <a href="https://twitter.com/hashtag/boxplot?src=hash&amp;ref_src=twsrc%5Etfw">#boxplot</a> is great. But don&#39;t forget to explore the underlying data distribution. <br><br>Thanks to <a href="https://twitter.com/JustinMatejka?ref_src=twsrc%5Etfw">@JustinMatejka</a> for this great educational dataset.<a href="https://twitter.com/hashtag/30DayChartChallenge?src=hash&amp;ref_src=twsrc%5Etfw">#30DayChartChallenge</a> | <a href="https://twitter.com/hashtag/Day27?src=hash&amp;ref_src=twsrc%5Etfw">#Day27</a> | <a href="https://twitter.com/hashtag/educational?src=hash&amp;ref_src=twsrc%5Etfw">#educational</a> <a href="https://twitter.com/hashtag/dataviz?src=hash&amp;ref_src=twsrc%5Etfw">#dataviz</a> <a href="https://twitter.com/hashtag/Rstats?src=hash&amp;ref_src=twsrc%5Etfw">#Rstats</a> <a href="https://twitter.com/hashtag/ggplot2?src=hash&amp;ref_src=twsrc%5Etfw">#ggplot2</a> <a href="https://twitter.com/hashtag/statistics?src=hash&amp;ref_src=twsrc%5Etfw">#statistics</a> <a href="https://twitter.com/hashtag/violinplot?src=hash&amp;ref_src=twsrc%5Etfw">#violinplot</a> <a href="https://t.co/JfNwMzuash">pic.twitter.com/JfNwMzuash</a></p>&mdash; Mihaela Bozukova (@MBozukova) <a href="https://twitter.com/MBozukova/status/1387094850995118081?ref_src=twsrc%5Etfw">April 27, 2021</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-
-
-
-## {data-background=#ffffff} 
-<img width="60%" src="https://i.imgur.com/Ym0oKHj.png" />  
+<img src="https://i.imgur.com/Ym0oKHj.png" width="60%"/>
 
 ::: footer
-[https://i.imgur.com/Ym0oKHj.png](https://i.imgur.com/Ym0oKHj.png)
+<https://i.imgur.com/Ym0oKHj.png>
 :::
 
+##  {data-background="#ffffff"}
 
-## {data-background=#ffffff} 
-<img width="100%" src="https://i.imgur.com/T7xz3UN.png" />  
+<img src="https://i.imgur.com/T7xz3UN.png" width="100%"/>
 
 ::: footer
-[https://i.imgur.com/T7xz3UN.png](https://i.imgur.com/T7xz3UN.png)
+<https://i.imgur.com/T7xz3UN.png>
 :::
 
-## {data-background=#ffffff} 
-<img width="100%" src="https://i.imgur.com/MxUNZxV.png" />  
+##  {data-background="#ffffff"}
+
+<img src="https://i.imgur.com/MxUNZxV.png" width="100%"/>
 
 ::: footer
-[https://i.imgur.com/MxUNZxV.png](https://i.imgur.com/MxUNZxV.png)
+<https://i.imgur.com/MxUNZxV.png>
 :::
 
+## 
+```{r}
+tweet_embed("https://twitter.com/mikeleeco/status/876792944396730368", align = "center", theme = "dark", hide_thread = T)
+```
 
+# rule 1 -- text should be horizontal {data-background="#ffeb7f"}
 
-##
-<blockquote class="twitter-tweet tw-align-center" data-lang="en"><p lang="en" dir="ltr">Remade the <a href="https://twitter.com/WSJ?ref_src=twsrc%5Etfw">@WSJ</a> measles vaccination visualization using ggplot2 and the animation package <a href="https://twitter.com/hashtag/rstats?src=hash&amp;ref_src=twsrc%5Etfw">#rstats</a> <a href="https://t.co/cnIScD9ymI">pic.twitter.com/cnIScD9ymI</a></p>&mdash; Michael Lee 🚴📊🇷 (@mikeleeco) <a href="https://twitter.com/mikeleeco/status/876792944396730368?ref_src=twsrc%5Etfw">June 19, 2017</a></blockquote>
-<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+## 
 
-
-# rule 1 -- text should be horizontal {data-background=#ffeb7f}
-
-
-##
-<img width="80%" src="https://pbs.twimg.com/media/EyeZQtdWUAUlBbR?format=png&name=large" />
+<img src="https://pbs.twimg.com/media/EyeZQtdWUAUlBbR?format=png&amp;name=large" width="80%"/>
 
 ::: footer
-[https://twitter.com/ikashnitsky/status/1378673154730647555](https://twitter.com/ikashnitsky/status/1378673154730647555)
+<https://twitter.com/ikashnitsky/status/1378673154730647555>
 :::
 
+## 
 
-##
-<iframe width="100%" height="650px" style="background: #FFFFFF;" src="https://ikashnitsky.github.io/2019/dotplot/"></iframe>
+<iframe width="100%" height="650px" style="background: #FFFFFF;" src="https://ikashnitsky.github.io/2019/dotplot/">
+
+</iframe>
 
 ::: footer
-[https://ikashnitsky.github.io/2019/dotplot](https://ikashnitsky.github.io/2019/dotplot)
+<https://ikashnitsky.github.io/2019/dotplot>
 :::
 
+## example of a figure improvement
 
-## example of a  figure improvement
-<img width="90%" src="https://i.imgur.com/OX29e5f.png" />
+<img src="https://i.imgur.com/OX29e5f.png" width="90%"/>
 
 ::: footer
-[https://doi.org/10/ggbtpx](https://doi.org/10/ggbtpx)
+<https://doi.org/10/ggbtpx>
 :::
 
+## 
 
-
-##
-<img width="90%" src="https://i.imgur.com/LJdMuGf.png" />
+<img src="https://i.imgur.com/LJdMuGf.png" width="90%"/>
 
 ::: footer
-[https://gist.github.com/ikashnitsky/2800295e304b4858be553432de4a0d11](https://gist.github.com/ikashnitsky/2800295e304b4858be553432de4a0d11)
+<https://gist.github.com/ikashnitsky/2800295e304b4858be553432de4a0d11>
 :::
 
+## 
 
-
-##
-<img width="100%" src="https://i.imgur.com/LFsmc42.png" />
+<img src="https://i.imgur.com/LFsmc42.png" width="100%"/>
 
 ::: footer
-[https://twitter.com/ikashnitsky/status/1192901559568523269](https://twitter.com/ikashnitsky/status/1192901559568523269)
+<https://twitter.com/ikashnitsky/status/1192901559568523269>
 :::
 
+# rule 2 -- on slides, text should be as large as possible {data-background="#cefafa"}
 
+## 
 
-
-# rule 2 -- on slides, text should be as large as possible {data-background=#cefafa} 
-
-##
-<img width="70%" src="https://pbs.twimg.com/media/EyeZRl_XEAELLvu?format=jpg&name=medium" />
+<img src="https://pbs.twimg.com/media/EyeZRl_XEAELLvu?format=jpg&amp;name=medium" width="70%"/>
 
 ::: footer
-[https://twitter.com/ikashnitsky/status/1380247030463881224](https://twitter.com/ikashnitsky/status/1380247030463881224)
+<https://twitter.com/ikashnitsky/status/1380247030463881224>
 :::
 
+## 
 
-##
-<img width="100%" src="https://i.imgur.com/JRC9VZG.png" />
+<img src="https://i.imgur.com/JRC9VZG.png" width="100%"/>
 
 ::: footer
-[https://i.imgur.com/JRC9VZG.png](https://i.imgur.com/JRC9VZG.png)
+<https://i.imgur.com/JRC9VZG.png>
 :::
 
+## 
 
-
-##
-<img width="100%" src="https://i.imgur.com/bYePASN.jpg" />
+<img src="https://i.imgur.com/bYePASN.jpg" width="100%"/>
 
 ::: footer
-[https://i.imgur.com/bYePASN.jpg](https://i.imgur.com/bYePASN.jpg)
+<https://i.imgur.com/bYePASN.jpg>
 :::
 
+## 
 
-##
-<img width="100%" src="https://i.imgur.com/nvNEc2F.jpg" />
+<img src="https://i.imgur.com/nvNEc2F.jpg" width="100%"/>
 
 ::: footer
-[https://i.imgur.com/nvNEc2F.jpg](https://i.imgur.com/nvNEc2F.jpg)
+<https://i.imgur.com/nvNEc2F.jpg>
 :::
 
+## 
 
-##
-<img width="100%" src="https://i.imgur.com/KpBVKP1.png" />
+<img src="https://i.imgur.com/KpBVKP1.png" width="100%"/>
 
 ::: footer
-[https://i.imgur.com/KpBVKP1.png](https://i.imgur.com/KpBVKP1.png)
+<https://i.imgur.com/KpBVKP1.png>
 :::
 
+# rule 3 -- mind colors, especially regarding colorblind friendliness {data-background="#ffeb7f"}
+
+## 
+```{r}
+tweet_embed("https://twitter.com/ikashnitsky/status/1257952618267148289", align = "center", theme = "dark", hide_thread = T)
+```
+
+## 
+```{r}
+tweet_embed("https://twitter.com/ikashnitsky/status/1381638374029721600", align = "center", theme = "dark", hide_thread = T)
+```
 
 
+# rule 4 -- highlight what's important for the story {data-background="#ffcccc"}
 
+## 
+```{r}
+tweet_embed("https://twitter.com/AlexSelbyB/status/1404075318449692674", align = "center", theme = "dark", hide_thread = T)
+```
 
+## 
 
-# rule 3 -- mind colors, especially regarding colorblind friendliness {data-background=#ffeb7f}
+<iframe width="100%" height="650px" src="https://barcanumbers.wordpress.com/2018/12/06">
 
-
-##
-<blockquote class="twitter-tweet tw-align-center" data-conversation="none"><p lang="und" dir="ltr"><a href="https://t.co/KPqzPh06Iq">https://t.co/KPqzPh06Iq</a> <a href="https://t.co/P1YWTIWooR">pic.twitter.com/P1YWTIWooR</a></p>&mdash; Ilya Kashnitsky (@ikashnitsky) <a href="https://twitter.com/ikashnitsky/status/1257952618267148289?ref_src=twsrc%5Etfw">May 6, 2020</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-
-##
-<blockquote class="twitter-tweet tw-align-center"><p lang="en" dir="ltr">Great news <a href="https://twitter.com/hashtag/rstats?src=hash&amp;ref_src=twsrc%5Etfw">#rstats</a> <a href="https://twitter.com/hashtag/dataviz?src=hash&amp;ref_src=twsrc%5Etfw">#dataviz</a> — the default go-to color selection just got richer 💥🎉<br><br>Knowing where it comes from, I know better than to question wherever &quot;turbo&quot; color scheme is really colorblind friendly, but it really blows my mind that something of these colors can be… <a href="https://t.co/AVo6cdMD32">https://t.co/AVo6cdMD32</a> <a href="https://t.co/pIud4NRjhY">pic.twitter.com/pIud4NRjhY</a></p>&mdash; Ilya Kashnitsky (@ikashnitsky) <a href="https://twitter.com/ikashnitsky/status/1381638374029721600?ref_src=twsrc%5Etfw">April 12, 2021</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-
-
-
-# rule 4 -- highlight what's important for the story  {data-background=#ffcccc}
-
-##
-<blockquote class="twitter-tweet tw-align-center"><p lang="en" dir="ltr">Spent way too long trying to work out what was so special about her knee <a href="https://t.co/0epzaJeQKk">https://t.co/0epzaJeQKk</a></p>&mdash; Alex Selby-Boothroyd (@AlexSelbyB) <a href="https://twitter.com/AlexSelbyB/status/1404075318449692674?ref_src=twsrc%5Etfw">June 13, 2021</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-
-##
-<iframe width="100%" height="650px" src="https://barcanumbers.wordpress.com/2018/12/06"></iframe>
+</iframe>
 
 ::: footer
-[https://barcanumbers.wordpress.com/2018/12/06](https://barcanumbers.wordpress.com/2018/12/06)
+<https://barcanumbers.wordpress.com/2018/12/06>
 :::
 
+## 
 
-##
-<iframe width="100%" height="650px" src="https://www.ft.com/content/a26fbf7e-48f8-11ea-aeb3-955839e06441"></iframe>
+<iframe width="100%" height="650px" src="https://www.ft.com/content/a26fbf7e-48f8-11ea-aeb3-955839e06441">
+
+</iframe>
 
 ::: footer
-[https://www.ft.com/content/a26fbf7e-48f8-11ea-aeb3-955839e06441](https://www.ft.com/content/a26fbf7e-48f8-11ea-aeb3-955839e06441)
+<https://www.ft.com/content/a26fbf7e-48f8-11ea-aeb3-955839e06441>
 :::
 
+# rule 5 -- plots don't have to be overly complicated to be powerful {data-background="#cefafa"}
 
+## 
+```{r}
+tweet_embed("https://twitter.com/ed_hawkins/status/1380478355921854466", align = "center", theme = "dark", hide_thread = T)
+```
 
+## 
+```{r}
+tweet_embed("https://twitter.com/metropop_eu/status/1003238957499518976", align = "center", theme = "dark", hide_thread = T)
+```
 
+## 
 
-# rule 5 -- plots don't have to be overly complicated to be powerful {data-background=#cefafa} 
+<iframe width="100%" height="650px" src="https://fivethirtyeight.com/features/why-the-oldest-person-in-the-world-keeps-dying">
 
-##
-<blockquote class="twitter-tweet tw-align-center"><p lang="en" dir="ltr">Climate change is happening now &amp; is happening everywhere. Our lives are already being affected by the warming of the planet.<br><br>Human activities are causing these fundamental changes to the climate. Burning fossil fuels &amp; deforestation are the primary reasons.<br><br>Our choices matter. <a href="https://t.co/SPnkVYq10u">pic.twitter.com/SPnkVYq10u</a></p>&mdash; Ed Hawkins (@ed_hawkins) <a href="https://twitter.com/ed_hawkins/status/1380478355921854466?ref_src=twsrc%5Etfw">April 9, 2021</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-
-
-##
-<blockquote class="twitter-tweet tw-align-center" data-lang="en"><p lang="en" dir="ltr">Austria vs Germany ⚽️ The First 111 Years <a href="https://twitter.com/hashtag/AUTGER?src=hash&amp;ref_src=twsrc%5Etfw">#AUTGER</a> international <a href="https://twitter.com/hashtag/football?src=hash&amp;ref_src=twsrc%5Etfw">#football</a> results since 1907: <br>🇦🇹 10 wins<br>🇩🇪 25 wins<br>✖️ 6 draws<a href="https://twitter.com/hashtag/dataviz?src=hash&amp;ref_src=twsrc%5Etfw">#dataviz</a> by <a href="https://twitter.com/tinafrank?ref_src=twsrc%5Etfw">@tinafrank</a> &amp; <a href="https://twitter.com/metropop_eu?ref_src=twsrc%5Etfw">@metropop_eu</a> <a href="https://t.co/iRjXmpNsOe">pic.twitter.com/iRjXmpNsOe</a></p>&mdash; ramon bauer (@metropop_eu) <a href="https://twitter.com/metropop_eu/status/1003238957499518976?ref_src=twsrc%5Etfw">June 3, 2018</a></blockquote>
-<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-
-
-##
-<iframe width="100%" height="650px" src="https://fivethirtyeight.com/features/why-the-oldest-person-in-the-world-keeps-dying"></iframe>
+</iframe>
 
 ::: footer
-[https://fivethirtyeight.com/features/why-the-oldest-person-in-the-world-keeps-dying](https://fivethirtyeight.com/features/why-the-oldest-person-in-the-world-keeps-dying)
+<https://fivethirtyeight.com/features/why-the-oldest-person-in-the-world-keeps-dying>
 :::
 
+# a great example {data-background="#ffeb7f"}
 
-
-# a great example {data-background=#ffeb7f}
-
-##
-<blockquote class="twitter-tweet tw-align-center"><p lang="en" dir="ltr">Friday and don&#39;t know what to do? Train your <a href="https://twitter.com/hashtag/ggplot2?src=hash&amp;ref_src=twsrc%5Etfw">#ggplot2</a> skills! 📊<br>My first blog post &quot;The Evolution of a ggplot (Ep. 1)&quot; is online 🎉<a href="https://t.co/fWG4PmyyhU">https://t.co/fWG4PmyyhU</a> <br><br>Thanks to <a href="https://twitter.com/R4DScommunity?ref_src=twsrc%5Etfw">@R4DScommunity</a> <a href="https://twitter.com/rstudio?ref_src=twsrc%5Etfw">@rstudio</a> <a href="https://twitter.com/dataandme?ref_src=twsrc%5Etfw">@dataandme</a> for all the neat <a href="https://twitter.com/hashtag/rstats?src=hash&amp;ref_src=twsrc%5Etfw">#rstats</a> tricks! <a href="https://twitter.com/hashtag/tidyverse?src=hash&amp;ref_src=twsrc%5Etfw">#tidyverse</a> <a href="https://twitter.com/hashtag/DataViz?src=hash&amp;ref_src=twsrc%5Etfw">#DataViz</a> <a href="https://twitter.com/hashtag/TidyTuesday?src=hash&amp;ref_src=twsrc%5Etfw">#TidyTuesday</a> <a href="https://twitter.com/hashtag/R4DS?src=hash&amp;ref_src=twsrc%5Etfw">#R4DS</a> <a href="https://t.co/RRMTSjXFgj">pic.twitter.com/RRMTSjXFgj</a></p>&mdash; Cédric Scherer (@CedScherer) <a href="https://twitter.com/CedScherer/status/1129453356756492293?ref_src=twsrc%5Etfw">May 17, 2019</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-
+## 
+```{r}
+tweet_embed("https://twitter.com/CedScherer/status/1129453356756492293", align = "center", theme = "dark", hide_thread = T)
+```
 
 # (not a rule) suggestion
 
-##
+## 
+
 ### When possible and meaningful for you story -- animate
 
-##
-<blockquote class="twitter-tweet tw-align-center"><p lang="en" dir="ltr">⚽️ With the <a href="https://twitter.com/hashtag/EURO2020?src=hash&amp;ref_src=twsrc%5Etfw">#EURO2020</a> approaching, you&#39;ve probably all been wondering what ~1 million of passes would looks like if all shot at the same time, right? Well wonder no more...<br><br>Thanks <a href="https://twitter.com/StatsBomb?ref_src=twsrc%5Etfw">@StatsBomb</a> for making the data openly available! <a href="https://twitter.com/observablehq?ref_src=twsrc%5Etfw">@observablehq</a> notebook <a href="https://t.co/dO4sfQpRi4">https://t.co/dO4sfQpRi4</a> <a href="https://t.co/fqbdK6PjRd">pic.twitter.com/fqbdK6PjRd</a></p>&mdash; Karim Douïeb (@karim_douieb) <a href="https://twitter.com/karim_douieb/status/1402522532276752389?ref_src=twsrc%5Etfw">June 9, 2021</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+## 
+```{r}
+tweet_embed("https://twitter.com/karim_douieb/status/1402522532276752389", align = "center", theme = "dark", hide_thread = T)
+```
 
-##
+## 
 
-<iframe width="100%" height="650px" style="background: #FFFFFF;" src="https://www.ft.com/video/83703ffe-cd5c-4591-9b4f-a3c087aa6d19"></iframe>
+<iframe width="100%" height="650px" style="background: #FFFFFF;" src="https://www.ft.com/video/83703ffe-cd5c-4591-9b4f-a3c087aa6d19">
+
+</iframe>
 
 ::: footer
-[https://www.ft.com/video/83703ffe-cd5c-4591-9b4f-a3c087aa6d19](https://www.ft.com/video/83703ffe-cd5c-4591-9b4f-a3c087aa6d19)
+<https://www.ft.com/video/83703ffe-cd5c-4591-9b4f-a3c087aa6d19>
 :::
 
+## 
 
-##
 ### Or make it completely interactive
 
-##
-<iframe width="100%" height="650px" style="background: #FFFFFF;" src="https://jschoeley.shinyapps.io/hmdexp"></iframe>
+## 
+
+<iframe width="100%" height="650px" style="background: #FFFFFF;" src="https://jschoeley.shinyapps.io/hmdexp">
+
+</iframe>
 
 ::: footer
-[https://jschoeley.shinyapps.io/hmdexp](https://jschoeley.shinyapps.io/hmdexp)
+<https://jschoeley.shinyapps.io/hmdexp>
 :::
 
-
-
-
-
-
-
-
-
-# Dataviz principles  {data-background=#ffffff} 
-
+# Dataviz principles {data-background="#ffffff"}
 
 ## 
-<iframe width="100%" height="650px" style="background: #FFFFFF;" src="https://policyviz.com/2018/08/07/dataviz-cheatsheet/"></iframe>
+
+<iframe width="100%" height="650px" style="background: #FFFFFF;" src="https://policyviz.com/2018/08/07/dataviz-cheatsheet/">
+
+</iframe>
 
 ::: footer
-[https://policyviz.com/2018/08/07/dataviz-cheatsheet](https://policyviz.com/2018/08/07/dataviz-cheatsheet)
+<https://policyviz.com/2018/08/07/dataviz-cheatsheet>
 :::
 
 ## 
-<iframe width="100%" height="650px" style="background: #FFFFFF;" src="https://ft-interactive.github.io/visual-vocabulary/"></iframe>
+
+<iframe width="100%" height="650px" style="background: #FFFFFF;" src="https://ft-interactive.github.io/visual-vocabulary/">
+
+</iframe>
 
 ::: footer
-[https://ft-interactive.github.io/visual-vocabulary](https://ft-interactive.github.io/visual-vocabulary)
+<https://ft-interactive.github.io/visual-vocabulary>
 :::
 
+## 
 
+<iframe width="100%" height="650px" style="background: #FFFFFF;" src="https://serialmentor.com/dataviz/">
 
-##
-<iframe width="100%" height="650px"  style="background: #FFFFFF;" src="https://serialmentor.com/dataviz/"></iframe>
+</iframe>
 
 ::: footer
-[https://serialmentor.com/dataviz](https://serialmentor.com/dataviz)
+<https://serialmentor.com/dataviz>
 :::
 
+## 
 
+<iframe width="100%" height="650px" style="background: #FFFFFF;" src="http://socviz.co/index.html">
 
-##
-<iframe width="100%" height="650px"  style="background: #FFFFFF;"  src="http://socviz.co/index.html"></iframe>
+</iframe>
 
 ::: footer
-[http://socviz.co/index.html](http://socviz.co/index.html)
+<http://socviz.co/index.html>
 :::
-
-
 
 ## Jonas Shoeley's slides
-<span style="font-size:1.5em">[https://github.com/jschoeley/idem_viz](https://github.com/jschoeley/idem_viz)</span>
 
+[<https://github.com/jschoeley/idem_viz>]{style="font-size:1.5em"}
 
+# Tidyverse {data-background="#cefafa"}
 
-
-
-
-
-# Tidyverse {data-background=#cefafa} 
-
-##
-<blockquote class="twitter-tweet tw-align-center"><p lang="und" dir="ltr"><a href="https://t.co/T4QBJaBD7s">pic.twitter.com/T4QBJaBD7s</a></p>&mdash; Trust me, I&#39;m a &quot;Biologist&quot; (@TrustBiologist) <a href="https://twitter.com/TrustBiologist/status/1404078363300483087?ref_src=twsrc%5Etfw">June 13, 2021</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+## 
+```{r}
+tweet_embed("https://twitter.com/TrustBiologist/status/1404078363300483087", align = "center", theme = "dark", hide_thread = T)
+```
 
 ## The most influential R developer
 
 ## Hadley Wickham
+
 ![](http://i.imgur.com/BHfreww.jpg)
