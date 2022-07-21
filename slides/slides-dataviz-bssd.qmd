@@ -7,7 +7,7 @@ format:
   revealjs:
     theme: dark
     highlight: zenburn
-editor: visual
+editor: source
 ---
 
 ```{r setup, include=FALSE}
@@ -21,7 +21,6 @@ library(knitr)
 library(tweetrmd)
 ```
 
-
 # [@ikashnitsky]{style="color:white"} {data-background="#00acee"}
 
 ## 
@@ -29,13 +28,13 @@ library(tweetrmd)
 ::: columns
 ::: {.column width="50%"}
 ```{r}
-tweet_embed("https://twitter.com/ikashnitsky/status/1377347138862993414", align = "center", theme = "dark", hide_thread = T)
+tweet_embed("https://twitter.com/ikashnitsky/status/1449435853638586369", align = "center", theme = "dark", hide_thread = T)
 ```
 :::
 
 ::: {.column width="50%"}
 ```{r}
-tweet_embed("https://twitter.com/monjalexander/status/1377972237760933895", align = "center", theme = "dark", hide_thread = T)
+tweet_embed("https://twitter.com/ikashnitsky/status/1378116363315740672", align = "center", theme = "dark", hide_thread = T)
 ```
 :::
 :::
@@ -101,11 +100,13 @@ tweet_embed("https://twitter.com/ikashnitsky/status/1404307967537713152", align 
 :::
 
 ## 
+
 ```{r}
 tweet_embed("https://twitter.com/JustinMatejka/status/859075295059562498", align = "center", theme = "dark", hide_thread = T)
 ```
 
 ## 
+
 ```{r}
 tweet_embed("https://twitter.com/MBozukova/status/1387094850995118081", align = "center", theme = "dark", hide_thread = T)
 ```
@@ -135,6 +136,7 @@ tweet_embed("https://twitter.com/MBozukova/status/1387094850995118081", align = 
 :::
 
 ## 
+
 ```{r}
 tweet_embed("https://twitter.com/mikeleeco/status/876792944396730368", align = "center", theme = "dark", hide_thread = T)
 ```
@@ -228,19 +230,21 @@ tweet_embed("https://twitter.com/mikeleeco/status/876792944396730368", align = "
 # rule 3 -- mind colors, especially regarding colorblind friendliness {data-background="#ffeb7f"}
 
 ## 
+
 ```{r}
 tweet_embed("https://twitter.com/ikashnitsky/status/1257952618267148289", align = "center", theme = "dark", hide_thread = T)
 ```
 
 ## 
+
 ```{r}
 tweet_embed("https://twitter.com/ikashnitsky/status/1381638374029721600", align = "center", theme = "dark", hide_thread = T)
 ```
 
-
 # rule 4 -- highlight what's important for the story {data-background="#ffcccc"}
 
 ## 
+
 ```{r}
 tweet_embed("https://twitter.com/AlexSelbyB/status/1404075318449692674", align = "center", theme = "dark", hide_thread = T)
 ```
@@ -268,11 +272,13 @@ tweet_embed("https://twitter.com/AlexSelbyB/status/1404075318449692674", align =
 # rule 5 -- plots don't have to be overly complicated to be powerful {data-background="#cefafa"}
 
 ## 
+
 ```{r}
 tweet_embed("https://twitter.com/ed_hawkins/status/1380478355921854466", align = "center", theme = "dark", hide_thread = T)
 ```
 
 ## 
+
 ```{r}
 tweet_embed("https://twitter.com/metropop_eu/status/1003238957499518976", align = "center", theme = "dark", hide_thread = T)
 ```
@@ -290,6 +296,7 @@ tweet_embed("https://twitter.com/metropop_eu/status/1003238957499518976", align 
 # a great example {data-background="#ffeb7f"}
 
 ## 
+
 ```{r}
 tweet_embed("https://twitter.com/CedScherer/status/1129453356756492293", align = "center", theme = "dark", hide_thread = T)
 ```
@@ -301,6 +308,7 @@ tweet_embed("https://twitter.com/CedScherer/status/1129453356756492293", align =
 ### When possible and meaningful for you story -- animate
 
 ## 
+
 ```{r}
 tweet_embed("https://twitter.com/karim_douieb/status/1402522532276752389", align = "center", theme = "dark", hide_thread = T)
 ```
@@ -378,6 +386,7 @@ tweet_embed("https://twitter.com/karim_douieb/status/1402522532276752389", align
 # Tidyverse {data-background="#cefafa"}
 
 ## 
+
 ```{r}
 tweet_embed("https://twitter.com/TrustBiologist/status/1404078363300483087", align = "center", theme = "dark", hide_thread = T)
 ```

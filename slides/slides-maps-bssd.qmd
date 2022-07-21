@@ -7,7 +7,7 @@ format:
   revealjs:
     theme: dark
     highlight: zenburn
-editor: visual
+editor: source
 ---
 
 ```{r setup, include=FALSE}
@@ -21,28 +21,81 @@ library(knitr)
 library(tweetrmd)
 ```
 
-# [@IFckingLoveMaps]{style="color:white"} {data-background="#00acee"} 
-
-##
-```{r}
-tweet_embed("https://twitter.com/IFckingLoveMaps/status/1229435663923240963", align = "center", theme = "dark", hide_thread = T)
-```
+# [@IFckingLoveMaps]{style="color:white"} {data-background="#00acee"}
 
 ## 
 
 ::: columns
 ::: {.column width="50%"}
 ```{r}
-tweet_embed("https://twitter.com/ikashnitsky/status/1531695114585776130", align = "center", theme = "dark", hide_thread = T)
+tweet_embed("https://twitter.com/IFckingLoveMaps/status/1229435663923240963", align = "center", theme = "dark", hide_thread = T)
 ```
 :::
 
 ::: {.column width="50%"}
 ```{r}
-tweet_embed("https://twitter.com/ikashnitsky/status/1531707262259052552", align = "center", theme = "dark", hide_thread = T)
+tweet_embed("https://twitter.com/TerribleMaps/status/1518564075416002563", align = "center", theme = "dark", hide_thread = T)
 ```
 :::
 :::
+
+
+## 
+
+::: columns
+::: {.column width="50%"}
+```{r}
+tweet_embed("https://twitter.com/ikashnitsky/status/1071704893084352512", align = "center", theme = "dark", hide_thread = T)
+```
+:::
+
+::: {.column width="50%"}
+```{r}
+tweet_embed("https://twitter.com/ikashnitsky/status/1531695114585776130", align = "center", theme = "dark", hide_thread = T)
+```
+:::
+:::
+
+
+# [With R, maps became]{style="color:#ffffff"} [yet another type]{style="color:#e6ee9c"} [of dataviz]{style="color:#ffffff"} {data-background="#00251a"}
+
+## 
+
+<iframe width="1000px" height="650px" style="background: #FFFFFF;" src="https://r-graph-gallery.com">
+
+</iframe>
+
+::: footer
+<https://r-graph-gallery.com>
+:::
+
+# Main take-away: Day 1 {data-background="#cce5cc"}
+
+## 
+<img src="https://i.imgur.com/JdGefX1.jpg" style="width:70%"/>
+
+# Main take-away: Day 2 {data-background="#ffeb7f"}
+
+## 
+
+```{r}
+tweet_embed("https://twitter.com/TrustBiologist/status/1404078363300483087", align = "center", theme = "dark", hide_thread = T)
+```
+
+
+# Main take-away: Day 3 {data-background="#cefafa"}
+
+##
+
+<iframe width="1000px" height="650px" style="background: #FFFFFF;" src="https://nsgrantham.shinyapps.io/tidytuesdayrocks/">
+
+</iframe>
+
+::: footer
+<https://nsgrantham.shinyapps.io/tidytuesdayrocks>
+:::
+
+
 
 # Map projections {data-background="#ffeb7f"}
 
@@ -71,7 +124,6 @@ tweet_embed("https://twitter.com/ikashnitsky/status/1531707262259052552", align 
 <iframe width="1000" height="600" src="https://www.youtube.com/embed/kIID5FDi2JQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
 
 </iframe>
-
 
 ## 
 
@@ -148,9 +200,10 @@ tweet_embed("https://twitter.com/nzzvisuals/status/1186225049960943617", align =
 :::
 
 ## 
-[google "download shapefile" =)]{font-size:2em"}
 
-# Where to go next? {data-background="#cefafa"} 
+\[google "download shapefile" =)\]{font-size:2em"}
+
+# Where to go next? {data-background="#cefafa"}
 
 ## 
 
