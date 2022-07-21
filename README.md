@@ -67,6 +67,7 @@ Practical coding sessions start from basic introduction to tidy data manipulatio
 # Links to submit in-class assignments
 - Ugly `ggplot2` theme -- https://bit.ly/bssd22-ugly (day 2)
 - Any plot with own data -- https://bit.ly/bssd22-own (day 3)
+- Geocoding -- https://docs.google.com/forms/d/e/1FAIpQLScO3GNGuNQZrfYM2SHKN5N73uBap5scMvhBO88j9kHM-GZN5Q/viewform
 
 
 
