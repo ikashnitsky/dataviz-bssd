@@ -20,5 +20,13 @@ df <- sjr_journals
 # I also added a more detailed Scopus categorization of scientific fields
 asjc <- readxl::read_xlsx("data/scopus-asjc-codes.xlsx")
 
+# how to join the two provided datasets
+df_joined <- df %>% 
+    separate_rows(categories, sep = "; ") %>% 
+    mutate(
+        categories = categories %>% str_remove_all(" \\s*\\([^\\)]+\\)")
+    ) %>% 
+    left_join(asjc, c("categories" = "field")) 
+
 # Link to submit your output
 # https://bit.ly/bssd22-challenge
