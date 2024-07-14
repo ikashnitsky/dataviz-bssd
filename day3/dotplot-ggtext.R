@@ -1,5 +1,5 @@
 #===============================================================================
-# 2022-07-20 -- BSSD dataviz
+# 2024-07-17 -- BSSD dataviz
 # dotplot
 # Ilya Kashnitsky, ilya.kashnitsky@gmail.com
 #===============================================================================
@@ -57,39 +57,39 @@ dates <- tibble::tribble(
     "Lady Elizabeth Bowes-Lyon",  "f",   FALSE, "1900-08-04", "2002-03-30", "1936-11-11",
     "Queen Elizabeth II***",  "f",    TRUE, "1926-04-21", "2021-04-15", "1952-02-06",
     "Prince Philip",  "m",   FALSE, "1921-06-21", "2021-04-09", "1952-02-06"
-) %>%
+) |>
     transmute(
-        person = person %>% as_factor %>% fct_rev,
+        person = person |> as_factor |> fct_rev,
         sex, ruller,
-        birth = birth %>% ymd,
-        death = death %>% ymd,
-        coronation = coronation %>% ymd,
-        birth_year = birth %>% year,
-        # coronation_year = coronation %>% year,
-        age_at_coronation = (coronation - birth) %>% as.duration() %>%
-            as.numeric("years") %>% floor,
-        longevity = (death - birth) %>% as.duration() %>% as.numeric("years"),
-        birth_year_fix = birth_year %>% if_else(.<1842, 1841, .)
+        birth = birth |> ymd,
+        death = death |> ymd,
+        coronation = coronation |> ymd,
+        birth_year = birth |> year,
+        # coronation_year = coronation |> year,
+        age_at_coronation = (coronation - birth) |> as.duration() |>
+            as.numeric("years") |> floor,
+        longevity = (death - birth) |> as.duration() |> as.numeric("years"),
+        birth_year_fix = birth_year |> if_else(.<1842, 1841, .)
     )
 
 # load cohort life tables of the UK
 load("data/uk_clt.rda")
 
 # remaining cohort life expectancy for the population at coronation age
-comp <- dates %>%
+comp <- dates |>
     left_join(
-        uk_clt %>% select(sex, year, age, ex),
+        uk_clt |> select(sex, year, age, ex),
         by = c("sex", "birth_year_fix" = "year", "age_at_coronation" = "age")
-    ) %>%
+    ) |>
     mutate(
         cohort_ex = age_at_coronation + ex
     )
 
 # visualize
-comp %>%
+comp |>
     ggplot(aes(longevity, person))+
     geom_hline(
-        data = . %>% slice(seq(1,11,2)),
+        data = . |> slice(seq(1,11,2)),
         aes(yintercept = person), size = 9, color = "#eaeaea"
     )+
     geom_vline(xintercept = 0, color = 8, size = 1)+
@@ -123,41 +123,41 @@ ggsave(
 
 
 # average gap
-comp %>% summarise(avg_premium = mean(longevity - cohort_ex))
+comp |> summarise(avg_premium = mean(longevity - cohort_ex))
 
 
 # survival percentiles ----------------------------------------------------
 
-surv_coronation <- dates %>%
+surv_coronation <- dates |>
     left_join(
-        uk_clt %>% select(sex, year, age, lx),
+        uk_clt |> select(sex, year, age, lx),
         by = c("sex", "birth_year_fix" = "year", "age_at_coronation" = "age")
-    ) %>%
+    ) |>
     mutate(
         lx_coronation = lx,
         prop_surv_coronation = lx/1e5
     )
 
-surv_death <- dates %>%
-    mutate(age_at_death = longevity %>% floor) %>%
+surv_death <- dates |>
+    mutate(age_at_death = longevity |> floor) |>
     left_join(
-        uk_clt %>% select(sex, year, age, lx, dx),
+        uk_clt |> select(sex, year, age, lx, dx),
         by = c("sex", "birth_year_fix" = "year", "age_at_death" = "age")
-    ) %>%
+    ) |>
     mutate(lx_death = lx - (longevity-age_at_death)*dx)
 
 prop_outlived <- left_join(
-    surv_coronation %>% select(person, lx_coronation, prop_surv_coronation),
-    surv_death %>% select(person, longevity, lx_death)
-) %>%
+    surv_coronation |> select(person, lx_coronation, prop_surv_coronation),
+    surv_death |> select(person, longevity, lx_death)
+) |>
     mutate(prop_outlived = 1 - (lx_death / lx_coronation))
 
 
 # visualize
-prop_outlived %>%
+prop_outlived |>
     ggplot(aes(prop_outlived, person))+
     geom_hline(
-        data = . %>% slice(seq(1,11,2)),
+        data = . |> slice(seq(1,11,2)),
         aes(yintercept = person), size = 9, color = "#eaeaea"
     )+
     geom_vline(xintercept = c(0, .5, 1), color = 8, size = 1)+
@@ -187,17 +187,17 @@ ggsave(
 # try combining both plots ------------------------------------------------
 # UPD  2021-04-16 ------------------------------
 
-comb_peers <- uk_clt %>%
-    right_join(dates, by = c("year" = "birth_year_fix", "sex")) %>%
-    filter(age %>% is_weakly_greater_than(age_at_coronation)) %>%
-    mutate(person = person %>% as_factor())+
-    group_by(person) %>%
+comb_peers <- uk_clt |>
+    right_join(dates, by = c("year" = "birth_year_fix", "sex")) |>
+    filter(age |> is_weakly_greater_than(age_at_coronation)) |>
+    mutate(person = person |> as_factor())+
+    group_by(person) |>
     mutate(
         prop_peers_alive = lx / lx[1] * 100
     )
 
 # unified plot
-comb_peers %>%
+comb_peers |>
     ggplot(aes(age, person))+
     geom_vline(xintercept = c(0), color = 8, size = 1)+
     geom_tile(aes(fill = prop_peers_alive), height =.7)+
@@ -209,7 +209,7 @@ comb_peers %>%
         )
     )+
     geom_point(
-        data = . %>% filter(age == age_at_coronation),
+        data = . |> filter(age == age_at_coronation),
         aes(x = age_at_coronation + ex),
         color = "#ffffff",
         shape = 124, size = 4
@@ -224,15 +224,15 @@ comb_peers %>%
         data = prop_outlived,
         aes(
             x = longevity,
-            label = prop_outlived %>% multiply_by(1e2) %>%
-                round(1) %>% paste0("%")
+            label = prop_outlived |> multiply_by(1e2) |>
+                round(1) |> paste0("%")
         ),
         hjust = 1.2, size = 3.2, family = font_rc, color = "#B5223B"
     )+
     # annotate suvrivorship to coronation
     geom_text(
-        data = . %>% filter(age == age_at_coronation),
-        aes(label = paste0((lx/1e3) %>% round(1), "%")),
+        data = . |> filter(age == age_at_coronation),
+        aes(label = paste0((lx/1e3) |> round(1), "%")),
         hjust = 1.2, size = 3.2, family = font_rc, color = "#64B6EE"
     )+
     # annotate blue % text explainer

@@ -1,5 +1,5 @@
 #===============================================================================
-# 2022-07-19 -- BSSD dataviz
+# 2024-07-16 -- BSSD dataviz
 # ggplot2 themes, colors and fonts
 # Ilya Kashnitsky, ilya.kashnitsky@gmail.com
 #===============================================================================
@@ -39,12 +39,9 @@ library(prismatic)
 
 
 # random minimal tileplot
-crossing(
-    x = LETTERS %>% extract(1:4),
-    y = 5:8
-) %>% 
-    mutate(z = runif(16)) %>% 
-    ggplot(aes(x, y, fill = z))+
+crossing(x = LETTERS |> extract(1:4), y = 5:8) |>
+    mutate(z = runif(16)) |>
+    ggplot(aes(x, y, fill = z)) +
     geom_tile()
 
 gg <- ggplot2::last_plot()
@@ -62,7 +59,7 @@ n <- 100
 
 tibble(x = runif(n),
        y = runif(n),
-       size = runif(n, min = 4, max = 20)) %>%
+       size = runif(n, min = 4, max = 20)) |>
     ggplot(aes(x, y, size = size)) +
     geom_point(color = "white", pch = 42) +
     scale_size_identity() +
@@ -82,7 +79,7 @@ tibble(
     y = runif(n),
     size = runif(n, min = 3, max = 20),
     color = rgb(runif(n), runif(n), runif(n))
-) %>%
+) |>
     ggplot(aes(x, y, size = size, color = color)) +
     geom_point() +
     scale_color_identity() +
@@ -114,17 +111,36 @@ esquisse::esquisser()
 
 # fonts -------------------------------------------------------------------
 
-# # library(extrafont)
-# library(hrbrthemes)
-# import_roboto_condensed()
-# 
-# gg + theme_minimal(base_family = font_rc)
+# library(extrafont)
+library(hrbrthemes)
+import_roboto_condensed()
+
+gg + theme_minimal(base_family = font_rc)
+
+library(showtext)
+sysfonts::font_add_google("Roboto Condensed", "rc")
+sysfonts::font_add_google("Atkinson Hyperlegible", "ah")
+showtext_auto()
+
+gg + theme_minimal(base_family = "rc")
+gg + theme_minimal(base_family = "ah")
+
+
+# a fancy way to reuse code chunks ----------------------------------------
+
+# TODO add blog post link
+
+# set ggplot2 theme
+devtools::source_gist("653e1040a07364ae82b1bb312501a184")
+theme_set(theme_ik())
+
+gg
 
 
 # challenge -- create as ugly themed plot as possible ---------------------
 
-# for inspiration: 
+# for inspiration:
 # https://twitter.com/CedScherer/status/1236056151210500096
 
-# submit your results here:
+# submit your results here:  TODO update link
 # https://bit.ly/bssd21-ugly

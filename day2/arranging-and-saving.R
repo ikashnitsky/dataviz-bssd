@@ -1,5 +1,5 @@
 #===============================================================================
-# 2022-07-19 -- BSSD dataviz
+# 2024-07-16 -- BSSD dataviz
 # Arranging and saving ggplots
 # Ilya Kashnitsky, ilya.kashnitsky@gmail.com
 #===============================================================================
@@ -8,12 +8,12 @@
 library(tidyverse)
 
 # let's re-create a simple plot
-airquality %>%
-  janitor::clean_names() %>%
+airquality |>
+  janitor::clean_names() |>
   mutate(
-    date = paste(day, month, "1973", sep = "-") %>%  lubridate::dmy(),
-    month = month %>% factor
-  ) %>% 
+    date = paste(day, month, "1973", sep = "-") |>  lubridate::dmy(),
+    month = month |> factor()
+  ) |> 
   ggplot(aes(x = date, y = temp, color = month)) +
   geom_line()
 

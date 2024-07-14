@@ -1,5 +1,5 @@
 #===============================================================================
-# 2022-07-21 -- BSSD dataviz
+# 2024-07-18 -- BSSD dataviz
 # Maps
 # Ilya Kashnitsky, ilya.kashnitsky@gmail.com
 #===============================================================================
@@ -16,21 +16,21 @@ library(cowplot)
 gd_fr <- read_sf("data/shape-france.shp")
 
 # base R plotting method
-gd_fr %>% plot
+gd_fr |> plot
 
 # minimal ggplot
-gd_fr %>% 
+gd_fr |> 
     ggplot()+
     geom_sf()
 
 # reproject
-gd_fr %>% 
+gd_fr |> 
     ggplot()+
     geom_sf()+
     coord_sf(crs = 2154)
 
 # LAEA -- appropriate European proj
-gd_fr %>% 
+gd_fr |> 
     ggplot()+
     geom_sf()+
     coord_sf(crs = 3035, datum = NA)+
@@ -44,35 +44,35 @@ gd_fr %>%
 library(eurostat)
 
 # the built-in dataset of EU boundaries
-gd <- eurostat_geodata_60_2016 %>% 
+gd <- eurostat_geodata_60_2016 |> 
     janitor::clean_names()
 
 # let's build the most basic map
-gd %>% 
+gd |> 
     ggplot() +
     geom_sf()
 
 # transform the projection for the one suitable for Europe
-gdtr <- gd %>% 
+gdtr <- gd |> 
     st_transform(crs = 3035)
 
-gdtr %>% 
+gdtr |> 
     ggplot() +
     geom_sf()
 
 # Further on, I will run all the examples for Italy only, for the speed of code execution 
 
 # filter out Italy
-gd_it <- gdtr %>% 
+gd_it <- gdtr |> 
     filter(cntr_code == "IT", levl_code == 3) 
 
 # the basic map
-gd_it %>%
+gd_it |>
     ggplot()+
     geom_sf()
 
 # get rid of the grid
-gd_it %>%
+gd_it |>
     ggplot()+
     geom_sf()+
     coord_sf(datum = NA)
@@ -80,7 +80,7 @@ gd_it %>%
 
 # datum parameter controls the grid
 # if we set it to the projection being used we can see the axes in meters
-gd_it %>% 
+gd_it |> 
     ggplot()+
     geom_sf()+
     coord_sf(datum = st_crs(3035))
@@ -88,7 +88,7 @@ gd_it %>%
 
 # these maps are simple ggplots, so we can change them like any other plot
 # {cowplot} package contains a nice theme for maps
-gd_it %>% 
+gd_it |> 
     ggplot()+
     geom_sf()+
     coord_sf(datum = NA)+
@@ -101,7 +101,7 @@ gd_it %>%
 # http://ropengov.github.io/eurostat/articles/cheatsheet.html
 
 # let's try to search
-search_eurostat("life expectancy") %>% View
+search_eurostat("life expectancy") |> View
 
 # Not nearly as cool as we'd like
 # better go to 
@@ -116,21 +116,21 @@ df <- get_eurostat("demo_r_find3")
 # http://ec.europa.eu/eurostat/estat-navtree-portlet-prod/BulkDownloadListing
 
 # time series length
-df$time %>% unique()
+df$time |> unique()
 
 # ages
-df$indic_de %>% unique()
+df$indic_de |> unique()
 
 # now we filter out TFR for Italian regions, NUTS3 only, let's keep all the years for now
-df_it <- df %>% 
+df_it <- df |> 
     filter(
         indic_de == "TOTFERRT",
-        geo %>% str_sub(1,2) == "IT", # only Italy
-        geo %>% paste %>% nchar == 5 # only NUTS-3 
-    ) %>% 
+        geo |> str_sub(1,2) == "IT", # only Italy
+        geo |> paste |> nchar == 5 # only NUTS-3 
+    ) |> 
     transmute(
-        id = geo %>% paste,
-        year = time %>% lubridate::year(),
+        id = geo |> paste,
+        year = time |> lubridate::year(),
         tfr = values
     )
 
@@ -139,7 +139,7 @@ dj_it <- left_join(gd_it, df_it, "id")
 
 
 # plot TFR
-dj_it %>% 
+dj_it |> 
     ggplot()+
     geom_sf(aes(fill = tfr))+
     coord_sf(datum = NA)+
@@ -147,7 +147,7 @@ dj_it %>%
 
 
 # now let's use viridis colors
-dj_it %>% 
+dj_it |> 
     ggplot()+
     geom_sf(aes(fill = tfr))+
     scale_fill_viridis_c(option = "B")+
@@ -162,7 +162,7 @@ dj_it %>%
 # ...
 
 # It's observed in one of the previous years!
-dj_it %>% 
+dj_it |> 
     ggplot()+
     geom_sf(aes(fill = tfr))+
     scale_fill_viridis_c(option = "B")+
@@ -174,8 +174,8 @@ dj_it %>%
 
 
 # next we'll use just 2017 and save for plotly
-dj_it %>% 
-    filter(year == 2017) %>% 
+dj_it |> 
+    filter(year == 2017) |> 
     ggplot()+
     geom_sf(aes(fill = tfr), color = NA)+
     scale_fill_viridis_c(option = "B")+
@@ -194,7 +194,7 @@ p <- ggplot2::last_plot()
 library(plotly)
 
 # let's create a basic plot
-q <- qplot(data = mtcars, hp, mpg, color = cyl %>% factor)
+q <- qplot(data = mtcars, hp, mpg, color = cyl |> factor)
 q
 # now, magic
 ggplotly(q)
@@ -204,9 +204,9 @@ ggplotly(q)
 ggplotly(p)  # doesn't work for me
 
 
-dj_it %>% 
-    filter(year == 2017) %>% 
-    plot_ly() %>% 
+dj_it |> 
+    filter(year == 2017) |> 
+    plot_ly() |> 
     add_sf(
         split = ~id, # group by our regions
         alpha = 1, # non-transparent colors
@@ -229,10 +229,10 @@ htmlwidgets::saveWidget(pl, "out/ggplotly.html")
 
 
 # bonus -- animate changes from year to year
-dj_it %>% 
+dj_it |> 
     plot_ly(
         frame = ~year
-    ) %>% 
+    ) |> 
     add_sf(
         split = ~id, # group by our regions
         alpha = 1, # non-transparent colors
@@ -255,14 +255,14 @@ pacman::p_unload(plotly)
 
 library(rmapshaper)
 
-bord <- gdtr %>% 
-    filter(cntr_code == "IT", levl_code == 2) %>% 
+bord <- gdtr |> 
+    filter(cntr_code == "IT", levl_code == 2) |> 
     ms_innerlines()
 
 
 # now add them to the map
-dj_it %>% 
-    filter(year == 2017) %>% 
+dj_it |> 
+    filter(year == 2017) |> 
     ggplot()+
     geom_sf(aes(fill = tfr), color = NA)+
     geom_sf(data = bord, color = "gray92")+
@@ -275,9 +275,9 @@ dj_it %>%
 
 
 # symplifying polygons ----------------------------------------------------
-dj_it %>% 
-    filter(year == 2017) %>% 
-    ms_simplify() %>% #!!!
+dj_it |> 
+    filter(year == 2017) |> 
+    ms_simplify() |> #!!!
     ggplot()+
     geom_sf(aes(fill = tfr), color = NA)+
     geom_sf(data = bord, color = "gray92")+
@@ -296,15 +296,15 @@ dj_it %>%
 # package maps contains a nice dataset of world cities
 library(maps)
 
-world.cities %>% View()
+world.cities |> View()
 
 # subset Italian cities
-it_cit <- world.cities %>% 
+it_cit <- world.cities |> 
     dplyr::filter(
         country.etc=="Italy", 
         # let's take only cities bigger than 100K
         pop > 1e5
-    ) %>% 
+    ) |> 
     st_as_sf(
         coords = c("long", "lat"),
         crs = 4326
@@ -322,14 +322,14 @@ library(GADMTools)
 
 gadm_it <- gadm_sf_loadCountries(fileNames = "ITA", level = 1) 
 
-gadm_it %>% 
+gadm_it |> 
     ggplot()+
     geom_sf()
 
-gadm_sf_it <- gadm_it %>% extract2("sf")
+gadm_sf_it <- gadm_it |> extract2("sf")
 
-gadm_sf_it %>% 
-    ms_simplify() %>% # the init file took forever for me to render so I simplify
+gadm_sf_it |> 
+    ms_simplify() |> # the init file took forever for me to render so I simplify
     ggplot()+
     geom_sf()
 
@@ -342,11 +342,11 @@ kz_raw <- rio::import(here::here("data/unmet_loc.csv"))
 
 library(xray)
 
-kz_raw %>% xray::distributions()
+kz_raw |> xray::distributions()
 
-kz_clean <- kz_raw %>% 
-    rename(x = Longitude, y = Latitude) %>% 
-    drop_na(x, y) %>% 
+kz_clean <- kz_raw |> 
+    rename(x = Longitude, y = Latitude) |> 
+    drop_na(x, y) |> 
     st_as_sf(
         coords = c("x", "y"),
         crs = 4326
@@ -355,30 +355,30 @@ kz_clean <- kz_raw %>%
 
 
 # regions
-gd_kz <- gadm_sf_loadCountries(fileNames = "KAZ", level = 2) %>% extract2("sf")
+gd_kz <- gadm_sf_loadCountries(fileNames = "KAZ", level = 2) |> extract2("sf")
 
-gd_kz %>% 
-    ms_dissolve(field = "NAME_1") %>% 
-    ms_simplify() %>% 
+gd_kz |> 
+    ms_dissolve(field = "NAME_1") |> 
+    ms_simplify() |> 
     ggplot() +
     geom_sf()+
     geom_sf(data = kz_clean, color = "red", alpha = .05)
 
 # limit points to KZ only
-kz_only <- kz_clean %>% 
+kz_only <- kz_clean |> 
     ms_clip(clip = gd_kz)
 
-gd_kz %>% 
-    ms_dissolve(field = "NAME_1") %>% 
-    ms_simplify() %>% 
+gd_kz |> 
+    ms_dissolve(field = "NAME_1") |> 
+    ms_simplify() |> 
     ggplot() +
     geom_sf()+
     geom_sf(data = kz_only, color = "red", alpha = .05)
 
 
-gd_kz %>% 
-    ms_dissolve(field = "NAME_1") %>% 
-    ms_simplify() %>% 
+gd_kz |> 
+    ms_dissolve(field = "NAME_1") |> 
+    ms_simplify() |> 
     ggplot() +
     geom_sf()+
     geom_sf(data = kz_only, color = "red", alpha = .05)+
@@ -388,9 +388,9 @@ gd_kz %>%
 # interactive map with leaflet
 library(leaflet)
 
-leaflet(gd_kz) %>% 
-    setView(100, 50, 2) %>% 
-    addProviderTiles(providers$Stamen.Toner) %>% 
+leaflet(gd_kz) |> 
+    setView(100, 50, 2) |> 
+    addProviderTiles(providers$Stamen.Toner) |> 
     addCircleMarkers(
         kz_raw$Longitude, kz_raw$Latitude, 
         radius = 1, color = "red",

@@ -1,8 +1,10 @@
 #===============================================================================
-# 2022-07-20 -- BSSD dataviz
+# 2024-07-17 -- BSSD dataviz
 # Population pyramid -- animate
 # Ilya Kashnitsky, ilya.kashnitsky@gmail.com
 #===============================================================================
+
+# TODO -- race chart 
 
 # animation ---------------------------------------------------------------
 
@@ -23,11 +25,11 @@ library(gganimate)
 
 
 # line / path
-df_aq <- airquality %>%
-    janitor::clean_names() %>%
+df_aq <- airquality |>
+    janitor::clean_names() |>
     mutate(
-        date = paste(day, month, "1973", sep = "-") %>%  lubridate::dmy(),
-        month = month %>% factor
+        date = paste(day, month, "1973", sep = "-") |>  lubridate::dmy(),
+        month = month |> factor
     )
 
 p <- ggplot(df_aq, aes(x = date, y = temp)) +

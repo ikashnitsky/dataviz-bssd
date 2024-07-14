@@ -1,5 +1,5 @@
 #===============================================================================
-# 2022-07-20 -- BSSD dataviz
+# 2024-07-17 -- BSSD dataviz
 # heatmap example
 # Ilya Kashnitsky, ilya.kashnitsky@gmail.com
 #===============================================================================
@@ -12,7 +12,7 @@ library(tidyverse)
 load("data/death-by-day.rda")
 
 # calendar plot of death tolls by day
-df %>% 
+df |> 
     ggplot(aes(week, wday, fill = n))+
     geom_tile()+
     scale_fill_viridis_c("#deaths",option = "B")+

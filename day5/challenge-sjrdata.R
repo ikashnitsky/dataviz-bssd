@@ -1,5 +1,5 @@
 #===============================================================================
-# 2022-07-22 -- BSSD dataviz
+# 2024-07-24 -- BSSD dataviz
 # Dataviz challenge -- sjrdata
 # Ilya Kashnitsky, ilya.kashnitsky@gmail.com
 #===============================================================================
@@ -21,11 +21,11 @@ df <- sjr_journals
 asjc <- readxl::read_xlsx("data/scopus-asjc-codes.xlsx")
 
 # how to join the two provided datasets
-df_joined <- df %>% 
-    separate_rows(categories, sep = "; ") %>% 
+df_joined <- df |> 
+    separate_rows(categories, sep = "; ") |> 
     mutate(
-        categories = categories %>% str_remove_all(" \\s*\\([^\\)]+\\)")
-    ) %>% 
+        categories = categories |> str_remove_all(" \\s*\\([^\\)]+\\)")
+    ) |> 
     left_join(asjc, c("categories" = "field")) 
 
 # Link to submit your output

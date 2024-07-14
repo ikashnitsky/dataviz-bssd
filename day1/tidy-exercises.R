@@ -1,5 +1,5 @@
 #===============================================================================
-# 2022-07-18 -- BSSD dataviz
+# 2024-07-15 -- BSSD dataviz
 # Tidy exercises
 # Ilya Kashnitsky, ilya.kashnitsky@gmail.com
 #===============================================================================
@@ -42,7 +42,7 @@ pop <- read_excel(path = 'data/data-denmark.xlsx', sheet = 'pop')
 # - join the two dataframes (left_join OR inner_join)
 # - calculate age specific death ratios
 # - subset only the ages 15-59 and year 2001
-# Q: what is the average ratio of male ASDR to female ASDR in each region? 
+# Q: what is the average ratio of male ASDR to female ASDR in each region?
 # Tip: use summarize
 
 
@@ -53,4 +53,3 @@ pop <- read_excel(path = 'data/data-denmark.xlsx', sheet = 'pop')
 # - transform to wide format using the column "year" (pivot_wider)
 # - calculate the growth of ASDR between 2005 and 2001
 # Q: in which region the average growth/decrease in ASDR was largest?
-

@@ -1,5 +1,5 @@
 #===============================================================================
-# 2022-07-21 -- BSSD dataviz
+# 2024-07-18 -- BSSD dataviz
 # Geocoding address example
 # Ilya Kashnitsky, ilya.kashnitsky@gmail.com
 #===============================================================================
@@ -18,21 +18,21 @@ library(gsheet)
 
 raw <- gsheet2tbl("https://docs.google.com/spreadsheets/d/1YlfLQc_aOOiTqaSGu5TI70OQy1ewTa_Ti0qAEOEcy58")
 
-df <- raw %>% 
-    janitor::clean_names() %>% 
-    drop_na() %>% 
+df <- raw |> 
+    janitor::clean_names() |> 
+    drop_na() |> 
     mutate(text_to_geocode = paste(city_settlement, country, sep = ", "))
 
 # now geocode
 # there is a new brilliant package tidygeocoder
 library(tidygeocoder)
 
-df_geocoded <- df %>% 
+df_geocoded <- df |> 
     geocode(text_to_geocode, method = "osm")
 
 # convert coordinates to an sf object
-df_plot <- df_geocoded %>% 
-    drop_na() %>% 
+df_plot <- df_geocoded |> 
+    drop_na() |> 
     st_as_sf(
         coords = c("long", "lat"),
         crs = 4326
@@ -40,26 +40,26 @@ df_plot <- df_geocoded %>%
 
 
 # get world map outline (you might need to install the package)
-world_outline <- spData::world %>% 
+world_outline <- spData::world |> 
     st_as_sf()
 
 # let's use a fancy projection
-world_outline_robinson <- world_outline %>% 
+world_outline_robinson <- world_outline |> 
     st_transform(crs = "ESRI:54030")
 
-country_borders <- world_outline_robinson %>% 
+country_borders <- world_outline_robinson |> 
     rmapshaper::ms_innerlines()
 
 
 # map!
-world_outline_robinson %>% 
-    filter(!iso_a2 == "AQ") %>% 
+world_outline_robinson |> 
+    filter(!iso_a2 == "AQ") |> 
     ggplot()+
     geom_sf(fill = "#673862", color = NA)+
     geom_sf(data = country_borders, size = .25, color = "#BD92B7FF")+
     geom_sf(
         data = df_plot, fill = "#FDD15E", 
-        color = "#FDD15E" %>% prismatic::clr_darken(),
+        color = "#FDD15E" |> prismatic::clr_darken(),
         size = 1.5, shape = 21
     )+
     coord_sf(datum = NA)+

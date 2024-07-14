@@ -1,5 +1,5 @@
 #===============================================================================
-# 2022-07-20 -- BSSD dataviz
+# 2024-07-17 -- BSSD dataviz
 # smoothed dots
 # Ilya Kashnitsky, ilya.kashnitsky@gmail.com, @ikashnitsky
 #===============================================================================
@@ -13,24 +13,24 @@
 library(tidyverse)
 library(magrittr)
 
-df_aq <- airquality %>%
-    janitor::clean_names() %>%
+df_aq <- airquality |>
+    janitor::clean_names() |>
     mutate(
-        date = paste(day, month, "1973", sep = "-") %>%  
+        date = paste(day, month, "1973", sep = "-") |>  
             lubridate::dmy(),
-        month = month %>% factor
+        month = month |> factor
     )
 
-df_aq %>%
+df_aq |>
     ggplot(aes(x = date, y = temp, color = month)) +
     geom_line()
 
-df_aq %>%
+df_aq |>
     ggplot(aes(x = date, y = temp, color = month)) +
     geom_point()+
     geom_line(size = 2, alpha = .3)
 
-df_aq %>%
+df_aq |>
     ggplot() +
     geom_point(aes(x = date, y = temp, color = month))+
     geom_smooth(se = F, aes(x = date, y = temp), color = 1)
@@ -51,9 +51,9 @@ library(hrbrthemes)
 remotes::install_github("ikashnitsky/sjrdata")
 library(sjrdata)
 
-df <- sjr_journals %>% view
+df <- sjr_journals |> view
 
-df %>%
+df |>
     filter(title %in% c(
         "Demography",
         "Population and Development Review",
@@ -61,14 +61,14 @@ df %>%
         "Population, Space and Place",
         "Demographic Research",
         "Genus"
-    )) %>%
-    mutate(year = year %>% as.numeric) %>%
+    )) |>
+    mutate(year = year |> as.numeric) |>
     ggplot(aes(year, sjr, color = title))+
     geom_hline(yintercept = 0, size = .75, color = "#3a3a3a")+
     geom_point(aes(size = total_docs_year), alpha = .5)+
     stat_smooth(se = F, span = .85)+
     geom_text(
-        data = . %>% filter(year == 2021),
+        data = . |> filter(year == 2021),
         aes(label = title),
         x = 1998, y = seq(3.7, 2.7, length.out = 6),
         hjust = 0, family = font_rc
