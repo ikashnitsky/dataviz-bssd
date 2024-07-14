@@ -22,10 +22,12 @@ countries <- UNlocations |> pull(name) |> paste
 # data on male life expectancy at birth
 data(e0M)
 
-e0M |> 
+e0M |>
     filter(country %in% countries) |>
     select(-last.observed) |>
-    pivot_longer(cols = 3:15, names_to = "period", values_to = "value") |>
+    pivot_longer(cols = 3:15,
+                 names_to = "period",
+                 values_to = "value") |>
     ggplot(aes(x = value, y = period |> fct_rev())) +
     geom_density_ridges(aes(fill = period)) +
     scale_fill_viridis_d(
@@ -43,5 +45,3 @@ e0M |>
     ) +
     theme_minimal(base_family =  "mono") +
     theme(legend.position = "none")
-
-

@@ -16,7 +16,7 @@ library(cowplot)
 gd_fr <- read_sf("data/shape-france.shp")
 
 # base R plotting method
-gd_fr |> plot
+gd_fr |> plot()
 
 # minimal ggplot
 gd_fr |> 
@@ -296,7 +296,7 @@ dj_it |>
 # package maps contains a nice dataset of world cities
 library(maps)
 
-world.cities |> View()
+world.cities |> view()
 
 # subset Italian cities
 it_cit <- world.cities |> 
