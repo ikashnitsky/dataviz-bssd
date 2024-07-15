@@ -1,8 +1,8 @@
 ---
 title: "Dataviz art/skill"
 subtitle: "Maps with R"
-author: "<br><br>**Ilya Kashnitsky**"
-date: "<br>Barcelona Summer School of Demography 2024<br>2024-07-18"
+author: "<br><br>**Ilya Kashnitsky**<br><br>Barcelona Summer School of Demography 2024<br>"
+date: "2024-07-18"
 format: 
   revealjs:
     theme: dark
@@ -199,9 +199,7 @@ tweet_embed("https://twitter.com/nzzvisuals/status/1186225049960943617", align =
 <http://wiki.openstreetmap.org/wiki/Shapefiles>
 :::
 
-## 
-
-\[google "download shapefile" =)\]{font-size:2em"}
+## google "download shapefile" =) 
 
 # Where to go next? {data-background="#cefafa"}
 
@@ -247,6 +245,8 @@ tweet_embed("https://twitter.com/nzzvisuals/status/1186225049960943617", align =
 
 # Packages to explore {data-background="#cce5cc"}
 
+
+
 ## 
 
 <iframe width="1000px" height="650px" style="background: #FFFFFF;" src="https://cran.r-project.org/web/packages/tmap/vignettes/tmap-getstarted.html">
@@ -259,12 +259,12 @@ tweet_embed("https://twitter.com/nzzvisuals/status/1186225049960943617", align =
 
 ## 
 
-<iframe width="1000px" height="650px" style="background: #FFFFFF;" src="https://r-spatial.github.io/sf/">
+<iframe width="1000px" height="650px" style="background: #FFFFFF;" src="https://paleolimbot.github.io/ggspatial/">
 
 </iframe>
 
 ::: footer
-<https://r-spatial.github.io/sf>
+<https://paleolimbot.github.io/ggspatial>
 :::
 
 ## 
@@ -276,6 +276,19 @@ tweet_embed("https://twitter.com/nzzvisuals/status/1186225049960943617", align =
 ::: footer
 <https://walkerke.github.io/tidycensus/articles/basic-usage.html>
 :::
+
+
+## 
+
+<iframe width="1000px" height="650px" style="background: #FFFFFF;" src="https://walker-data.com/mapgl">
+
+</iframe>
+
+::: footer
+<https://walker-data.com/mapgl>
+:::
+
+
 
 ## 
 
