@@ -71,6 +71,7 @@ Practical coding sessions start from basic introduction to tidy data manipulatio
 - Hadley Wickham's [R For Data Science](https://r4ds.had.co.nz)
 - Neal Grantham's [TidyTuesday Rocks app](https://nsgrantham.shinyapps.io/tidytuesdayrocks/)
 - Nathaniel Smith's [talk on the principles of viridis palettes](https://youtu.be/xAoljeRJ3lU)
+- David Robinson's [RStudio Conference 2019 talk](https://posit.co/resources/videos/the-unreasonable-effectiveness-of-public-work/) on the immense benefits of being open and sharing stuff freely 
 - Yan Holtz's [tool for selecting color palletes](https://python-graph-gallery.com/color-palette-finder/)
 - John Burn-Murdoch's [RStudio 2021 talk](https://youtu.be/L5_4kuoiiKU)
 - Hans Rosling: [sample talk](https://youtu.be/BZoKfap4g4w); [Factfulness](https://www.amazon.com/Factfulness-Reasons-World-Things-Better/dp/1250107814); [gapminder.org](https://www.gapminder.org/tools/#$chart-type=bubbles&url=v1)
