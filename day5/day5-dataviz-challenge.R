@@ -4,6 +4,9 @@
 # Ilya Kashnitsky, ilya.kashnitsky@gmail.com
 #===============================================================================
 
+# Please submit your dataviz by the link in the main course's github README
+# https://github.com/ikashnitsky/dataviz-bssd?tab=readme-ov-file#links-to-submit-in-class-assignments
+
 # load required/suggested packages
 library(tidyverse)
 library(sf)
