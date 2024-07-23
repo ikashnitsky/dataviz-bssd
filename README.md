@@ -1,4 +1,4 @@
-# <img src="https://i.imgur.com/lLufdBo.png" align="right" width="150" height="150" />  Barcelona Summer School of Demography 2024 week 3 Dataviz – the Art/Skill Cocktail
+# <img src="https://i.imgur.com/HMrQRSW.png" align="right" width="150" height="150" />  Barcelona Summer School of Demography 2024 week 3 Dataviz – the Art/Skill Cocktail
 
 In the ever-growing universe of dry academic texts, impressive and efficient graphics are quite rare. Driven by widespread software legacy issues and mostly outdated limitations imposed by traditional scientific publishers, researchers often consider producing high quality graphics as a peripheral optional task – “if time allows” (spoiler: it won’t). Yet, modern tools place data visualization in the focus of research workflows when it comes to conveying the results. Hence, the ability to turn a large dataset into an insightful visualization is an increasingly valuable skill in academia.
 
@@ -35,8 +35,8 @@ Practical coding sessions start from basic introduction to tidy data manipulatio
 
 ### Day 3, Wednesday, July 17: TOOLBOX
 - Useful types of plots
-- Dotplots – the most neglected and powerful type of dataviz
-- Heatmaps, equality-line, ggridges, treemap
+- Dotplot – the most neglected and powerful type of dataviz
+- Heatmap, equality-line, ggridges, treemap
 - Interactivity: `plotly`, `gganimate`
 
 ### Day 4, Thursday, July 18: MAPS
