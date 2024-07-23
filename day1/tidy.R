@@ -99,14 +99,8 @@ save(df, file = "data/denmark.Rdata")
 # save(df, file = "data/denmark.rda")
 
 rm(list = ls()) # NOTE! forbidden line, never use mindlessly
-# TODO link to Jenny Bryant post
+# Have a look at the detailed explanation by Jenny Bryant
+# https://www.tidyverse.org/blog/2017/12/workflow-vs-script/
 
 # load the result again
 load("data/denmark.Rdata")
-
-
-
-# TODO show some useful functions
-useful
-
-usethis::use_

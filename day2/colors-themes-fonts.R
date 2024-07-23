@@ -128,7 +128,8 @@ gg + theme_minimal(base_family = "ah")
 
 # a fancy way to reuse code chunks ----------------------------------------
 
-# TODO add blog post link
+# A blog post on the power of gist + devtools::source_gist()
+# https://ikashnitsky.phd/2023/gist-snippet
 
 # set ggplot2 theme
 devtools::source_gist("653e1040a07364ae82b1bb312501a184")
@@ -142,5 +143,5 @@ gg
 # for inspiration:
 # https://twitter.com/CedScherer/status/1236056151210500096
 
-# submit your results here:  TODO update link
-# https://bit.ly/bssd21-ugly
+# submit your results via the link in the main repository README:
+# https://github.com/ikashnitsky/dataviz-bssd?tab=readme-ov-file#links-to-submit-in-class-assignments

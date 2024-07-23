@@ -17,7 +17,7 @@ library(wpp2015)
 # get the UN country names
 data(UNlocations)
 
-countries <- UNlocations |> pull(name) |> paste
+countries <- UNlocations |> pull(name) |> paste()
 
 # data on male life expectancy at birth
 data(e0M)

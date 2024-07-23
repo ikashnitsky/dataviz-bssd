@@ -4,8 +4,6 @@
 # Ilya Kashnitsky, ilya.kashnitsky@gmail.com
 #===============================================================================
 
-# TODO -- race chart
-
 # animation ---------------------------------------------------------------
 
 # the power of moving charts

@@ -124,18 +124,21 @@ dates <- tibble::tribble(
     "1952-02-06"
 ) |>
     transmute(
-        person = person |> as_factor |> fct_rev,
+        person = person |> as_factor() |> fct_rev(),
         sex,
         ruller,
-        birth = birth |> ymd,
-        death = death |> ymd,
-        coronation = coronation |> ymd,
-        birth_year = birth |> year,
-        # coronation_year = coronation |> year,
+        birth = birth |> ymd(),
+        death = death |> ymd(),
+        coronation = coronation |> ymd(),
+        birth_year = birth |> year(),
+        # coronation_year = coronation |> year(),
         age_at_coronation = (coronation - birth) |> as.duration() |>
-            as.numeric("years") |> floor,
+            as.numeric("years") |> floor(),
         longevity = (death - birth) |> as.duration() |> as.numeric("years"),
-        birth_year_fix = birth_year |> if_else(. < 1842, 1841, .)
+        birth_year_fix = case_when(
+            birth_year < 1842 ~ 1841,
+            TRUE ~ birth_year
+        )
     )
 
 # load cohort life tables of the UK
@@ -157,7 +160,7 @@ comp <- dates |>
 comp |>
     ggplot(aes(longevity, person)) +
     geom_hline(
-        data = . |> slice(seq(1, 11, 2)),
+        data = . %>% slice(seq(1, 11, 2)), # !note the use of tidy pipe TODO
         aes(yintercept = person),
         size = 9,
         color = "#eaeaea"
@@ -229,7 +232,7 @@ surv_coronation <- dates |>
            prop_surv_coronation = lx / 1e5)
 
 surv_death <- dates |>
-    mutate(age_at_death = longevity |> floor) |>
+    mutate(age_at_death = longevity |> floor()) |>
     left_join(
         uk_clt |> select(sex, year, age, lx, dx),
         by = c(
@@ -251,7 +254,7 @@ prop_outlived <- left_join(
 prop_outlived |>
     ggplot(aes(prop_outlived, person)) +
     geom_hline(
-        data = . |> slice(seq(1, 11, 2)),
+        data = . %>% slice(seq(1, 11, 2)),
         aes(yintercept = person),
         size = 9,
         color = "#eaeaea"
@@ -293,7 +296,7 @@ ggsave(
 comb_peers <- uk_clt |>
     right_join(dates, by = c("year" = "birth_year_fix", "sex")) |>
     filter(age |> is_weakly_greater_than(age_at_coronation)) |>
-    mutate(person = person |> as_factor()) +
+    mutate(person = person |> as_factor()) |> 
     group_by(person) |>
     mutate(prop_peers_alive = lx / lx[1] * 100)
 
@@ -314,7 +317,7 @@ comb_peers |>
         )
     ) +
     geom_point(
-        data = . |> filter(age == age_at_coronation),
+        data = . %>% filter(age == age_at_coronation),
         aes(x = age_at_coronation + ex),
         color = "#ffffff",
         shape = 124,
@@ -342,7 +345,7 @@ comb_peers |>
     ) +
     # annotate suvrivorship to coronation
     geom_text(
-        data = . |> filter(age == age_at_coronation),
+        data = . %>% filter(age == age_at_coronation),
         aes(label = paste0((lx / 1e3) |> round(1), "%")),
         hjust = 1.2,
         size = 3.2,

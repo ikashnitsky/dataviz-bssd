@@ -18,7 +18,7 @@ df_aq <- airquality |>
     mutate(
         date = paste(day, month, "1973", sep = "-") |>
             lubridate::dmy(),
-        month = month |> factor
+        month = month |> factor()
     )
 
 df_aq |>
@@ -48,10 +48,10 @@ df_aq |>
 
 library(tidyverse)
 library(hrbrthemes)
-remotes::install_github("ikashnitsky/sjrdata")
+# remotes::install_github("ikashnitsky/sjrdata")
 library(sjrdata)
 
-df <- sjr_journals |> view()
+df <- sjr_journals
 
 df |>
     filter(
@@ -72,7 +72,7 @@ df |>
     geom_point(aes(size = total_docs_year), alpha = .5) +
     stat_smooth(se = F, span = .85) +
     geom_text(
-        data = . |> filter(year == 2021),
+        data = . %>% filter(year == 2021), # ! TODO
         aes(label = title),
         x = 1998,
         y = seq(3.7, 2.7, length.out = 6),

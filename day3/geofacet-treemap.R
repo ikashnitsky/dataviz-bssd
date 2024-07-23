@@ -78,13 +78,13 @@ library(prismatic)
 # choosing colors for race
 col <- RColorBrewer::brewer.pal(8, "Accent")
 
-col |> prismatic::color() |> plot
+col |> prismatic::color() |> plot()
 
 pal <- col |> extract(c(1, 8, 6, 5, 3))
 
-pal |> color
-pal |> color |> prismatic::clr_grayscale()
-pal |> color |> prismatic::clr_deutan()
+pal |> color()
+pal |> color() |> prismatic::clr_grayscale()
+pal |> color() |> prismatic::clr_deutan()
 
 eth |>
     filter(SCHOOL_YEAR == "2016-2017") |>
