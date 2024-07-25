@@ -199,6 +199,17 @@ tweet_embed("https://twitter.com/nzzvisuals/status/1186225049960943617", align =
 <http://wiki.openstreetmap.org/wiki/Shapefiles>
 :::
 
+
+## 
+
+<iframe width="1000px" height="650px" style="background: #FFFFFF;" src="https://www.paulamoraga.com/book-spatial/r-packages-to-download-open-spatial-data.html#climatic-data">
+
+</iframe>
+
+::: footer
+<https://github.com/rspatial/geodata>
+:::
+
 ## google "download shapefile" =) 
 
 # Where to go next? {data-background="#cefafa"}
@@ -212,6 +223,7 @@ tweet_embed("https://twitter.com/nzzvisuals/status/1186225049960943617", align =
 ::: footer
 <https://geocompr.robinlovelace.net>
 :::
+
 
 ## 
 

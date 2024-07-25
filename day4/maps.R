@@ -101,22 +101,23 @@ gd_it |>
 # http://ropengov.github.io/eurostat/articles/cheatsheet.html
 
 # let's try to search
-search_eurostat("life expectancy") |> View
+search_eurostat("life expectancy") |> view()
 
 # Not nearly as cool as we'd like
 # better go to 
 # http://ec.europa.eu/eurostat/data/database
 # OR
-# http://ec.europa.eu/eurostat/web/regions/data/database
+# https://ec.europa.eu/eurostat/web/regions/database
 
 # download the dataset found manually
-df <- get_eurostat("demo_r_find3")
+df <- get_eurostat("demo_r_find3") |> 
+    janitor::clean_names()
 
 # if the automated download does not work, the data can be grabbed manually at
-# http://ec.europa.eu/eurostat/estat-navtree-portlet-prod/BulkDownloadListing
+# https://ec.europa.eu/eurostat/databrowser/bulk?lang=en
 
 # time series length
-df$time |> unique()
+df$time_period |> unique()
 
 # ages
 df$indic_de |> unique()
@@ -126,11 +127,11 @@ df_it <- df |>
     filter(
         indic_de == "TOTFERRT",
         geo |> str_sub(1,2) == "IT", # only Italy
-        geo |> paste |> nchar == 5 # only NUTS-3 
+        geo |> paste() |> nchar() == 5 # only NUTS-3 
     ) |> 
     transmute(
-        id = geo |> paste,
-        year = time |> lubridate::year(),
+        id = geo |> paste(),
+        year = time_period |> year(),
         tfr = values
     )
 
@@ -168,9 +169,9 @@ dj_it |>
     scale_fill_viridis_c(option = "B")+
     coord_sf(datum = NA)+
     theme_map()+
-    theme(legend.position = c(.9, .6))+
+    # theme(legend.position = c(.9, .6))+
     labs(fill = "TFR")+
-    facet_wrap(~year, ncol = 2)
+    facet_wrap(~year, ncol = 5)
 
 
 # next we'll use just 2017 and save for plotly
@@ -194,7 +195,7 @@ p <- ggplot2::last_plot()
 library(plotly)
 
 # let's create a basic plot
-q <- qplot(data = mtcars, hp, mpg, color = cyl |> factor)
+q <- qplot(data = mtcars, hp, mpg, color = cyl |> factor())
 q
 # now, magic
 ggplotly(q)
@@ -248,7 +249,7 @@ dj_it |>
         showlegend = FALSE # try TRUE to see what happens
     )
 
-# unload {plotly}
+# unload {plotly} # explain last_plot()
 pacman::p_unload(plotly)
 
 # create inner boundaries as lines ---------------------------------------
@@ -274,7 +275,7 @@ dj_it |>
 
 
 
-# symplifying polygons ----------------------------------------------------
+# simplifying polygons ----------------------------------------------------
 dj_it |> 
     filter(year == 2017) |> 
     ms_simplify() |> #!!!
@@ -315,20 +316,20 @@ p + geom_sf(data = it_cit)
 
 
 
-# GADMTools ---------------------------------------------------------------
+# geodata ---------------------------------------------------------------
 
-# https://cran.r-project.org/web/packages/GADMTools/vignettes/Using_GADMTools.pdf
-library(GADMTools)
+# This is a beautiful package to streamline download of open geodata from many providers. We will use GADM for boundaries
 
-gadm_it <- gadm_sf_loadCountries(fileNames = "ITA", level = 1) 
+library(geodata)
+
+gadm_it <- gadm(country = "ITA", level = 1, path = "~/data/geodata") |> 
+    st_as_sf()
 
 gadm_it |> 
     ggplot()+
     geom_sf()
 
-gadm_sf_it <- gadm_it |> extract2("sf")
-
-gadm_sf_it |> 
+gadm_it |> 
     ms_simplify() |> # the init file took forever for me to render so I simplify
     ggplot()+
     geom_sf()
@@ -355,14 +356,15 @@ kz_clean <- kz_raw |>
 
 
 # regions
-gd_kz <- gadm_sf_loadCountries(fileNames = "KAZ", level = 2) |> extract2("sf")
+gd_kz <- gadm(country = "KAZ", level = 1, path = "~/data/geodata")|> 
+    st_as_sf()
 
 gd_kz |> 
     ms_dissolve(field = "NAME_1") |> 
     ms_simplify() |> 
     ggplot() +
     geom_sf()+
-    geom_sf(data = kz_clean, color = "red", alpha = .05)
+    geom_sf(data = kz_clean, color = 2, alpha = .05)
 
 # limit points to KZ only
 kz_only <- kz_clean |> 
@@ -373,7 +375,7 @@ gd_kz |>
     ms_simplify() |> 
     ggplot() +
     geom_sf()+
-    geom_sf(data = kz_only, color = "red", alpha = .05)
+    geom_sf(data = kz_only, color = 2, alpha = .05)
 
 
 gd_kz |> 
@@ -381,7 +383,7 @@ gd_kz |>
     ms_simplify() |> 
     ggplot() +
     geom_sf()+
-    geom_sf(data = kz_only, color = "red", alpha = .05)+
+    geom_sf(data = kz_only, color = 2, alpha = .05)+
     facet_wrap(~unmet)
 
 
@@ -393,7 +395,7 @@ leaflet(gd_kz) |>
     addProviderTiles(providers$Stamen.Toner) |> 
     addCircleMarkers(
         kz_raw$Longitude, kz_raw$Latitude, 
-        radius = 1, color = "red",
+        radius = 1, color = 2,
         popup = kz_clean$unmet, 
         label = kz_clean$unmet
     )

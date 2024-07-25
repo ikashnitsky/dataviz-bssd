@@ -25,7 +25,7 @@ foo <- read_lines(data_url) |>
         c("rank", "country", "researchers", "top_rev", "verified_rev", "verified_rev_12m", "verified_editor_rec")
     ) |> 
     # numerical colums to numeric format
-    mutate_at(3:7, {function(x) x |> str_remove_all(",") |> as.numeric}) |>
+    mutate_at(3:7, {function(x) x |> str_remove_all(",") |> as.numeric()}) |>
     # add ISO codes
     mutate(code = country |> countryname(destination = "iso2c"))
     
@@ -150,12 +150,12 @@ df_map |>
         fill = "#000000", color = NA
     )+ # for missing countries
     geom_sf(aes(fill = prop_top), color = NA)+
-    geom_sf(data = country_borders, size = .1, color = "#ffffff")+
+    geom_sf(data = country_borders, size = .1, color = "#4a4a4a")+
     scale_fill_viridis_b(option = "B", breaks = 1:5, begin = .2)+
     dark_theme_minimal(base_family = font_rc)+
     theme(
         axis.text = element_blank(),
-        plot.background = element_rect(fill = "#121212", color = NA),
+        plot.background = element_rect(fill = "#2a2a2a", color = NA),
         legend.position = c(.1, .4)
     )+
     labs(
@@ -188,13 +188,13 @@ df_map |>
         fill = "#000000", color = NA
     )+ # for missing countries
     geom_sf(aes(fill = prop_res), color = NA)+
-    geom_sf(data = country_borders, size = .1, color = "#ffffff")+
+    geom_sf(data = country_borders, size = .1, color = "#4a4a4a")+
     scale_fill_viridis_b(option = "B", begin = .1, 
                          breaks = c(.05, .1, .15, .2))+
     dark_theme_minimal(base_family = font_rc)+
     theme(
         axis.text = element_blank(),
-        plot.background = element_rect(fill = "#121212", color = NA),
+        plot.background = element_rect(fill = "#2a2a2a", color = NA),
         legend.position = c(.1, .4)
     )+
     labs(

@@ -13,9 +13,9 @@ c(
     "tidyverse",
     "janitor",
     "magrittr",
-    "lubridate",
     "readxl",
     "rio",
+    "xray",
     "gsheet",
     # dataviz
     "ggthemes",
@@ -42,7 +42,6 @@ c(
     "wpp2015",
     "wpp2019",
     "gapminder",
-    "rtweet", # ??? todo
     # fonts
     "sysfonts",
     "extrafont",
@@ -53,13 +52,10 @@ c(
     "gifski",
     # rspatial
     "sf",
+    "geodata",
     "rmapshaper",
     "leaflet",
-    "tidygeocoder",
-    # from github
-    "PPgp/wpp2022",
-    "ikashnitsky/sjrdata",
-    "walkerke/mapgl"
+    "tidygeocoder"
 ) |> 
     pak::pak()
 
@@ -67,3 +63,14 @@ c(
 # last preparatory step
 # create the "out" directory to export outputs
 fs::dir_create("out")
+
+
+# additional packages from github -----------------------------------------
+
+c(
+    # from github
+    "PPgp/wpp2022",
+    "ikashnitsky/sjrdata",
+    "walkerke/mapgl"
+) |> 
+    pak::pak()
