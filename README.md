@@ -1,4 +1,4 @@
-# <img src="https://i.imgur.com/2lMpmyW.png" align="right" width="333" height="333" />  Barcelona Summer School of Demography 2024 week 3 Dataviz – the Art/Skill Cocktail
+# <img src="https://i.imgur.com/g258HfB.png" align="right" width="333" height="333" />  Barcelona Summer School of Demography 2025 week 3 Dataviz – the Art/Skill Cocktail
 
 In the ever-growing universe of dry academic texts, impressive and efficient graphics are quite rare. Driven by widespread software legacy issues and mostly outdated limitations imposed by traditional scientific publishers, researchers often consider producing high quality graphics as a peripheral optional task – “if time allows” (spoiler: it won’t). Yet, modern tools place data visualization in the focus of research workflows when it comes to conveying the results. Hence, the ability to turn a large dataset into an insightful visualization is an increasingly valuable skill in academia.
 
@@ -6,7 +6,7 @@ The course aims to empower the participants with the flexibility that the R+tidy
 
 Practical coding sessions start from basic introduction to tidy data manipulation and ggplot2 basics. Next, practical examples cover the creation of certain most useful types of plots. Important data visualization choices and caveats are discussed along the way. Special attention is devoted to producing geographical maps, which are no longer the luxury of professional cartographers but have turned, with the help of R, into yet another data visualization type. Going beyond ggplot2, the course presents an introduction to interactive data visualization.
 
-# Course BlueSky account: [@datavizartskill.ikashnitsky.phd](https://bsky.app/profile/datavizartskill.ikashnitsky.phd)
+### Course BlueSky account: [@datavizartskill.ikashnitsky.phd](https://bsky.app/profile/datavizartskill.ikashnitsky.phd)
 
 # [CED BSSD course announcement][link]
 
@@ -23,43 +23,35 @@ Practical coding sessions start from basic introduction to tidy data manipulatio
 
 # Outline
 
-### Day 1, Monday, July 15: BASICS
+### Day 1, Monday, July 14: BASICS
 - Basic dataviz principles ([slides][slides-gg])
 - Impressive dataviz showcases
 - `tidtverse`: Tidy approach to data
 
-### Day 2, Tuesday, July 16: TUNE-UP
+### Day 2, Tuesday, July 15: TUNE-UP
 - `ggplot2` basics
 - Colors in dataviz
 - Themes and fonts
 
-### Day 3, Wednesday, July 17: TOOLBOX
+### Day 3, Wednesday, July 16: TOOLBOX
 - Useful types of plots
 - Dotplot – the most neglected and powerful type of dataviz
 - Heatmap, equality-line, ggridges, treemap
 - Interactivity: `plotly`, `gganimate`
 
-### Day 4, Thursday, July 18: MAPS
+### Day 4, Thursday, July 17: MAPS
 - The basics of map projections ([slides][slides-maps])
 - With `geom_sf` maps become yet another type of dataviz
 - Useful spatial processing tricks with `rmapshaper`
 - `biscale` maps
 
-### Day 5, Friday, July 19: ROCK
+### Day 5, Friday, July 18: ROCK
 - dataviz challenge in teams
 - brief presentations by teams and discussion
 - course wrap-up
 
 [slides-gg]: https://ikashnitsky.github.io/dataviz-bssd/slides/slides-dataviz-bssd.html
 [slides-maps]: https://ikashnitsky.github.io/dataviz-bssd/slides/slides-maps-bssd.html
-
-
-# Links to submit in-class assignments
-- Ugly `ggplot2` theme -- https://bit.ly/bssd24-ugly (day 2)
-- Any plot with own data -- https://bit.ly/bssd24-own (day 3)
-- Geocoding -- https://bit.ly/bssd24-geocoding (day 4, in class)
-- Maps -- https://bit.ly/bssd24-maps (day 4)
-- Challenge -- https://bit.ly/bssd24-challenge (day 5)
 
 
 

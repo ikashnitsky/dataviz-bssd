@@ -1,15 +1,14 @@
-#===============================================================================
-# 2024-07-15 -- BSSD dataviz
-# Tidy data
+# ..........................................................
+# 2025-07-14 -- BSSD dataviz
+# Tidy data                                     -----------
 # Ilya Kashnitsky, ilya.kashnitsky@gmail.com
-#===============================================================================
+# ..........................................................
 
 # load the package
 library(tidyverse)
 library(magrittr)
 
 # PIPES: from %>% to R native |> [shift+cmd/crtl+M]
-
 
 # Read the data with readxl -----------------------------------------------
 
@@ -26,14 +25,14 @@ pop <- read_excel(path = "data/data-denmark.xlsx", sheet = "pop")
 
 # to wide format
 pop_w <- pivot_wider(
-    data = pop,
-    names_from = year,
-    values_from = value
+  data = pop,
+  names_from = year,
+  values_from = value
 )
 
 # equivalently we can start using the piping operator ( |> )
 pop_w <- pop |>
-    pivot_wider(names_from = year, values_from = value)
+  pivot_wider(names_from = year, values_from = value)
 
 # back to long format
 pop_l <- pop_w |> pivot_longer(contains("200"), names_to = "year")
@@ -60,7 +59,7 @@ df_joined <- left_join(deaths, pop, by = c("year", "region", "sex", "age"))
 
 # rename
 df_re <- df_joined |>
-    rename(deaths = value.x, pop = value.y)
+  rename(deaths = value.x, pop = value.y)
 
 
 # mutate
@@ -70,26 +69,24 @@ df <- df_re |> mutate(mx = deaths / pop)
 df_tr <- df_joined |> transmute(region, sex, mx = value.x / value.y)
 
 
-
 # group |> summarize |> ungroup
 df_sum <- pop |>
-    group_by(region, sex, age) |>
-    summarise(mean = mean(value)) |>
-    ungroup()
+  group_by(region, sex, age) |>
+  summarise(mean = mean(value)) |>
+  ungroup()
 
 
 # summarise_if(is.numeric, ...)
 df_sum_if <- pop |>
-    pivot_wider(names_from = year, values_from = value) |>
-    group_by(sex, age) |>
-    summarise_if(.predicate = is.numeric, .funs = mean)
+  pivot_wider(names_from = year, values_from = value) |>
+  group_by(sex, age) |>
+  summarise_if(.predicate = is.numeric, .funs = mean)
 
 
 # now we save the data frame to be used later
 df <- inner_join(deaths, pop, by = c("year", "region", "sex", "age")) |>
-    rename(deaths = value.x, pop = value.y) |>
-    mutate(mx = deaths / pop)
-
+  rename(deaths = value.x, pop = value.y) |>
+  mutate(mx = deaths / pop)
 
 
 # saving data in Rdata (rda) format ---------------------------------------

@@ -2,7 +2,7 @@
 title: "Dataviz art/skill"
 subtitle: "Maps with R"
 author: "<br><br>**Ilya Kashnitsky**<br><br>Barcelona Summer School of Demography 2024<br>"
-date: "2024-07-18"
+date: "2025-07-17"
 format: 
   revealjs:
     theme: dark
