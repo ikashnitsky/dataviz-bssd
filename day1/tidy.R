@@ -9,6 +9,7 @@ library(tidyverse)
 library(magrittr)
 
 # PIPES: from %>% to R native |> [shift+cmd/crtl+M]
+# Important: |> requires that function use () at the end
 
 # Read the data with readxl -----------------------------------------------
 
@@ -40,12 +41,12 @@ pop_l <- pop_w |> pivot_longer(contains("200"), names_to = "year")
 
 # Basic dplyr functions ---------------------------------------------------
 
-# filter
+# filter()
 pop_filt <- pop |> filter(year == "y2003", !sex == "b")
 
 # magrittr !!!
 
-# select
+# select()
 pop_select <- pop |> select(contains("a"))
 
 
@@ -53,23 +54,24 @@ pop_select <- pop |> select(contains("a"))
 df_bind <- bind_rows(pop, deaths)
 
 
-# join
+# join_*()
+df_joined <- left_join(deaths, pop) # tries joining by `value`
 df_joined <- left_join(deaths, pop, by = c("year", "region", "sex", "age"))
 
 
-# rename
+# rename()
 df_re <- df_joined |>
   rename(deaths = value.x, pop = value.y)
 
 
-# mutate
+# mutate()
 df <- df_re |> mutate(mx = deaths / pop)
 
 # transmute as a shortcut for both rename and mutate (+select)
 df_tr <- df_joined |> transmute(region, sex, mx = value.x / value.y)
 
 
-# group |> summarize |> ungroup
+# group() |> summarize() |> ungroup()
 df_sum <- pop |>
   group_by(region, sex, age) |>
   summarise(mean = mean(value)) |>
@@ -77,13 +79,14 @@ df_sum <- pop |>
 
 
 # summarise_if(is.numeric, ...)
+# this example calculates the mean of all numeric columns leaving `region` off the grouping, thus calculating the mean for each combination of `sex` and `age` across the five regions
 df_sum_if <- pop |>
   pivot_wider(names_from = year, values_from = value) |>
   group_by(sex, age) |>
   summarise_if(.predicate = is.numeric, .funs = mean)
 
 
-# now we save the data frame to be used later
+# now we save the data frame to be used later in the course
 df <- inner_join(deaths, pop, by = c("year", "region", "sex", "age")) |>
   rename(deaths = value.x, pop = value.y) |>
   mutate(mx = deaths / pop)

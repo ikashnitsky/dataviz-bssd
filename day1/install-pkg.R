@@ -18,6 +18,8 @@ c(
   "rio",
   "xray",
   "gsheet",
+  "knitr",
+  "tweetrmd",
   # dataviz
   "ggthemes",
   "ggdark",
@@ -28,7 +30,6 @@ c(
   "ggridges",
   "ggforce",
   "ggfortify",
-  "ggdark",
   "ggalt",
   "geofacet",
   "ggtern",
