@@ -53,6 +53,9 @@ Practical coding sessions start from basic introduction to tidy data manipulatio
 [slides-gg]: https://ikashnitsky.github.io/dataviz-bssd/slides/slides-dataviz-bssd.html
 [slides-maps]: https://ikashnitsky.github.io/dataviz-bssd/slides/slides-maps-bssd.html
 
+# Links to submit in-class assignments
+- Ugly `ggplot2` theme -- https://wr.do/s/bssd25-ugly (day 2)
+
 
 
 # Useful links
@@ -82,12 +85,6 @@ ggplot2
 - [Thread on excess deaths plots](https://twitter.com/ikashnitsky/status/1409472083965349892) 
 - Jim Vaupel's [brilliant talk](https://twitter.com/ikashnitsky/status/1512700871968186379) on the unique central positioning of demography in science  
 
-## My links and materials 
-- [Thread](https://twitter.com/ikashnitsky/status/1380247006170509312) on log transformation of the ratios
-- [Post on efficient RStudio layout](https://ikashnitsky.github.io/2018/perfect-rstudio-layout/)
-- [Replication materials](https://github.com/ikashnitsky/sex-gap-e0-pnas) for Zarulli etal 2021 PNAS paper
-- Boxplot + jitter example: [tweet](https://twitter.com/ikashnitsky/status/1403645553637011461)  
-- US names shiny app: [repository](https://github.com/ikashnitsky/us-names-app); [tweet](https://twitter.com/ikashnitsky/status/1203840297911889920); [shiny app](https://ikashnitsky.shinyapps.io/us-names/)  
 
 ## Quarto closeread format aka scrollytelling
 - https://closeread.dev
@@ -98,9 +95,10 @@ ggplot2
 
 
 ## Tools to explore
+- Posit's [ggplot2 extensions gallery](https://exts.ggplot2.tidyverse.org/gallery/)
 - Jan Broder Engler's [{tidyplots}](https://tidyplots.org/)
-- Grant McDermott's [{tinyplot}](https://grantmcdermott.com/tinyplot/)
-
+- Grant McDermott's [{tinyplot}](https://grantmcdermott.com/tinyplot/) -- this is a supercharged ggplot2 base R alternative 
+- Luis D. Verde Arregoitia's [Large Language Model tools for R](https://luisdva.github.io/llmsr-book/)
 - Oli Hawkins's [pilot - an attractive, minimal, general purpose ggplot2 theme with an accessible discrete color palette](https://github.com/olihawkins/pilot)
 
 ## Various cool dataviz and other unclassified links
@@ -114,10 +112,18 @@ ggplot2
 - Yan Holtz's [If only your chart could talk](https://prodigious-trailblazer-3628.kit.com/posts/if-only-your-chart-could-talk)
 - Yan Holtz's [post on dual axes](https://www.linkedin.com/posts/yan-holtz-2477534a_dataviz-activity-7289613046396727297-NOTk)
 
+## My links and materials 
+- [Thread](https://twitter.com/ikashnitsky/status/1380247006170509312) on log transformation of the ratios
+- [Post on efficient RStudio layout](https://ikashnitsky.github.io/2018/perfect-rstudio-layout/)
+- [Replication materials](https://github.com/ikashnitsky/sex-gap-e0-pnas) for Zarulli etal 2021 PNAS paper
+- Boxplot + jitter example: [tweet](https://twitter.com/ikashnitsky/status/1403645553637011461)  
+- US names shiny app: [repository](https://github.com/ikashnitsky/us-names-app); [tweet](https://twitter.com/ikashnitsky/status/1203840297911889920); [shiny app](https://ikashnitsky.shinyapps.io/us-names/)  
+
 ## Other curated collections of resources
 - Oscar Baruffa's [Big Book of R](https://www.bigbookofr.com)
 - Andrew Heiss's [Helpful Resources](https://datavizf24.classes.andrewheiss.com/resource/)
 - Nicola Rennie's [Data Science Resources](https://nrennie.rbind.io/data-science-resources)
 - Antti Rask's [ggplot2 Extended book, Resources chapter](https://ggplot2-extended-book.com/introduction#sec-further-resources)
+- Erik Gahner Larsen's [Awesome ggplot2](https://github.com/erikgahner/awesome-ggplot2)
 - Joscelin Rocha-Hidalgo's [Resources database](https://www.resourcesdatabase.com)
--  Michigan Alzheimer’s Disease Center’s [Resource Library](https://michiganadc.github.io/dmsc-madc/resources.html#category=R)
+- Michigan Alzheimer’s Disease Center’s [Resource Library](https://michiganadc.github.io/dmsc-madc/resources.html#category=R)
