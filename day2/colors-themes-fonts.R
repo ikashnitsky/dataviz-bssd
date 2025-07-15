@@ -22,9 +22,13 @@ library(ggthemes)
 # colorblind friendliness
 # https://www.toptal.com/designers/colorfilter?orig_uri=https://infographic.statista.com/normal/chartoftheday_13680_the_legal_status_of_abortion_worldwide_n.jpg&process_type=protan
 
+# Claus Wilke's CVD emulator (shiny live!)
+# https://wilkelab.org/SDS366/apps/bin/cvd-emulator/
+
 # Recent posts by Lisa Rost on colorblind friendly dataviz
 # https://blog.datawrapper.de/colorblindness-part1/
 # https://blog.datawrapper.de/colorblindness-part2/
+
 
 # paletteer !!!
 library(paletteer)
@@ -129,10 +133,37 @@ theme_set(theme_ik())
 
 gg
 
-# challenge -- create as ugly themed plot as possible ---------------------
 
+
+# more stuff to explore ---------------------------------------------------
+
+# Joachim Schork on packages to deal with text labels
+# https://www.linkedin.com/feed/update/urn:li:activity:7346888433350459392/
+
+# Yan Holtz's tool for selecting color palettes
+# https://python-graph-gallery.com/color-palette-finder/
+
+# Colors for all • cols4all
+# https://cols4all.github.io/cols4all-R/
+
+
+# Working with colours in R | Nicola Rennie
+# https://nrennie.rbind.io/blog/colours-in-r/
+
+# Andrew Heiss' Color palettes – Data Visualization with R
+# https://datavizf24.classes.andrewheiss.com/resource/colors.html#scientific-colour-maps
+
+
+
+
+#..........................................................................
+#
+# CHALLENGE -- create as UGLY themed plot as possible ---------------------
+#
 # for inspiration:
 # https://twitter.com/CedScherer/status/1236056151210500096
-
+#
 # submit your results via the link in the main repository README:
 # https://wr.do/s/bssd-assignment-links
+#
+#..........................................................................
