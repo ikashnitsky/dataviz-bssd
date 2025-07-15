@@ -58,7 +58,9 @@ Practical coding sessions start from basic introduction to tidy data manipulatio
 
 
 
-# Useful links
+***
+
+# USEFUL LINKS
 
 ## Learn 
 - Hadley Wickham's [R For Data Science, 2nd edition](https://r4ds.hadley.nz) 
@@ -111,6 +113,7 @@ ggplot2
 - Eye-bleedingly ugly [dataviz that succeeds in grabbing attention](https://bsky.app/profile/ikashnitsky.phd/post/3lfpais3h4c2x) 
 - Yan Holtz's [If only your chart could talk](https://prodigious-trailblazer-3628.kit.com/posts/if-only-your-chart-could-talk)
 - Yan Holtz's [post on dual axes](https://www.linkedin.com/posts/yan-holtz-2477534a_dataviz-activity-7289613046396727297-NOTk)
+- Josef Fruehwald's [Light vs Dark](https://jofrhwld.github.io/blog/posts/2025/07/2025-07-14_light-color/)
 
 ## My links and materials 
 - [Thread](https://twitter.com/ikashnitsky/status/1380247006170509312) on log transformation of the ratios
