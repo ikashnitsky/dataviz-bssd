@@ -54,7 +54,8 @@ Practical coding sessions start from basic introduction to tidy data manipulatio
 [slides-maps]: https://ikashnitsky.github.io/dataviz-bssd/slides/slides-maps-bssd.html
 
 # Links to submit in-class assignments
-- Ugly `ggplot2` theme -- https://wr.do/s/bssd25-ugly (day 2)
+- Ugly `ggplot2` theme -- https://wr.do/s/bssd25-ugly (day 3)
+- Any plot with own data -- https://wr.do/s/bssd25-own (day 3)
 
 
 
