@@ -1,3 +1,18 @@
+<!-- badges: start -->
+<!-- https://shields.io/badges -->
+<!-- https://simpleicons.org -->
+[![R-version](https://img.shields.io/badge/4.5.1-0678b9?label=version&logo=R)][cran] 
+[![bsky](https://img.shields.io/badge/@ikashnitsky.phd-0285FF?label=bsky&logo=bluesky)][bsky]
+[![doi](https://img.shields.io/badge/10.5281/zenodo.16014438-269292?logo=DOI)][doi]
+[![orcid](https://img.shields.io/badge/0000.0003.1835.8687-004444?logo=ORCID)][orcid]
+
+[cran]: https://cran.r-project.org
+[bsky]: https://bsky.app/profile/ikashnitsky.phd
+[doi]: https://doi.org/10.5281/zenodo.16014438
+[orcid]: https://orcid.org/0000-0003-1835-8687
+<!-- badges: end -->
+
+
 # <img src="https://i.imgur.com/g258HfB.png" align="right" width="333" height="333" />  Barcelona Summer School of Demography 2025 week 3 Dataviz – the Art/Skill Cocktail
 
 In the ever-growing universe of dry academic texts, impressive and efficient graphics are quite rare. Driven by widespread software legacy issues and mostly outdated limitations imposed by traditional scientific publishers, researchers often consider producing high quality graphics as a peripheral optional task – “if time allows” (spoiler: it won’t). Yet, modern tools place data visualization in the focus of research workflows when it comes to conveying the results. Hence, the ability to turn a large dataset into an insightful visualization is an increasingly valuable skill in academia.
@@ -56,6 +71,8 @@ Practical coding sessions start from basic introduction to tidy data manipulatio
 # Links to submit in-class assignments
 - Ugly `ggplot2` theme -- https://wr.do/s/bssd25-ugly (day 3)
 - Any plot with own data -- https://wr.do/s/bssd25-own (day 3)
+- Geocoding -- https://wr.do/s/bssd25-geocoding (day 4, in class)
+- Maps -- https://wr.do/s/bssd25-maps (day 4)
 
 
 
@@ -93,7 +110,7 @@ ggplot2
 - https://closeread.dev
 - Winners of the [Closeread Prize - Data-Driven Scrollytelling with Quarto - Posit](https://posit.co/blog/closeread-prize-winners/)
 - Óscar Bartolomé Pato's [EURO 2024 Final Scrollytelling Analysis](https://data-kicks.github.io/euro_final_scrollytelling_analysis/euro_final_scrollytelling_analysis.html)
-- Ansgar Wolsing's [World Population Flags](https://bydata.github.io/population-flags)
+- Ansgar Wolsing's [World Population Flags](https://bydata.github.io/population-flags)   
 *DO EXPLORE ALL OF THE WINNERS*
 
 
@@ -103,6 +120,8 @@ ggplot2
 - Grant McDermott's [{tinyplot}](https://grantmcdermott.com/tinyplot/) -- this is a supercharged ggplot2 base R alternative 
 - Luis D. Verde Arregoitia's [Large Language Model tools for R](https://luisdva.github.io/llmsr-book/)
 - Oli Hawkins's [pilot - an attractive, minimal, general purpose ggplot2 theme with an accessible discrete color palette](https://github.com/olihawkins/pilot)
+- Kyle Walker's [{mapgl}](https://walker-data.com/mapgl/)
+- Teun van den Brand's [{legendry}](https://teunbrand.github.io/legendry/) -- to add dataviz elements in you legends
 
 ## Various cool dataviz and other unclassified links
 - Years of life stolen by gun shooting in the US -- [dataviz by Periscopic](https://guns.periscopic.com) 
@@ -110,9 +129,9 @@ ggplot2
 - Miguel HG's [US Baby Boom on a Lexis plot](https://www.reddit.com/r/dataisbeautiful/comments/1lgrd8x)
 - [30 Charts That Show How Covid Changed Everything in March 2020 - The New York Times](https://www.nytimes.com/interactive/2025/03/09/upshot/covid-lockdown-five-year-charts.html?unlocked_article_code=1.204.6Wc6.m8TgWsSu9897\&smid=url-share)
 - John Burn-Murdoch's [Excess c19 death's plot](https://www.ft.com/content/a2901ce8-5eb7-4633-b89c-cbdf5b386938)
+- Yan Holtz's [If only your chart could talk](https://prodigious-trailblazer-3628.kit.com/posts/if-only-your-chart-could-talk)
 - NYT (Motoko Rich, Amanda Cox, Matthew Bloch) [US districts school kids performance against parent's wealthiness](https://www.nytimes.com/interactive/2016/04/29/upshot/money-race-and-success-how-your-school-district-compares.html)
 - Eye-bleedingly ugly [dataviz that succeeds in grabbing attention](https://bsky.app/profile/ikashnitsky.phd/post/3lfpais3h4c2x) 
-- Yan Holtz's [If only your chart could talk](https://prodigious-trailblazer-3628.kit.com/posts/if-only-your-chart-could-talk)
 - Yan Holtz's [post on dual axes](https://www.linkedin.com/posts/yan-holtz-2477534a_dataviz-activity-7289613046396727297-NOTk)
 - Josef Fruehwald's [Light vs Dark](https://jofrhwld.github.io/blog/posts/2025/07/2025-07-14_light-color/)
 

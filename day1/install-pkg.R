@@ -2,9 +2,9 @@
 
 # First, install {pak} to deal easier with other packages
 # solution by Sacha Epskamp from: https://stackoverflow.com/a/9341833/4638884
-if (!require('pak', character.only = TRUE)) {
-  install.packages('pak', dep = TRUE)
-  if (!require('pak', character.only = TRUE)) {
+if (!require('pacman', character.only = TRUE)) {
+  install.packages('pacman', dep = TRUE)
+  if (!require('pacman', character.only = TRUE)) {
     stop("Package not found")
   }
 }
@@ -14,12 +14,12 @@ c(
   "tidyverse",
   "janitor",
   "magrittr",
+  "pak",
   "readxl",
   "rio",
   "xray",
   "gsheet",
   "knitr",
-  "tweetrmd",
   # dataviz
   "ggthemes",
   "ggdark",
@@ -57,9 +57,10 @@ c(
   "geodata",
   "rmapshaper",
   "leaflet",
+  "mapgl",
   "tidygeocoder"
 ) |>
-  pak::pak()
+  pacman::p_load()
 
 
 # last preparatory step
@@ -72,7 +73,6 @@ fs::dir_create("out")
 c(
   # from github
   "PPgp/wpp2022",
-  "ikashnitsky/sjrdata",
-  "walkerke/mapgl"
+  "ikashnitsky/sjrdata"
 ) |>
   pak::pak()

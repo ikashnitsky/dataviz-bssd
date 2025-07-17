@@ -1,7 +1,7 @@
 ---
 title: "Dataviz art/skill"
 subtitle: "Maps with R"
-author: "<br><br>**Ilya Kashnitsky**<br><br>Barcelona Summer School of Demography 2024<br>"
+author: "<br><br>**Ilya Kashnitsky**<br><br>Barcelona Summer School of Demography 2025<br>"
 date: "2025-07-17"
 format: 
   revealjs:
@@ -61,7 +61,7 @@ tweet_embed("https://twitter.com/ikashnitsky/status/1531695114585776130", align 
 
 ## 
 
-<iframe width="1000px" height="650px" style="background: #FFFFFF;" src="https://r-graph-gallery.com">
+<iframe width="1050px" height="650px" style="background: #FFFFFF;" src="https://r-graph-gallery.com">
 
 </iframe>
 
@@ -87,7 +87,7 @@ tweet_embed("https://twitter.com/TrustBiologist/status/1404078363300483087", ali
 
 ##
 
-<iframe width="1000px" height="650px" style="background: #FFFFFF;" src="https://nsgrantham.shinyapps.io/tidytuesdayrocks/">
+<iframe width="1050px" height="650px" style="background: #FFFFFF;" src="https://nsgrantham.shinyapps.io/tidytuesdayrocks/">
 
 </iframe>
 
@@ -101,7 +101,7 @@ tweet_embed("https://twitter.com/TrustBiologist/status/1404078363300483087", ali
 
 ## 
 
-<iframe width="1000px" height="650px" style="background: #FFFFFF;" src="https://xkcd.com/977/">
+<iframe width="1050px" height="650px" style="background: #FFFFFF;" src="https://xkcd.com/977/">
 
 </iframe>
 
@@ -147,15 +147,10 @@ tweet_embed("https://twitter.com/Pisarski/status/1052486032766197760", align = "
 
 </iframe>
 
-## 
-
-```{r}
-tweet_embed("https://twitter.com/ashastral/status/1072313190590103557", align = "center", theme = "dark", hide_thread = T)
-```
 
 ## 
 
-<iframe width="1000px" height="650px" style="background: #FFFFFF;" src="http://epsg.io">
+<iframe width="1050px" height="650px" style="background: #FFFFFF;" src="http://epsg.io">
 
 </iframe>
 
@@ -181,7 +176,7 @@ tweet_embed("https://twitter.com/nzzvisuals/status/1186225049960943617", align =
 
 ## 
 
-<iframe width="1000px" height="650px" style="background: #FFFFFF;" src="https://gadm.org/data.html">
+<iframe width="1050px" height="650px" style="background: #FFFFFF;" src="https://gadm.org/data.html">
 
 </iframe>
 
@@ -191,7 +186,7 @@ tweet_embed("https://twitter.com/nzzvisuals/status/1186225049960943617", align =
 
 ## 
 
-<iframe width="1000px" height="650px" style="background: #FFFFFF;" src="http://wiki.openstreetmap.org/wiki/Shapefiles">
+<iframe width="1050px" height="650px" style="background: #FFFFFF;" src="http://wiki.openstreetmap.org/wiki/Shapefiles">
 
 </iframe>
 
@@ -202,7 +197,7 @@ tweet_embed("https://twitter.com/nzzvisuals/status/1186225049960943617", align =
 
 ## 
 
-<iframe width="1000px" height="650px" style="background: #FFFFFF;" src="https://www.paulamoraga.com/book-spatial/r-packages-to-download-open-spatial-data.html#climatic-data">
+<iframe width="1050px" height="650px" style="background: #FFFFFF;" src="https://www.paulamoraga.com/book-spatial/r-packages-to-download-open-spatial-data.html#climatic-data">
 
 </iframe>
 
@@ -216,7 +211,7 @@ tweet_embed("https://twitter.com/nzzvisuals/status/1186225049960943617", align =
 
 ## 
 
-<iframe width="1000px" height="650px" style="background: #FFFFFF;" src="https://geocompr.robinlovelace.net">
+<iframe width="1050px" height="650px" style="background: #FFFFFF;" src="https://geocompr.robinlovelace.net">
 
 </iframe>
 
@@ -227,7 +222,7 @@ tweet_embed("https://twitter.com/nzzvisuals/status/1186225049960943617", align =
 
 ## 
 
-<iframe width="1000px" height="650px" style="background: #FFFFFF;" src="https://cengel.github.io/R-spatial/">
+<iframe width="1050px" height="650px" style="background: #FFFFFF;" src="https://cengel.github.io/R-spatial/">
 
 </iframe>
 
@@ -237,17 +232,17 @@ tweet_embed("https://twitter.com/nzzvisuals/status/1186225049960943617", align =
 
 ## 
 
-<iframe width="1000px" height="650px" style="background: #FFFFFF;" src="https://bookdown.org">
+<iframe width="1050px" height="650px" style="background: #FFFFFF;" src="https://www.bigbookofr.com/chapters/geospatial">
 
 </iframe>
 
 ::: footer
-<https://bookdown.org>
+<https://www.bigbookofr.com/chapters/geospatial>
 :::
 
 ## 
 
-<iframe width="1000px" height="650px" style="background: #FFFFFF;" src="https://www.r-bloggers.com">
+<iframe width="1050px" height="650px" style="background: #FFFFFF;" src="https://www.r-bloggers.com">
 
 </iframe>
 
@@ -261,17 +256,17 @@ tweet_embed("https://twitter.com/nzzvisuals/status/1186225049960943617", align =
 
 ## 
 
-<iframe width="1000px" height="650px" style="background: #FFFFFF;" src="https://cran.r-project.org/web/packages/tmap/vignettes/tmap-getstarted.html">
+<iframe width="1050px" height="650px" style="background: #FFFFFF;" src="https://r-tmap.github.io/tmap/">
 
 </iframe>
 
 ::: footer
-<https://cran.r-project.org/web/packages/tmap/vignettes/tmap-getstarted.html>
+<https://r-tmap.github.io/tmap/>
 :::
 
 ## 
 
-<iframe width="1000px" height="650px" style="background: #FFFFFF;" src="https://paleolimbot.github.io/ggspatial/">
+<iframe width="1050px" height="650px" style="background: #FFFFFF;" src="https://paleolimbot.github.io/ggspatial/">
 
 </iframe>
 
@@ -281,7 +276,7 @@ tweet_embed("https://twitter.com/nzzvisuals/status/1186225049960943617", align =
 
 ## 
 
-<iframe width="1000px" height="650px" style="background: #FFFFFF;" src="https://walkerke.github.io/tidycensus/articles/basic-usage.html">
+<iframe width="1050px" height="650px" style="background: #FFFFFF;" src="https://walkerke.github.io/tidycensus/articles/basic-usage.html">
 
 </iframe>
 
@@ -292,7 +287,7 @@ tweet_embed("https://twitter.com/nzzvisuals/status/1186225049960943617", align =
 
 ## 
 
-<iframe width="1000px" height="650px" style="background: #FFFFFF;" src="https://walker-data.com/mapgl">
+<iframe width="1050px" height="650px" style="background: #FFFFFF;" src="https://walker-data.com/mapgl">
 
 </iframe>
 
@@ -304,7 +299,7 @@ tweet_embed("https://twitter.com/nzzvisuals/status/1186225049960943617", align =
 
 ## 
 
-<iframe width="1000px" height="650px" style="background: #FFFFFF;" src="https://bhaskarvk.github.io/tilegramsR/">
+<iframe width="1050px" height="650px" style="background: #FFFFFF;" src="https://bhaskarvk.github.io/tilegramsR/">
 
 </iframe>
 
@@ -314,7 +309,7 @@ tweet_embed("https://twitter.com/nzzvisuals/status/1186225049960943617", align =
 
 ## 
 
-<iframe width="1000px" height="650px" style="background: #FFFFFF;" src="https://cran.r-project.org/web/packages/voteogram/vignettes/intro_to_voteogram.html">
+<iframe width="1050px" height="650px" style="background: #FFFFFF;" src="https://cran.r-project.org/web/packages/voteogram/vignettes/intro_to_voteogram.html">
 
 </iframe>
 
@@ -324,7 +319,7 @@ tweet_embed("https://twitter.com/nzzvisuals/status/1186225049960943617", align =
 
 ## 
 
-<iframe width="1000px" height="650px" style="background: #FFFFFF;" src="https://www.r-graph-gallery.com/cartogram.html">
+<iframe width="1050px" height="650px" style="background: #FFFFFF;" src="https://www.r-graph-gallery.com/cartogram.html">
 
 </iframe>
 

@@ -29,7 +29,6 @@ library(ggthemes)
 # https://blog.datawrapper.de/colorblindness-part1/
 # https://blog.datawrapper.de/colorblindness-part2/
 
-
 # paletteer !!!
 library(paletteer)
 # https://github.com/EmilHvitfeldt/r-color-palettes
@@ -133,8 +132,6 @@ theme_set(theme_ik())
 
 gg
 
-
-
 # more stuff to explore ---------------------------------------------------
 
 # Joachim Schork on packages to deal with text labels
@@ -146,15 +143,11 @@ gg
 # Colors for all • cols4all
 # https://cols4all.github.io/cols4all-R/
 
-
 # Working with colours in R | Nicola Rennie
 # https://nrennie.rbind.io/blog/colours-in-r/
 
 # Andrew Heiss' Color palettes – Data Visualization with R
 # https://datavizf24.classes.andrewheiss.com/resource/colors.html#scientific-colour-maps
-
-
-
 
 #..........................................................................
 #
