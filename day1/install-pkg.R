@@ -19,6 +19,7 @@ c(
   "rio",
   "xray",
   "gsheet",
+  "datapasta",
   "knitr",
   # dataviz
   "ggthemes",
